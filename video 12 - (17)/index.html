@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Selectors in Html</title>
+    <style>
+        /* Element selectors */
+        div{
+            background-color: yellow;
+        }
+
+        /* Class selectors */
+        .red{
+            background-color: red;
+        }
+
+        #green{
+            background-color: green;
+            color: aliceblue;
+        }
+
+        /* child selectors */
+        div > p{
+            background-color: wheat;
+            color:blue;
+        }
+
+/* Descendant selectors */
+div p{
+    background-color:pink;
+    color: rgb(131, 12, 243);
+}
+
+/* Universal selectors */
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+
+/* Pseudo selectors */
+a:visited{
+    color: yellow;
+}
+
+a:link{
+    color: green;
+}
+
+a:active{
+    background-color: red;
+}
+
+a:hover{
+    background-color: hotpink;
+}
+
+p:first-child{
+    background-color: aqua;
+}
+    </style>
+</head>
+<body>
+    <h2>Css Selector in Html:</h2>
+    <ol>
+        <li>dot . means ---- class</li>
+        <li>slash # means ---- Id</li>
+        <li>  div - k under paragrapgh -p- ho to us pr style apply hoga ------  direct child hona chaiye---Child selector </li>
+        <li>Desenrdant selector</li>
+        <li>star * means  ----Universal selector</li>
+        <li>Pseudo selector</li>
+    </ol>
+    <h4>Element selector example:</h4>
+    <div>
+        i am a div in element selector 
+    </div>
+
+    <h4>Class selector example:</h4>
+    <div class="red">
+        i am also a div but in class selector
+    </div>
+
+    <h4>Id selector example:</h4>
+    <div id="green">
+        i am also a div but in id selector
+    </div>
+
+    <h4>child selector example:</h4>
+     <p>Child selector tab hi work krta hai jab kisi div k just baad paragraph p tag ho to uskko child selector bolte or styles apply hote agr child hua to tabb jaa k style apply hoga warna nhi hoga </p>
+    <div>
+        <p>i am a para inside a div  for child selector</p>
+       
+    </div>
+
+
+    <h4>Descendant selector example:</h4>
+    <p>descendant selector means div k under p tag hona chaiye kisi k bhi through ex: like article, footer, main. etc kisi mein bhi p tag ho tabhi slector apply hoga..</p>
+<div>
+    i am a div. 
+    <article>
+        <p>i am a para inside the article tag and div</p>
+    </article>
+</div>
+
+<h4>Universal selector example:</h4>
+<p>Its give margin and padding zero..</p>
+
+<h4>Pseudo selector example:</h4>
+<p>in this selector kisi bhi  link ko visit kk baad color change hojayega to pseudo selector use karenge using links like using folllows</p>
+
+<div>
+
+    <ol>
+        <li>a: visited --- is se agr apn  kisi bhi link pr visit karenge ttab colour change hoga ya styles apply hoge jo humm ne diye hai.</li>
+        <li>a: link --- agr hum link pr visit nhi kra to color change  dekhenga.</li>
+        <li>a: active  --- kisi bhi link pr  cllick karoge tab color  cahnge hoga </li>
+        <li>a: hover   --- jab aap apna mouse/cursor link pr le kr jaoge tab color change hoga.</li>
+    </ol>
+</div>
+    <h3>Example:</h3>
+<a href="https://www.google.com"> Go to Google</a>
+<a href="https://www.Facebook2.com"> Go to Facebook</a>
+
+<p>Jaha jaha p apne parents ka first child hai waha waha us ka background color aqua krdo..</p>
+<main class="one">
+    <p>i am First</p>
+    <p>i am Second</p>
+</main>
+
+</body>
+</html>
