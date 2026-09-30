@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS BoxModel</title>
+    <style>
+        .box {
+            background-color: aqua;
+        }
+
+        .box1 {
+            color: yellow;
+            padding: 10px;
+            margin: 25px;
+            border: 2px solid blue;
+            height: 200px;
+            box-sizing: border-box;
+        }
+
+        .box2 {
+            color: red;
+            padding: 10px;
+            margin: 25px;
+            border: 2px solid black;
+            height: 200px;
+            box-sizing: border-box;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <h2>Css Box model:</h2>
+    <img src="https://cwh-full-next-space.fra1.cdn.digitaloceanspaces.com/tutorial/css-box-model/box%20model.png" alt=""
+        height="400px">
+    <p>Ek element ko multiple clasess de ja sakti hai </p>
+    <p>kisi bhi elemennt ko ek se zyada clasess dena hai to space laga kr dete hai </p>
+    <ol>
+        <li>.box ---ek to wo property longa jab me dono box ko dena chatha ho ye tab use karenge jab 2 box use karenge
+        </li>
+        <li>.box1 ---indiviual box - used only for box1</li>
+        <li>.box2 --- used for only box2</li>
+    </ol>
+
+    <div class="box box1">
+        i am box
+    </div>
+    <div class="box box2">i am another box</div>
+
+    <h3>Marggin collabs:</h3>
+    <p>agr do elements ki Margginn obverlap horahi hai to jo bhi maximun margin hai wo bas ek baar lagegi.</p>
+    <h4>for example:</h4>
+    <p>Box1 and box2 mein margin 25px set karoge dono me to wo overlap ho k maximum margibn bataigi.</p>
+    <p>agr Box1 mein 35 margin and Box2 mein 25 margiin then in dono me jo sab se zyada wo lag jayegi..</p>
+</body>
+</html>
