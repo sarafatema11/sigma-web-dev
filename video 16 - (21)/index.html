@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Specificity and cascade</title>
+    <style>
+        /* the specificity of this selector is 1 */
+        h2 {
+            color: aqua;
+        }
+
+        /* the specificity of this selector is 10 */
+        .cred {
+            color: red;
+        }
+
+        /* the specificity of this selector is 10 */
+        .cpurple {
+            color: purple;
+        }
+
+        /* the specificity of this selector is 10 */
+        .yellow {
+            color: yellow;
+        }
+
+        /* this is the example of attribute selector  */
+        /* the specificity of this selector is 10 */
+        [data-x=a] {
+            background-color: red;
+        }
+
+        h4 {
+            color: red !important;
+        }
+
+        /* Find this specificity / calculate this specificity ? */
+
+
+       
+        /* Solution To calculate the specificity value of the selector a.harryclass.rohan-class[href]:hover, */
+        /* you can break down its components: Element selectors: a contributes 1 point. Class selectors: .harryclass and .rohan-class each contribute 10 points, */
+        /* totaling 20 points. Attribute selector: [href] contributes 10 points. Pseudo-class: :hover adds another 10 points. Add up all these values: 1 (element)+20 (classes)+10 (attribute)+10 (pseudo-class)=41. */
+
+        /* So, the specificity value of the selector a.harryclass.rohan-class[href]:hover will be 41. */
+
+         /* the specificity of this selector is 1 + 10 + 10 + 10 + 10 = 41 */
+
+        a.harryclass.rohan-class[href]:hover {
+            color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Css Specificity and cascade:</h1>
+    <ol>
+        <li>css stands for cascading style sheet.</li>
+        <li>kisi bhi conflicts ko resolve kerne k liye css mein cascade Algorithm ka use kerte hai.</li>
+        <li>ye Algorithm determine kerta hai ki konsi property aaply ki jayegi css mein or konsi nahi.</li>
+    </ol>
+
+    <h3>4 Rules of cascde Algorithm:</h3>
+    <ol>
+        <li>Position and order of apperence</li>
+        <li>Specificity</li>
+        <li>Origin</li>
+        <li>Importance</li>
+    </ol>
+    <h3>For Example:</h3>
+    <p>Agar 3 Bhi ek hi tarah k selector hai to wo 3 ko bhi conflict resolve kya jayega konsa badme hai is baad meinn
+        means --last mein -- jo style tag mein last hoga wo apply hoga.</p>
+
+    <div>
+        <h2 class="yellow cred cpurple">Css Specificity</h2>
+
+        <h1>Specificity:</h1>
+        <p>an algorithm that determines which CSS selector has the strongest match (inline > ID > class > element >
+            universal)</p>
+        <ol>
+            <li>value k hisab se calculate ki jati hai.</li>
+            <li>konsa css selector sab se zyada specific hai.</li>
+            <li>Inline Style > ID Selector > Class/Attribute/Pseudo-class > Element Selector > Universal Selector</li>
+        </ol>
+        <h3>for Example:</h3>
+        <h2 style="color: blue;" class="yellow cred cpurple">Css Specificity</h2>
+
+        <h1>Attribute selector:</h1>
+        <p>wo element jis ki data -x ki vale a us ka background-color red krdo.</p>
+
+        <h2 class="yellow cred cpurple" data-x="a">Css Specificity</h2>
+
+        <h1>Importance:</h1>
+
+        <h3>Agar aap style tag me color k aage -- color: red !important; -- aisa importantlaga doge to wo important
+            hojayega wo lage ga hi lagega.</h3>
+
+        <h3>The !important flag in CSS is used to give a particular style rule the highest level of importance,
+            overriding any other competing styles. When you add !important to a CSS rule, it will take precedence over
+            other rules affecting the same element, regardless of their specificity.</h3>
+
+        <h3>For Example:</h3>
+
+        <h4> color: red !important;</h4>
+
+        <h1>Specificity Calculation:</h1>
+
+        <h3>To calculate specificity, assign a value to each part of the selector:</h3>
+
+        <ol>
+            <li>Universal Selector: 0</li>
+            <li>Element selectors and pseudo-elements: 1</li>
+            <li>Class selectors, attribute selectors, and pseudo-classes: 10</li>
+            <li>ID selectors: 100</li>
+            <li>Inline styles: 1000</li>
+
+        </ol>
+    </div>
+</body>
+
+</html>
