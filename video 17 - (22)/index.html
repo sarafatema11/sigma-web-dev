@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sizing & Units </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 12px;
+        }
+
+        .box {
+            box-sizing: border-box;
+            border: 2px solid black;
+            /* width: 233px; */
+
+            /* px : pixel  */
+            width: 2048px;
+            background-color: antiquewhite;
+        }
+
+        .box2 {
+            box-sizing: border-box;
+            border: 2px solid black;
+            width: 100vw;
+            background-color: rgb(227, 33, 12);
+        }
+
+        .box3 {
+            box-sizing: border-box;
+            border: 2px solid black;
+            width: 80vw;
+            height: 10vh;
+            margin: auto;
+            background-color: rgb(227, 12, 173);
+        }
+
+        .container {
+            box-sizing: border-box;
+            border: 2px solid black;
+            width: 80vw;
+
+            /* margin 23px top bottom margin & auto means lefft right margin  */
+            margin: 23px auto;
+            background-color: rgb(241, 233, 21);
+        }
+
+        .box4 {
+            box-sizing: border-box;
+            border: 2px solid black;
+            width: 80vw;
+            height: 80vh;
+            margin: 23px auto;
+            background-color: rgb(227, 12, 173);
+        }
+
+        .container1 {
+            box-sizing: border-box;
+            border: 2px solid black;
+            width: 80vw;
+            /* height: 80vh; */
+            min-height: 80vh;
+            /* bcz khuch property inherit krti 18px  */
+            font-size: 18px;
+            margin: 23px auto;
+            background-color: rgb(241, 233, 21);
+        }
+
+        .container1>div {
+            border: 2px solid red;
+            /* conntainer1 me se khuch property inherit karega css mein container1 me font size 18 hai  2em likhne k baad uska double hoga -- chrome-inspect- computed - search font - see here is 36 font size */
+            font-size: 2em;
+            /* font-size: 2rem; */
+            width: 50%;
+        }
+
+        .container1>div>div {
+            border: 2px solid blue;
+            width: 50%;
+        }
+
+        .mycont {
+            /* background-color: red; */
+            box-sizing: border-box;
+            border: 2px solid black;
+            color: rgb(0, 0, 0);
+            font-size: 22px;
+            /* width: 100vmin; */
+            width: 80vw;
+            margin: 23px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Sizing units:</h1>
+    <ol>
+        <li>px : pixel</li>
+        <li>vw : viewport width</li>
+        <li>Margin:auto; : it means ki mein left or rights se margin lagana chatha ho. </li>
+        <li>vh : viewport height</li>
+        <li>rem & em : </li>
+        <li>rem :</li>
+        <li>em :</li>
+        <li>Ram :</li>
+        <li>Vmin & Vmax :</li>
+        <li>min-height : 80vh; : </li>
+        <li>percentage unit :</li>
+
+    </ol>
+
+
+
+    <h3> px : pixel </h3>
+    <p>196th of an inch hota hai.</p>
+    <div class="box">
+        This is a Box
+    </div>
+
+
+    <h3> vw : viewport width</h3>
+    <p>Aap ko jo vw hai usko jtni width hai utna le lega.</p>
+    <h4>example : width: 100vw; </h4>
+    <h4>example : width: 80vw; </h4>
+
+    <div class="box2">this is box 2</div>
+
+    <h3>
+        Margin:auto; : it means ki mein left or rights se margin lagana chatha ho.
+    </h3>
+
+    <p>margin auto se center hota hai text.</p>
+    <p>margin tab hi hoga jab ye - block element- ho - inline element- hoga to nahi hoga.</p>
+    <p>inline elements : means span not div.span pr aap width nahi laga sakte.</p>
+
+    <div class="box3">This is box 3</div>
+    <br>
+    <span class="box3">box 3 of inline element means span box</span>
+
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti libero delectus distinctio quidem vel aut
+        voluptatum, in error aliquid exercitationem, nesciunt eum. Odit fuga ducimus culpa aliquid saepe, est itaque
+        voluptate consequuntur rem rerum eius suscipit sequi. Quis minima aliquid nemo ullam temporibus illo
+        praesentium, sit amet consequatur, odio ut quia dolorum delectus, nihil cupiditate consectetur.
+    </div>
+
+    <h3> vh : viewport height </h3>
+    <div class="box4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab libero molestias eligendi quidem
+        voluptatem iste. Ex, dicta quod impedit, amet maxime cumque sit reprehenderit assumenda deserunt iusto magni
+        error vel quaerat architecto cupiditate? Aspernatur culpa consequuntur nemo odit sed incidunt quidem ea animi
+        hic rem.
+    </div>
+
+    <h2>Easy definitions : REM & EM : </h2>
+    <h3>
+        REM (Root Em): 1rem is equal to the font size of the root (html) element.
+        Example: If html font-size is 16px, then 1rem = 16px.
+        EM: 1em is equal to the font size of the current/parent element.
+        Example: If the parent has font-size: 20px, then 1em = 20px.
+        If the parent has font-size: 20px, then 2em = 40px.
+
+        Easy to remember:
+        👉 rem = based on root font size
+        👉 em = based on parent/current font size
+    </h3>
+
+    <br>
+
+    <h3>rem : means jitna root ko milne wala tha uska dunga. root elemments k font size se double hojayega . html is the
+        root element.
+    </h3>
+
+    <p>html is a root element . biodefault font size is 16px .</p>
+
+
+    <h3>em : inherit ker k is ko jitna font size milne wala tha uska double mmeans dugna melega.</h3>
+
+    <div class="container1">
+        <div>container 1
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ipsum numquam quod blanditiis et repellendus
+            nihil alias dignissimos officia unde laborum itaque architecto expedita quia, deserunt sed praesentium magni
+            assumenda maxime illo, voluptatem possimus. Error quasi saepe quibusdam totam temporibus quis consequuntur
+            consequatur eligendi! Quod?
+            <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, quo.</div>
+        </div>
+        <!-- Expand this to see that this container willl adjust its height . lorem999 -->
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, excepturi.
+
+    </div>
+
+    <h3>Vmin -- means height-- & Vmax -- means width --: </h3>
+    <p>if u want vh in mobile & vw in computer then use Vmax & vmin .</p>
+    <p>width bada hoga height se </p>
+    <h3>example:</h3>
+    <ol>
+        <li>computer</li>
+        <li>laptop screen</li>
+    </ol>
+    <p>but sometimes height bada hoga width se .</p>
+    <h3>example:</h3>
+    <ol>
+        <li>mobile screen</li>
+    </ol>
+
+    <li>min-height : 80vh; : means height ho na ho iski minimum height 80vh rakho hi rakho. </li>
+
+    <li>percentage unit : means is box / paragraph ki parents ki width krdo 50% hogi .</li>
+
+    <div class="mycont">
+        i am another conntainer.
+    </div>
+
+</body>
+</html>
