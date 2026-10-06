@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Shadow & Units</title>
+    <style>
+        .box {
+            border: 2px solid black;
+            padding: 34px;
+            box-shadow: 5px 15px 5px #3ece69;
+        }
+
+        .text-element {
+            text-shadow: 10px 5px 3px #d96bdc;
+        }
+
+        .outline {
+            border: 2px solid black;
+            border-radius: 34px;
+            outline: 2px solid red;
+            outline-offset: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Shadow, Text, Outline :</h1>
+    <h2>Shadow:</h2>
+    <h4>syntax:</h4>
+    <p> box-shadow: h-offset v-offset blur spread color inset;</p>
+    <ol>
+        <li>h-offset & v-offset : (means horizontal vertical shaadow kitni door hogi.)
+            determine shadow horizontal & vertical direction/position.</li>
+        <li> blur : (means jitni zyada value rikhoge utni zyada blur hoga.)
+            the larger the vale, blurere the shadow.</li>
+        <li>spread :(shadow size big small)
+            Expand & shrink the shadow.</li>
+        <li>color : (give color of the shadow.)
+            define shadow color.</li>
+        <li>inset : (aap kitni under shadow rakhna chathy ho.)
+            make the shadow inner.</li>
+    </ol>
+    <div class="box">
+        i am a box
+    </div>
+
+    <h2>Text Shadow:</h2>
+    <h4>syntax:</h4>
+    <p> text-shadow: h-offset v-offset blur spread color ;</p>
+
+    <div class="text-element">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aut inventore amet id
+        exercitationem rem quaerat, consequatur sequi et sit.</div>
+
+
+    <h2>Outline:</h2>
+    <p>is a line that is drawn around element.</p>
+    <h4>syntax :</h4>
+    <p>outline : width style color;</p>
+    <ol>
+        <li>width: sets the outline width.</li>
+        <li>style: determine the style of the outline. ex: dashed, dotted,solid etc.</li>
+        <li>color: sets the outline color.</li>
+    </ol>
+
+    <div class="outline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto exercitationem at ipsa
+        necessitatibus id iste perspiciatis quos error totam quasi?</div>
+
+    <h2>Difference btwn Outline & Border:</h2>
+    <ol>
+        <li>position: space nhi leti hai.-- more space </li>
+        <li>offset: outline offset se outline ki doori increae hojayegi. --- directly nhi kr sakte.</li>
+        <li>width: uniform width.--- we can change it.</li>
+        <li>Rounded corner: nahi hote hai. --- using border-radius we can cahnge have border corners. </li>
+    </ol>
+
+</body>
+</html>
