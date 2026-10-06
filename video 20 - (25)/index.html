@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Lists</title>
+    <style>
+        nav ul li {
+
+            list-style: none;
+            padding: 23px;
+            /* list-style: devanagari; */
+
+            /* • Windows Key (⊞) + . (Dot/Period) */
+            /* • ya fir Windows Key (⊞) + ; (Semicolon) */
+            /* list-style-type: "😊"; */
+
+            /* background-color: yellow; */
+            /* list-style-position: inside; */
+            /* border: 2px solid black; */
+            /* list-style-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8AvkHF7XW1uPb_c9DivbBsXJ_qI9pUq_rirEaUa_HEA&s=10"); */
+            /* list-style: disc inside url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8AvkHF7XW1uPb_c9DivbBsXJ_qI9pUq_rirEaUa_HEA&s=10"); */
+            /* panda image  */
+
+        }
+
+        nav ul {
+            display: flex;
+        }
+
+        h4 ul li {
+            list-style: none;
+
+
+        }
+
+        h3 ul li {
+            /* numbers marathi me aajayega dot remove ho kr  */
+            list-style: devanagari;
+
+        }
+
+        div ol li {
+            background-color: yellow;
+        }
+
+        div ul li {
+            background-color: yellow;
+            list-style-position: inside;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+
+    <ol>
+        <li>display: list-item;</li>
+        <dd>means Marker or content hota hai. </dd>
+        <dd>means dot (.) is a marker and home is a list/ content.</dd>
+
+        <li>list-style: none;</li>
+        <dd>means Marker means dot (.) gayab ho jayega.</dd>
+        <h4>example
+            <ul>
+                <li>Home</li>
+            </ul>
+        </h4>
+
+
+
+        <li>list-style: Devanagari;</li>
+        <dd>means Marker means dot (.) gayab ho jayega. or uski jagah numbers marathi me aa jayege.</dd>
+        <h3>example
+            <ul>
+                <li>Home</li>
+            </ul>
+        </h3>
+
+        <li>background-color: yellow;</li>
+        <dd>means ye use krne se only content ka background yellow hoga numbers lo </dd>
+        <div>
+            <ol>
+                <li>Home</li>
+            </ol>
+        </div>
+
+
+        <br>
+
+        <li>list-style-position: inside;</li>
+        <dd>means is se content or mark means numbers dono ka background color yellow ho jayega. oor mark means numvbers
+            content k under ajayega.</dd>
+        <div>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+            </ul>
+        </div>
+
+
+        <br>
+
+        <li>list-style-img:url("")</li>
+        <dd>means image ajayegi numbers ki jagah 123 ki jagah..</dd>
+
+        <br>
+
+        <li>list-style-type: ""</li>
+        <dd>means emoji ajjayegi 123 numbers ki jagah.</dd>
+
+    </ol>
+
+</body>
+
+</html>
