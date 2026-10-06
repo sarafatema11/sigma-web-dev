@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Property</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            border: 2px solid blue;
+            /* display: inline; */
+            display: inline-block;
+            width: 344px;
+            padding: 45px;
+            margin: 34px;
+        }
+
+        .box1 {
+            /* display: none; */
+            /* visibility: hidden; */
+            display: flex;
+            justify-content: center;
+            /* display: inline-flex; */
+            /* display: grid; */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- mdn docs-- display topics -- read it on chrome. -->
+    <h1>CSS display Property :</h1>
+    <ol>
+        <li>Inline Element: div is a inline</li>
+        <li>Block Element: span is a block </li>
+    </ol>
+    <h3>Inline-block element:</h3>
+    <p>means aagr aap isko use karenge aagar aap chathy ho ki aap ki margin & width , padding, top se bhi lage to
+        inline-block element use hoga.</p>
+    <h4>Example: display: inlne-block;</h4>
+
+    <h3>Display: none; (DN) </h3>
+    <p>display none krne se hum ne jo bhi display di hogi wo remove hojjayegi.</p>
+    <h4>example: .box1 dekho style css me.</h4>
+
+    <h3>visibility property: (vp) </h3>
+    <p>suupose hum ne visibility hidden di-- to box gayab hojayega but uski space raghegi.</p>
+    <h4>example :</h4>
+    <p>visibility: hidden;</p>
+
+    <h2>Differencce btwn DN & VP :</h2>
+    <h3>visibility: </h3>
+    <p>ye lagaunge to space rahhegi box chala jayegga but in display none</p>
+
+    <h3>display none:</h3>
+    <p>ye lagaunge to space or box dono remove ho jayenge.</p>
+
+
+
+    <div class="box box1">i am a box</div>
+
+    <div class="box">hey its me</div>
+
+    <span>i am a good</span>
+    <span>girl</span>
+
+    <h3>flex box: </h3>
+    <p>mostly used to move the text & box etc.</p>
+
+    <h3>grid:</h3>
+    <p>is also a display property.</p>
+</body>
+</html>
