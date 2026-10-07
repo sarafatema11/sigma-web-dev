@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS POsition</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            border: 2px solid black;
+            height: 433px;
+            width: 80vw;
+            margin: 3px;
+            padding: 3px;
+        }
+
+        .box1 {
+            background-color: aqua;
+            /* sticky position mostly used for navbar  */
+            /* position: sticky;
+            top: 0px;
+            height: 111px;
+            width: 100%;
+            margin: 0;
+            padding: 0; */
+
+            /* position: relative; */
+            /* z-index: 1; */
+
+            position: absolute;
+            top: 0px;
+            left: 3px;
+        }
+
+        .box2 {
+            background-color: azure;
+            /* top: -78px; */
+            /* left: 144px; */
+
+            /* position: relative;
+            top: 34px;
+            left: 56px; */
+
+        }
+
+        .box3 {
+            background-color: antiquewhite;
+            /* position: fixed;
+            bottom: 0px;
+            left: 8vw;
+            height: 111px; */
+        }
+
+        .box4 {
+            background-color: purple;
+        }
+
+
+        .parent {
+            /* position: sticky; */
+            /* position: absolute; */
+            /* position: fixed; */
+            padding: 43px;
+            margin: 34px;
+            border: 3px solid purple;
+            
+            /* Exceptoion:  transformed ,  filter or perspective properties can also make an element appear as a positioned  */
+
+            /* position: relative; */
+            /* transform: translate(0); */
+            /* filter: invert();  */
+            /* using --filter invert() -- property color change hojate hai.  */
+            /* filter: invert(0); */
+            perspective: 0em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+
+    </div>
+
+    <h1>Css Position Property:</h1>
+
+    <ol>
+
+        <h3>
+            <li>Static:</li>
+        </h3>
+        <dd>(biodefault property of position)</dd>
+        <dd>jaha pr tha waha rahega koi aasar nahi padega. top bottom etc nahi laga sakte..</dd>
+
+        <h3>
+            <li>position: relative; :</li>
+        </h3>
+        <dd>jo itni ki aap ni jagha thi waha mein top:4px; laga sakta hu. isse element ko move ker sakta ho.</dd>
+        <dd>z-index:1; tabhi kaam karega jab positiion: relative laga hua ho.</dd>
+        <dd>is mein Aap ya to top / bottom or left / right in dono me se koi ek laga sakte ho.</dd>
+        <h4>example:</h4>
+        <dd>top:34px;</dd>
+        <dd>left:56px;</dd>
+
+        <h3>
+            <li>z-index:1; :</li>
+        </h3>
+        <dd>ye laga ne se hum ek dusre box ko upr neeche kr sakte hai. example box 1 dekho </dd>
+
+
+        <h3>
+            <li>position: absolute; :</li>
+        </h3>
+        <dd>ye lagta hai "Nearest Positioned ancestor"</dd>
+        <h4>example: (box 1 & parent ka style css dekho.)</h4>
+        <dd>position: Absolute;</dd>
+        <dd>top : 0px;</dd>
+        <dd>left : 0px;</dd>
+
+
+        <p>jo position Absolute hai wo aapne "nearest parent" dundti hai jo ki (Positioned)hai.
+        </p>
+        <p>or ek baar wo mil gaya aapna "nearest Positioned element" us k relative wo top & left / bottom & right /
+            bottom & left / top & right etc. us k hisab se Aap ne position ko laga deti hai.
+        </p>
+
+        <h3>
+            <li>positiion: Fixed; :</li>
+        </h3>
+        <dd>Aap ki position ko fixed kerdega Aap scroll bhi karoge to wo fixed hi rahega remove nhi hogga.</dd>
+
+        <h4>example: (box 3 style css dekho )</h4>
+        <dd>position: fixed;</dd>
+        <dd>bottom: 0px;</dd>
+        <dd>left:8vw;</dd>
+        <dd>height: 111px;</dd>
+
+
+        <h3>
+            <li>Sticky Position: </li>
+        </h3>
+        <dd>sticky means jipak jane wali cheez jab hum kisi bhi element ko / ya somethhing else ko sticky position de
+            dete hai to wo vahi chipak jata hai.</dd>
+        <dd>fixed & sticky both are different.</dd>
+
+        <h4>example: (see box 1 style css)</h4>
+
+        <dd>position: sticky;</dd>
+        <dd> top: 0px;</dd>
+        <dd>height: 111px;</dd>
+        <dd>width: 100%;</dd>
+        <dd> margin: 0;</dd>
+        <dd> padding: 0; </dd>
+
+        <h2>Differencw btwn Fixed & Sticky:</h2>
+
+        <ol>
+            <h3>
+                <li>fixed:</li>
+            </h3>
+            <dd>means fixed kerdo ek jagah per.</dd>
+
+            <h3>
+                <li>Sticky:</li>
+            </h3>
+            <dd>means jab tak Aap is ki above scroll nahi karoge ye static rahhega or jaise hi is k par scroll karoge
+                dewar k par wo sticky ban jayega.
+
+            </dd>
+        </ol>
+
+        <h3>
+            <li>transform:: translate(0); ;</li>
+        </h3>
+        <dd>ye property lagi hu hai na tabhi parent k relative hi position ho raha hai.</dd>
+        <h4>example: (parent dekho style css me)</h4>
+
+        <h3>
+            <li>filter:invert();</li>
+        </h3>
+        <dd>ye krne se basically color change hoga.</dd>
+
+        <h3>
+            <li>filter:invert(0);</li>
+        </h3>
+        <dd>parent ki relative position karega.</dd>
+
+        <h3>
+            <li>perspective:0em; </li>
+        </h3>
+        <dd>parents ki relative hoga.</dd>
+
+
+
+    </ol>
+
+</body>
+
+</html>
