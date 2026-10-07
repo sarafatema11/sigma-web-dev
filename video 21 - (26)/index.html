@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS overflow Property</title>
+    <style>
+        .box {
+            width: 30vw;
+            height: 10vh;
+            border: 2px solid black;
+            overflow: scroll;
+        }
+
+        .box1 {
+            width: 70vw;
+            height: 70vh;
+            border: 2px solid black;
+            overflow: auto;
+            overflow: scroll;
+        }
+
+        .box2 {
+            width: 30vw;
+            height: 40vh;
+            border: 2px solid black;
+            /* overflow: auto; */
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .box3 {
+            width: 30vw;
+            height: 40vh;
+            border: 2px solid black;
+            /* overflow: scroll; */
+            overflow: clip;
+            white-space: nowrap;
+        }
+
+        .box4 {
+            width: 30vw;
+            height: 30vh;
+            border: 2px solid black;
+            /* overflow-x:hidden; */
+            /* overflow-y: scroll; */
+            /* overflow: hidden scroll; */
+            /* overflow: scroll hidden; */
+            overflow: scroll scroll;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>CSS overflow Property</h2>
+
+    <ol>
+        <h3>
+            <li>overflow: scroll ;</li>
+        </h3>
+        <dd>is se ek scroll bar ajayega horizontal scrollbar.</dd>
+
+
+        <div class="box">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis possimus vero soluta doloribus consequuntur
+            culpa eum eius non, dolore aliquam ut est et fugit hic harum odit. Repellat mollitia ullam consectetur illum
+            rerum! Dignissimos molestias aperiam optio corporis eos. Nobis Lorem ipsum dolor sit, amet consectetur
+            adipisicing elit. Quas, rerum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, minima.
+        </div>
+
+        <h3>
+            <li>overflow: auto;</li>
+        </h3>
+        <dd>Agar ye overflow kar raha hai to sccroll bar dekaho warma maat dekhao.</dd>
+
+        <div class="box1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae ipsa, ea nihil nesciunt minus
+            adipisci eaque accusantium fugiat voluptates iste. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Alias non excepturi ut optio esse eius numquam adipisci officiis repellendus eveniet?</div>
+
+
+
+        <h3>
+            <li>white-space:nowrap;</li>
+        </h3>
+
+        <dd>means ye use krne se ye horizontally pori space le legi means pura text paragraphn ek line me horizontal
+            ajayega vertically scroll nhi ayega means vertically neeche ko text nahi melega.</dd>
+
+        <div class="box2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis ipsum libero ab
+            veritatis, quasi tenetur incidunt qui beatae fuga? At officiis vel nisi saepe nam! Ducimus nisi at sunt
+            nobis. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus, consequatur.</div>
+
+        <h3>
+            <li>text-overflow: ellipsis;</li>
+            <li>overflow: hidden;</li>
+        </h3>
+        <dd>ye donno krne se text me 3 dot ajate hai like this ...</dd>
+
+
+        <h3>
+            <li>overflow: clip;</li>
+        </h3>
+        <dd>scroll bar remove kr deta hai.</dd>
+
+        <div class="box3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id praesentium facilis atque
+            eligendi cum sed ducimus non perferendis tenetur at molestias, vero totam accusantium quaerat ratione
+            inventore quo exercitationem quidem.</div>
+
+        <h3>
+            <li>overflow-x:hidden;</li>
+            <li>overflow-y:scroll;</li>
+        </h3>
+        <dd>overflow-x hidden hojayega. & overflow-y mein scoll ajayega.</dd>
+
+        <div class="box4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate sint sunt perferendis
+            quibusdam nulla unde asperiores, harum corrupti quam dignissimos at laborum ipsum quidem recusandae
+            nesciunt? Et laborum dicta quidem velit deleniti provident asperiores magnam.</div>
+
+
+        <h3>
+            <li>overflow: hidden auto;</li>
+            <li>overflow: auto hidden;</li>
+        </h3>
+        <dd>hidden is x & auto is y and another one auto se x & hidden is y.</dd>
+        
+    </ol>
+</body>
+
+</html>
