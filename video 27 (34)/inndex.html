@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Css Float & Clear</title>
+    <style>
+        .Cards {
+            border: 2px solid black;
+            /* Aagr aap ki image line or content se bhar jari hai to isko manage krta hai according to content  */
+            display: flow-root;
+        }
+
+        /* flat left krne se left side float karega & content alloe kerdega right side mein. */
+        img {
+            float: left;
+            /* float: right; */
+        }
+
+        .card {
+            border: 2px solid red;
+        }
+
+        .card:nth-child(3) {
+            background-color: aqua;
+            /* clear: right; */
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- shortcut key:----- .cards>.card*3   -->
+    <div class="Cards">
+        <img src="https://st4.depositphotos.com/3584053/27959/i/450/depositphotos_279597000-stock-illustration-snowman-and-snow-day-new.jpg"
+            width="230px" alt="">
+        <div class="card">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, voluptate veniam odio, ducimus odit nisi
+            officiis hic quasi blanditiis delectus, ad enim consequatur! Maxime accusantium nihil nesciunt soluta esse
+            quia?
+        </div>
+        <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste deserunt quasi omnis id quos
+            corrupti ipsam, eius, tempore earum animi ex eligendi laboriosam. Reiciendis inventore magni, quos
+            perferendis commodi eum magnam quidem ut cumque, sunt laudantium? Voluptate, ducimus dolores laboriosam
+            dolorum odio iusto autem in est ab! Vitae ullam consequuntur laboriosam nulla dignissimos dolorem quia
+            dolores expedita adipisci? Vel laudantium earum quis, asperiores veniam nisi unde veritatis debitis sunt.
+            Placeat error accusantium expedita quas quibusdam obcaecati culpa facilis voluptatibus minus numquam
+            mollitia aliquid aliquam, voluptas totam facere, autem voluptatum neque maxime in incidunt nihil. Recusandae
+            deserunt aliquam corrupti qui fuga quisquam incidunt, similique modi dignissimos adipisci labore illum quo
+            fugit eos quibusdam, a optio. Itaque optio illum, at porro corporis delectus! At soluta accusamus
+            reprehenderit, rerum nulla atque, iure voluptates, veritatis provident beatae perferendis molestiae sapiente
+            illo tenetur impedit quia nam non distinctio corrupti libero commodi? Sed in dolor placeat reiciendis maxime
+            molestias consequatur iste similique animi, voluptate itaque error est neque excepturi ducimus consectetur
+            accusamus delectus voluptatibus, ipsam, rerum aliquid dolores architecto. Dolorum deserunt explicabo, quam
+            ea blanditiis eius, nemo magni voluptatum quis alias harum animi placeat beatae cum vel error quidem.
+            Aperiam vitae ab consectetur nam maxime incidunt, est earum nihil pariatur ut nobis facere! Facilis aliquid
+            harum possimus fugit fugiat obcaecati tempore ullam cupiditate animi, quisquam quis totam non et perferendis
+            expedita asperiores quia sit assumenda commodi quam? Alias perferendis cum possimus quasi nesciunt laborum
+            molestias doloremque dolorem porro? Veritatis at tempora unde accusantium aut, delectus optio iste dolor
+            mollitia odit asperiores vel, ducimus voluptatem pariatur nulla. Qui illo repellendus hic ipsa architecto ea
+            neque illum. Eos, eaque! Sapiente quasi fugit ut a minus quae esse nemo voluptates alias, sed officiis
+            doloremque quas rem, omnis harum corporis libero velit voluptas? Voluptatibus velit nihil blanditiis et
+            atque repellendus. Illo earum cumque doloribus rerum quam soluta pariatur quae id! Itaque voluptatibus
+            laborum hic voluptas obcaecati ipsum explicabo adipisci? Est eveniet, totam quod modi, reprehenderit cumque
+            placeat molestiae molestias, laborum omnis at quae iusto fuga?</div>
+        <div class="card">Card 3</div>
+    </div>
+    <div>
+        <h2>float</h2>
+        <p> flat left krne se left side float karega & content alloe kerdega right side mein.</p>
+        <p>example: paragraph text image k right side me move krdega.</p>
+        <br>
+
+        <h2>clear</h2>
+        <p>mere right mein ya left side me koi bhi content hoga usko clear means koi bhi element flat na kere. we use
+            clear property.</p>
+        <br>
+
+        <h2>display: flow-root;</h2>
+        <p>Aagr aap ki image line or content se bhar jari hai to isko manage krta hai according to content
+        </p>
+    </div>
+</body>
+
+</html>
