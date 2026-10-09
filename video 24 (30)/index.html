@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+    <style>
+:root{
+    --color:rgb(236, 66, 222);
+    --seccolor:rgb(233, 168, 228);
+    --defpad:23px;
+    --defop:0.4;
+}
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav {
+            background-color:var(--color);
+        }
+
+        .container {
+            background-color:var(--seccolor);
+        }
+
+        ul {
+            display: flex;
+        }
+
+        ul li {
+             /* opacity: 0.3; */
+             opacity: var(--defop);
+            list-style: none;
+            /* padding: 34px; */
+            padding: var(--defpad);
+            border: 2px solid var(--seccolor);
+        }
+
+        /* agar color naam ka vairable na mele to uska background color blue krdo */
+
+        ul li:first-child{
+              --color:rgb(224, 30, 30);
+              /* background-color:var(--color, blue); */
+              background-color:var(--color);
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore reprehenderit unde rerum illo veniam qui quis,
+        facilis, quia voluptatum hic nostrum quisquam temporibus ad culpa distinctio accusantium tempore repellat
+        laudantium nobis aliquid facere quo voluptatibus placeat totam. Nobis iste quos ipsum! Rerum quia incidunt
+        harum!
+    </div>
+
+    <h2>css variable can only holds colors?</h2>
+    <h3>Answer: No </h3>
+    <h3>bbcz they only hold Values , background url, springs, numberss etc.</h3>
+
+</body>
+
+</html>
