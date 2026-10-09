@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Media Queries</title>
+    <style>
+        body {
+            background-color: red;
+        }
+
+        /* @media not/only media type & (expression) {
+            css-code;
+        } */
+
+        @media only screen and (max-width: 455px) {
+            body {
+                background-color: blue;
+            }
+
+            .boxes {
+                flex-direction: column;
+            }
+        }
+
+
+        /* minimum media query 455 se zyada ya 455 tak rehna to hi background color blue ho jayrga. */
+
+        /* @media only screen and (min-width: 455px) {
+            body {
+                background-color: blue;
+            }
+        } */
+
+        .boxes {
+            display: flex;
+        }
+
+        .box {
+            width: 344px;
+            height: 344px;
+            background-color: steelblue;
+            margin: 3px;
+            padding: 3px;
+        }
+
+        /* landscape means width height se zyada ho or portrait means height width se zyada ho */
+        @media screen and (orientation: portrait) {
+            body {
+                border: 2px solid purple;
+            }
+        }
+
+         /* @media screen and (orientation: landscape) {
+            body {
+                border: 2px solid purple;
+            }
+        } */
+    </style>
+</head>
+
+<body>
+    <div>Hey i am a red body guy!</div>
+
+    <h2>Media rule:</h2>
+    <p>purpose ye tha ki aagar koi bhi insaan kisi dusre device mein access ker raha hai website to style ko changed kya
+        ja sakte.</p>
+    <p>Css3 me media name changed & convert into MEDIA QUERY.</p>
+    <h3>Syntax:</h3>
+    <h4>@media not/only media type & (expression){
+        css-code;
+        }
+    </h4>
+    <h2>Media Query is used for "to make responsive design" banannae k lye.</h2>
+
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>
