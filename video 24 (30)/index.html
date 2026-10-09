@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Variables</title>
     <style>
-:root{
-    --color:rgb(236, 66, 222);
-    --seccolor:rgb(233, 168, 228);
-    --defpad:23px;
-    --defop:0.4;
-}
+        :root {
+            --color: rgb(236, 66, 222);
+            --seccolor: rgb(233, 168, 228);
+            --defpad: 23px;
+            --defop: 0.4;
+        }
 
         * {
             margin: 0;
@@ -19,11 +19,11 @@
         }
 
         .nav {
-            background-color:var(--color);
+            background-color: var(--color);
         }
 
         .container {
-            background-color:var(--seccolor);
+            background-color: var(--seccolor);
         }
 
         ul {
@@ -31,8 +31,8 @@
         }
 
         ul li {
-             /* opacity: 0.3; */
-             opacity: var(--defop);
+            /* opacity: 0.3; */
+            opacity: var(--defop);
             list-style: none;
             /* padding: 34px; */
             padding: var(--defpad);
@@ -41,13 +41,11 @@
 
         /* agar color naam ka vairable na mele to uska background color blue krdo */
 
-        ul li:first-child{
-              --color:rgb(224, 30, 30);
-              /* background-color:var(--color, blue); */
-              background-color:var(--color);
+        ul li:first-child {
+            --color: rgb(224, 30, 30);
+            /* background-color:var(--color, blue); */
+            background-color: var(--color);
         }
-
-
     </style>
 </head>
 
