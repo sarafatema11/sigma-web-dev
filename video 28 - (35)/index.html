@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors</title>
+    <style>
+        /* .box:first-child {
+            background-color: red;
+        } */
+
+
+        /* ye jo hai na ye selector use kerne se first line of the paragrapgh ka colour yellow ho jayega.  */
+
+        /* .box::first-line {
+            color: yellow;
+        } */
+
+        /* 
+        is me boxes me sare elements ka color blue krdo or border dedo un sab ko.  */
+
+        /* .boxes * {
+            color: blue;
+            border: 2px solid black;
+        } */
+
+
+        /* p, a, .box, ye sab alaga sakte hai isko grouping bolte hai. */
+
+        /* p, a, .box, [data-color="primary"] {
+            padding-top: 45px;
+        }   */
+
+        /* .box:nth-child(even) {
+            background-color: blue;
+        } */
+
+        /* .box:nth-child(odd) {
+            background-color: blue;
+        } */
+
+
+        /* .box:nth-last-child(1) {
+            background-color: red;
+        } */
+
+        .boxes::before {
+            content: "Harry is good.";
+            color: blue;
+        }
+
+        .boxes::after {
+            content: "Sigma Course is also good. ";
+            color: red;
+        }
+
+        .boxes::selection {
+            color: aqua;
+            background-color: black;
+        }
+
+        .box::first-letter {
+            color: peru;
+            font-size: 45px;
+        }
+
+        input::placeholder {
+            color: rgb(104, 104, 166);
+            /* font-size: 40px; */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Selectors</h1>
+    <h3>More on CSS Selectors : - chp-17 we already talk about some css selectors.</h3>
+
+
+    <div class="boxes">
+        <div data-color="primary" class="box">Hey I am first box!</div>
+        <div class="box">Hey I am box!</div>
+        <div class="box">Hey I am box!</div>
+        <input type="text" placeholder="Type your name here">
+    </div>
+
+    <div>
+        <ol>
+
+            <li>
+                <h2>.boxes *</h2>
+            </li>
+            <dd>boxes k under jo element hai usko select kerne k liye aap (.boxes *{}) bol k select ker sakte hai.</dd>
+
+
+            <li>
+                <h2>.boxe::first-line</h2>
+            </li>
+            <dd>ye use krne se jo aap ka paragraph ki first line hai wo color yellow hho jayega..</dd>
+            <dd> ye jo hai na ye selector use kerne se first line of the paragrapgh ka colour yellow ho jayega. </dd>
+
+
+            <li>
+                <h2>attribute selector:</h2>
+            </li>
+            <dd>we can use attribute selector on ID & class jo attribute HTML element hoga us pr kr sakte hai.</dd>
+            <dd>jaha data color primary ho waha waha margin 45px lag jaye.</dd>
+            <h4>ex: margin-top: 45px;</h4>
+            <dd>padding lagaoge to wo under se top element pr 45px lagegi. </dd>
+
+            <li>
+                <h2>nth-child(even) / nth-child(odd) :</h2>
+            </li>
+            <dd>means .box me nth child even ho to background color blue krdo ex: 2,4,6,8 etc.</dd>
+            <h4>ex: .box:nth-child(even){
+                background-color: blue;
+                }
+            </h4>
+
+            <dd>nth-child ,box me odd ho to us ka background-color red krdo ex: 1,3,5,7 etc.</dd>
+            <h4>ex: .box:nth-child(odd){
+                background-color: blue;
+                }
+            </h4>
+
+            <li>
+                <h2>nth-last-child(1) </h2>
+            </li>
+            <dd>means neeche se jo last hai waha se jo first line hai uska background-color red krdo.</dd>
+
+            <li>
+                <h2>.boxes::before & .boes::After </h2>
+            </li>
+            <dd>means element ko css k through dynamically insert kya ja sakta hai using " Befor & after " is called "
+                pseudo element".</dd>
+            <dd>means main content se phale is me ek content daal dena.</dd>
+
+            <ol>
+                <h3>
+                    <li>before:</li>
+                </h3>
+                <p>main content se phele insert kerdega.</p>
+
+                <h3>
+                    <li>after</li>
+                </h3>
+                <p>main content k baad insert hota means last me or aap indono ko style bhi kr sakte ho before & after
+                    ko .</p>
+            </ol>
+
+            <h2>
+                <li>.boxes::selection </li>
+            </h2>
+            <dd>
+                ye use kerte selected element pr style aaply kerdega jab bhi aap cursor se element selecct karoge uska
+                color or background coolor change hojayega.
+            </dd>
+
+            <h2>
+                <li>.box::first-letter</li>
+            </h2>
+            <dd>means hamare box ka jo first letter hai us ka color peru hojaye change hojaye.</dd>
+
+            <h2>
+                <li>input::placeholder </li>
+            </h2>
+            <dd>
+                input ka jo placeholder hai usko mein target krna chatha ho or us ka color blue krna change krna chatha
+                ho.
+            </dd>
+        </ol>
+    </div>
+</body>
+</html>
