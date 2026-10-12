@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css flexbox </title>
+    <style>
+        .container {
+            border: 2px solid red;
+            display: flex;
+            height: 80vh;
+            /* item top se center hojayege  */
+            /* justify-content: center; */
+            /* vertically means box k beech me center ho jayega.*/
+            align-items: center;
+
+            /* flex-direction: column; */
+            /* flex-direction: column-reverse; */
+            /* flex-direction: row; */
+            /* flex-direction: row-reverse; */
+            flex-wrap: wrap;
+            /* align-content: center; */
+            /* align-content: flex-start; */
+
+            /* there is no justify-items in flexbox  */
+            /* flex-wrap: nowrap; */
+            flex-flow: row wrap;
+            /* gap:30px ;
+            row-gap: 40px;
+            column-gap: 10px; */
+            gap: 40px 10px;
+
+
+        }
+
+        .item {
+            /* flex-grow: 1; */
+            background-color: blueviolet;
+            height: 62px;
+            width: 62px;
+            /* margin: 4px; */
+            border: 2px solid black;
+        }
+
+        .order-1 {
+            order: 1
+        }
+
+        .order-2 {
+            order: 2
+        }
+
+        .order-3 {
+            order: 3
+        }
+
+        .item1 {
+            /* flex-grow: 2; */
+            /* flex-shrink: 2; */
+            align-self: flex-start;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item item1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item order-1">4</div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+
+
+    </div>
+
+    <h1>flexbox-direction properies:</h1>
+    <ol>
+        <h3>
+            <li>flex-direction:</li>
+        </h3>
+        <dd>biodeafult left to right hai we can change it also we can do top to bottom.</dd>
+
+        <h3>
+            <li>flex-direction:column;</li>
+        </h3>
+        <dd>ye items ko "row" mein na le kr "columns" me lega items ko.</dd>
+
+        <h3>
+            <li>flex-direction:column-reverse;</li>
+        </h3>
+        <dd>ye items ko ulta kr dega. ex:- top 1 me one arra tha abb bottom se 1 arra.</dd>
+
+        <h3>
+            <li>flex-direction:row;</li>
+        </h3>
+        <dd>items move to horizonatll row </dd>
+
+        <h3>
+            <li>flex-direction:row-reverse;</li>
+        </h3>
+        <dd>items move to horizonatll row. but ex:- 1,2,3 start from right side.</dd>
+
+    </ol>
+
+    <h1>flex-wrap: </h1>
+    <ol>
+        <h3>
+            <li>flex-wrap:wrap;</li>
+        </h3>
+        <dd>wrap means " new content neeche aa jayega."</dd>
+        <dd>
+            if overlapping ho rahi hai to koi cheez agr box k bhar jarahi hai to usko content k overlap ho rahi hai to
+            wrap
+            use kro.
+        </dd>
+
+        <h3>
+            <li>flex-wrap:wrap-reverse;</li>
+        </h3>
+        <dd>wrap reverse se "ulta wrap " hojate hai.</dd>
+
+        <h3>
+            <li>flex-wrap:nowrap;</li>
+        </h3>
+        <dd>is a default property. wrap nhi karega agr aap nhi karoge to.</dd>
+    </ol>
+
+    <h1>align-content: properties:</h1>
+    <dd>Mulltiple lines moves ker sakte hai.</dd>
+    <ol>
+        <h3>
+            <li>align-content: center;</li>
+        </h3>
+        <h3>
+            <li>align-content: flex-start;</li>
+        </h3>
+        <h3>
+            <li>align-content: flex-end;</li>
+        </h3>
+    </ol>
+
+    <h1>difference between Align-item & align-content:</h1>
+    <ol>
+        <h2>
+            <li>align-item: (only one line then use it.)</li>
+        </h2>
+
+        <dd>sirf aagar ek line hai hamare pass dusri line me nhi gye items to hum "align-item" ka use krte hai.</dd>
+
+        <h2>
+            <li>align-content: (multiple lines than use it)</li>
+        </h2>
+        <dd>More than one line hai to "align-content" ka use kerte hai.</dd>
+    </ol>
+    <h1>there is no justify-items in flexbox.</h1>
+    <ol>
+        <li>justify-content</li>
+        <li>align-item</li>
+        <li>align-content</li>
+    </ol>
+
+    <h1>flex-flow</h1>
+    <dd>ye property ek sath do cheeze set krti hai.</dd>
+    <ol>
+        <li>flex-direction</li>
+        <li>flex-wrap</li>
+    </ol>
+    <h2>syntax:-</h2>
+    <h3>flex-flow:flex-direction flex-wrap;</h3>
+    <h2>example:</h2>
+    <h3>flex-flow:row wrap;</h3>
+
+    <h1>gap property:</h1>
+
+    <ol>
+        <h3>
+            <li>gap:30px;</li>
+        </h3>
+        <dd>using this property u can give gap betweens items & row & colums.</dd>
+
+        <h3>
+            <li>row-gap:40px;</li>
+        </h3>
+        <dd>give row gap.</dd>
+
+        <h3>
+            <li>column-gap:10px;</li>
+        </h3>
+        <dd>give column gap.</dd>
+
+        <h3>
+            <li>gap: row-gap column-gap;</li>
+        </h3>
+        <h2>gap: 40px 10px;</h2>
+        <dd>its give both row & column gap.</dd>
+    </ol>
+
+    <h1>Item properties:</h1>
+    <ol>
+        <h2>
+            <li>order: </li>
+        </h2>
+        <ol>
+            <li>starting order default zero.</li>
+            <li>order property jitni zyada hogi utna baad mein elemment ayega.</li>
+            <li>jis k order sab se kaam hoga wo sab se phele ayega.</li>
+            <li>kaam order. phele</li>
+            <li>zyada order . baad me last me.</li>
+        </ol>
+
+        <h1>
+            <li>flex-grow:2</li>
+        </h1>
+        <ol>
+            <li>biodefault zero hai.</li>
+            <li>ye ek item ki jagah 2 item ki jagah lega</li>
+            <li>.item{
+                flex-grow:2;}
+            </li>
+            <li>pure flex box ki jo width hai us me sare item ek jagah lenge equally width ko le k.</li>
+            <li>sare items ek hi row me ajayenge.</li>
+        </ol>
+
+        <h1>
+            <li>flex-shrink:</li>
+        </h1>
+        <dd>ye ability hai ki ye half ho sakta hai."chota ho sakta hai."</dd>
+
+        <h1>
+            <li>align-self:</li>
+        </h1>
+        <dd>ek partcular element ki position change kerna chatha ho to use kro.</dd>
+
+    </ol>
+</body>
+
+</html>

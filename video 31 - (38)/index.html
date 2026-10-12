@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox</title>
+    <style>
+        .container {
+            border: 2px solid red;
+            display: flex;
+            height: 80vh;
+            /* item top se center hojayege  */
+            justify-content: center;
+            /* vertically means box k beech me center ho jayega. */
+            align-items: center;
+            /* flex-direction: column; */
+        }
+
+        .item {
+            background-color: blueviolet;
+            height: 62px;
+            width: 62px;
+            margin: 4px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+
+    <h1>Container properies:</h1>
+
+    <h1>CSS Flexbox:</h1>
+    <dd>ye jo flexbox hai wo container pr lagayi jati hai individual item pr nahi lagayi jati. "Ek container jis k under
+        multiple items ho".</dd>
+    <br>
+
+    <ol>
+        <h3>
+            <li>display: flex;</li>
+        </h3>
+        <dd>biodefault flexbox aap k item ko left to right ker deta hai automatically means (vertically to horizontal).
+        </dd>
+
+        <h3>
+            <li>justify-content:center;</li>
+        </h3>
+        <dd>item "center hojayega "</dd>
+
+
+        <h3>
+            <li>align-item:center;</li>
+        </h3>
+        <dd>ye use krne se vertically "center hojayega."</dd>
+
+        <h2>justify-content properties:</h2>
+        <dd>ye sab property ka use ker k aap items ko "horizontally" move ker sakte ho.</dd>
+
+        <ol>
+            <h3>
+                <li>justify-content:center;</li>
+            </h3>
+            <dd>items "center hojayega."</dd>
+
+            <h3>
+                <li>justify-content:flex-start;</li>
+            </h3>
+            <dd>ye flex ki start ki taraf chala jayega.</dd>
+
+            <h3>
+                <li>justify-content:flex-end;</li>
+            </h3>
+            <dd>ye flex ki end ki taraf chala jayega.</dd>
+
+            <h3>
+                <li>justify-content:right;</li>
+            </h3>
+            <dd>ye item ko "right isde" move kr dega.</dd>
+
+            <h3>
+                <li>justify-content:left;</li>
+            </h3>
+            <dd>ye item ko "left isde" move kr dega.</dd>
+
+            <h3>
+                <li>justify-content:space-around;</li>
+            </h3>
+            <dd>starting se ending (equal soace divided kerta) mein space ajayega.</dd>
+            <h3>
+                <li>justify-content:space-between;</li>
+            </h3>
+            <dd>only item k between space dega starting se ending me space nahi dega.</dd>
+
+            <h3>
+                <li>space-evvenly;</li>
+            </h3>
+            <dd>means barabar space krna.</dd>
+
+
+            <h2>
+                <li>difference btwn SPACE-AROUND / SPACR-BETWEEN:</li>
+            </h2>
+            <dd>space around: equally divided space.</dd>
+            <dd>space between: starting & ending me space nhi hoga sirf beech me hpga.</dd>
+
+        </ol>
+    </ol>
+
+    <h2>Align-item properties:</h2>
+    <h3><li>align-item: baseline;</li></h3>
+        <dd>means baseline mill jati hai sare items ki (sab k center milana chatha ho) convert into baseline.</dd>
+
+        <h2>Mostly udes:
+            <ol>
+                <li>flex-start</li>
+                <li>flex-end</li>
+                <li>center</li>
+            </ol>
+        </h2>
+</body>
+</html>
