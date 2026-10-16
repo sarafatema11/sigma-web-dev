@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .container {
+            width: 80vw;
+            height: 100vh;
+            border: 2px solid black;
+            display: grid;
+            /* grid-template-columns: [phela]120px [dusra]100px [t];   */
+            /* grid-template-rows: 100px 100px 100px; */
+            /* grid-template-columns: 1fr 2fr 1fr; */
+            /* grid-template-columns: repeat(4, 1fr); */
+            /* grid-template-columns: repeat(4, minmax(100px, 1fr)); */
+            grid-template-columns: repeat(4, 80px);
+            grid-template-rows: repeat(2, 80px);
+            /* gap: 34px; */
+            row-gap: 10px;
+            column-gap: 44px;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .item {
+            border: 2px solid red;
+            height: 55px;
+            width: 55px;
+        }
+
+        .item-4 {
+            /* you can do same things on rows.  */
+            /* grid-row-start: 1;
+            grid-row-end: 2; */
+            /* grid-row: 1/2;  */
+
+            /* you can do same things  on columns. */
+            /* grid-column-start: 1;
+            grid-column-end: 2; */
+            /* grid-column: 1/2;  */
+        }
+
+        .item-1 {
+            /* grid-row: 1/2; */
+            /* grid-column: 1/2; */
+            /* grid-column: 1/3; */
+            /* grid-column: phela/t; */
+            /* grid-column:dusra/t; */
+            /* is me box 1 inspect kr k grid kr k dekhoge to box m 2 se 3 tak jara.  */
+        }
+
+        /* .item-2{
+            align-self: start;
+            justify-self: end;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <!-- 4 n 1 overlap ho ker ek k upr ek ajayega.  -->
+        <div class="item item-2">2</div>
+        <div class="item">3</div>
+        <div class="item item-4">4</div>
+        <div class="item">5</div>
+    </div>
+
+    <h1>CSS Grid Properties:</h1>
+    <dd>in this u can define how many rows & columns are present.</dd>
+
+    <ol>
+        <h2>
+            <li>grid-template-columns: 120px 100px;</li>
+        </h2>
+        <dd>meri grid 2 columns me divide ho jayegi.</dd>
+
+        <h2>
+            <li> grid-template-rows: 100px 100px 100px;</li>
+        </h2>
+        <dd>means jo rows hogi uski height 100px 100px 100px 3 times.</dd>
+
+        <h2>
+            <li> .item-4{
+                grid-row: 1/2;
+                grid-column: 1/2;
+                }
+                <br>
+                .item-1{
+                grid-row: 1/2;
+                grid-column: 1/2;
+                }
+                <br>
+                html code: see
+                <!-- <div class="item item-4">4</div> 
+        html code: <div class="item item-1">1</div> -->
+            </li>
+        </h2>
+        <dd>ye 4 n 1 overlap ho kr ek k upr ek ajayega.</dd>
+
+        <h2>
+            <li>.item-4{grid-row:1/2; & grid-column:1/2;}</li>
+        </h2>
+        <dd>kisi bhi item me tum ne ye bol diya ki mujhe 1 no. se 2 no. tak row & column hona to wo usi pr response
+            hoga.</dd>
+
+        <h2>
+            <li>grid-row-start:1; & grid-row-end:2;</li>
+        </h2>
+        <h2>
+            <li>grid-column-start:1; & grid-column-end:2;</li>
+        </h2>
+
+        <dd>u can also write this in items-4 & item-1 they give same output.</dd>
+        <dd>you can do same things on rows & columns.</dd>
+
+        <h1>Naming Grid line:</h1>
+        <h2>
+            <li> grid-template-columns: [phela]120px [dusra]100px [t];</li>
+        </h2>
+
+        <h2>
+            <li>.item-4{grid-row:1/2; grid-column:phela/t;}</li>
+        </h2>
+
+        <h3>is me box 4 phela means firste se third tak jara t means third / teesra. </h3>
+
+        <dd>columns declare krne se rows automatically ban jati hai. set ho jati hai. dono me se koi ek bhi aap kr skate
+            ho rows n coolumns me se.</dd>
+
+        <dd> grid-template-columns: [phela]120px [dusra]100px [t];</dd>
+        <dd>agr isko comment krdo to rows ban jaegi 3 n then columns bhi utomatically accordingly ban jayegi.</dd>
+        <dd>is k baad aap item me grid row & column kr k set kr sakte ho jaha aap ko hona.n u can overlap bhi kr sakte
+            ho.
+        </dd>
+
+        <h1>
+            <li>Fr Units:</li>
+        </h1>
+        <dd>pure jo bhi avvailable width hai 1 fraction (fr) 3 bar write kr diya to 1 third hogaya or agar</dd>
+        <dd>or agar 4 baar likha hota 1 fouth hojata hai.</dd>
+
+        <h3>1fr 1fr 1fr ------- 1 third</h3>
+        <h3>1fr 1fr 1fr 1fr ------1 fourth</h3>
+
+        <h3>fr is a unit which is specificly used in grid.</h3>
+        <dd> grid-template-columns: 1fr 2fr 1fr;</dd>
+        <dd>is me 2fr 1fr se double hoga.</dd>
+
+        <h2>
+            <li>gap :</li>
+        </h2>
+        <dd>is used to give gap.</dd>
+
+        <h2>
+            <li>row-gap: 10px;</li>
+        </h2>
+        <h2>
+            <li>column-gap: 10px;</li>
+        </h2>
+
+        <dd>u can set also row gap & columnn gap alag alag & sath mein bhi ker sakte ho.</dd>
+<ol>
+    <h1>Alaways Remeber :</h1>
+    <h2><li>Padding use maat kerna (do not use paading in grid).</</li></h2>
+    <h2> <li>use gap (gap property ) in grid.</h2></li>
+</ol>
+
+
+        <h2>
+            <li>place-content: center;</li>
+        </h2>
+        <dd>align-content, & justify-content dono center mein ho jayege.</dd>
+        <h2>
+            <li>justify-item:center; & align-items:center;</li>
+        </h2>
+        <dd>ye dono rite krne se center hojayega.</dd>
+
+        <h1>
+            <dd>align-item center isliye nhi hua bcz aap ne us ko height nahi di hai.</dd>
+        </h1>
+
+        <h2>
+            <li>individua property laga sakte ho app apne accordingly. using see below & see item-2 box :
+            </li>
+        </h2>
+
+        <h2>
+            <li>align-self:start;</li>
+        </h2>
+        <h2>
+            <li>justify-self:end;</li>
+        </h2>
+
+        <h2>
+            <li> grid-template-columns: repeat(4, 1fr);</li>
+        </h2>
+        <dd>it is used to repeat the number & anyother things.</dd>
+        <dd>agr aap 1fr ko 5 times write krna chathye ho to aisa likho ye 1fr to 5 times write krdega.</dd>
+
+        <h2>
+            <li> grid-template-columns: repeat(4, minmax(100px, 1fr));</li>
+        </h2>
+        <dd>means minimum 100px rahe jo cell / column ki width hai. or maximum 1fr rahe.</dd>
+        <dd>1fr means width:80vw ko 4 piece me divide kr k.</dd>
+
+    </ol>
+
+    <h1>Difference between are follows:</h1>
+    <ol>
+
+        <h2> <li>justify-item & justify-content:</li> </h2>
+        <dd>overlap           & jo hamari grid container k under present ho.</dd>
+
+        <h2> <li>justify-item & align-item:</li> </h2>
+        <dd>ye cell/container k under use hote hai.</dd>
+
+        <h2> <li>justify-content & align-content:</li> </h2>
+        <dd>Agar aap ka container big hai or grid small hai to "content" use karoge.</dd>
+        
+        <h2><li>place-content:center;</li></h2>
+        <dd>justify-content & align-content ye dono bhi cenetr ho jayege.</dd>
+    </ol>
+
+</body>
+</html>
