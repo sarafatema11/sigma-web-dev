@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UltraEdit Navbar</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            /* background: #e8e8e8; */
+        }
+
+        .top-box {
+            background: #ffd741;
+            padding: 8px;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        .buy {
+            text-decoration: underline;
+            font-weight: bold;
+            margin-left: 8px;
+        }
+
+        header {
+            width: 85%;
+            margin: 10px auto;
+            padding: 10px 15px;
+            background: #f2f2f2;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+
+
+
+        .logo img {
+            width: 130px;
+            display: block;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex: 1;
+            justify-content: center;
+            position: relative;
+        }
+
+        ul li:nth-child(7) {
+            margin-left: 0;
+        }
+
+        li {
+            list-style: none;
+            font-size: 14px;
+            white-space: nowrap;
+        }
+
+        li a {
+            text-decoration: none;
+            color: #202c3d;
+        }
+
+        li a:hover {
+            color: #b38a00;
+        }
+
+        li i {
+            font-size: 12px;
+        }
+
+        button {
+            background: #ffd741;
+            color: black;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .search {
+            font-size: 16px;
+        }
+
+        @media (max-width: 900px) {
+            nav {
+                flex-wrap: wrap;
+            }
+
+            ul {
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex: 1;
+        }
+
+        .right-menu {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-left: 20px;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top-box">
+        UE Core &amp; Enterprise Subscriptions: Get 10% Off on your second year
+        <i class="fa-solid fa-circle-info"></i>
+        <span class="buy">Buy Now →</span>
+    </div>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE_primary_logo.png" alt="UltraEdit">
+            </div>
+
+            <ul>
+                <li><a href="#">Products <i class="fa-solid fa-angle-down"></i></a></li>
+                <li><a href="#">Buy</a></li>
+                <li><a href="#">Renew</a></li>
+                <li><a href="#">Support <i class="fa-solid fa-angle-down"></i></a></li>
+                <li><a href="#">Learn <i class="fa-solid fa-angle-down"></i></a></li>
+                <li><a href="#">Company <i class="fa-solid fa-angle-down"></i></a></li>
+
+            </ul>
+            <div class="right-menu">
+                <button><i class="fa-solid fa-download"></i> Download</button>
+                <span><i class="fa-solid fa-globe"></i> English</span>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </nav>
+    </header>
+
+</body>
+</html>
