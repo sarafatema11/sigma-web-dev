@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Transforms</title>
+    <style>
+        /* *{
+            margin: 0;
+            padding: 0;
+        } */
+
+
+        .box {
+            height: 50px;
+            width: 50px;
+            background-color: beige;
+            border: 2px solid black;
+
+            /* Rotate Property */
+            /* transform: rotate(40deg); */
+            /* transform: rotate(0.25turn); */
+            /* transform: rotate(0.5turn); */
+            /* transform: rotateX(40deg); */
+            /* transform: rotateX(96deg);
+            transform: rotatey(9deg);
+            transform: rotatez(9deg); */
+
+            transform: rotate(0.125turn);
+            transform-origin: -50% -50%;
+
+            /* Scale Property  */
+            /* transform: scale(1.6); */
+            /* transform: scalex(1.6); */
+            /* transform: scaley(1.6); */
+
+            /* transform:scale3d(); */
+
+            /* Skew property  */
+            /* transform: skew(5deg); */
+            /* transform: skewy(34deg); */
+
+            /* Translate Property: mostly used property.*/
+            /* transform: translatex(34px); */
+            /* transform: translatex(34%); */
+            /* transform: translatex(100%); */
+            /* transform: translatey(100%);*/
+
+            /* Multiple transforms  */
+            /* transform: translatey(100%) skew(40deg) translateX(45%); */
+
+            /* if i want to hide navbar i use this proprty and margin & padding zero krdo  */
+            /* transform: translatey(-100%) skew(40deg) translateX(45%); */
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            height: 80vh;
+            width: 100vw;
+            border: 2px solid purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">box</div>
+    </div>
+
+    <h1>CSS Transforms : (Mostly Used For Navbar.)</h1>
+    <h2>
+        <p>there are 2 types of transforms</p>
+        <ol>
+            <li>2D Transforms</li>
+            <li>3D Transforms</li>
+        </ol>
+    </h2>
+
+    <ol>
+        <h2>
+            <li>2D Transforms</li>
+        </h2>
+
+        <dd>means hum change kerna chathy hai kisi bhi object ko in (2D) two dimenstion space like Translate, Skew,
+            Rotate, Scale etc.jo bhi hai wo hum kr sakte hai.</dd>
+        <dd>Because its 2D, transformations are applied only in the X (horizontal) and Y (vertical) dimensions.</dd>
+
+        <h3>syntax: transform: function(values);</h3>
+        <dd>Where function can be translate, rotate, scale, skew, etc.</dd>
+
+        <ol>
+            <h2>
+                <li>Rotate Property:</li>
+            </h2>
+
+            <ol>
+                <h3>
+                    <li>transform: rotate(40deg);</li>
+                </h3>
+                <dd>40 degree box move roate hojayega.</dd>
+
+                <h3>
+                    <li>transform: rotate(0.25turn);</li>
+                </h3>
+                <dd>ye 90 degree move hogya hai.</dd>
+
+                <h3>
+                    <li>transform: rotate(0.5turn);</li>
+                </h3>
+                <dd>ye 180 degree pr roate ho jayega.</dd>
+
+                <h3>Turn : means ek baar isko ghuma kr wapas wahi pr rakh diya like 360 degree ka roataion. </h3>
+
+                <h3>
+                    <li>transform: rotateX(40deg);</li>
+                </h3>
+                <dd>roate x means ye roate hoga x axsis k around </dd>
+                <dd>ye x-axsis k about 40 degree rotate hogaya.</dd>
+
+                <h3>
+                    <li> transform: rotatey(9deg);</li>
+                </h3>
+                <dd>ye y-axsis k about 9 degree rotate ho jayega.</dd>
+
+                <h3>
+                    <li> transform: rotatez(9deg);</li>
+                </h3>
+                <dd>ye z-axsis k about roate ho jayega.</dd>
+
+            </ol>
+
+            <h2>
+                <li>Scale Property:</li>
+            </h2>
+            <ol>
+                <h3>
+                    <li>transform: scale(1.6);</li>
+                </h3>
+                <dd>ye 1.6 times scale se bada big hogaya hai.</dd>
+
+                <h3>
+                    <li>transform: scalex(1.6);</li>
+                </h3>
+                <dd>agar me chaho sirf x-axsis me ho to x me 1.6 times se big ho jayega.</dd>
+
+                <h3>
+                    <li>transform: scaley(1.6);</li>
+                </h3>
+                <dd>or aagar chaho y-axsis me ho to abb y-axsis me 1.6 times se big ho jayega.</dd>
+
+                <h3>
+                    <li>transform: scalez(1.6);</li>
+                </h3>
+                <dd>ye z-axsis me 1.6 times se big ho jayega.</dd>
+
+                <h3>
+                    <li>Scale3d()</li>
+                </h3>
+                <dd>jab aap scale 3d krte ho to ek scale 3d transformation jo hai wo apply ho jata hai.</dd>
+            </ol>
+
+            <h2>
+                <li>Skew Property:</li>
+            </h2>
+            <ol>
+                <h3>
+                    <li> transform: skew(5deg);</li>
+                </h3>
+                <dd>ye 5 degree se Skew ho jayega.</dd>
+                <dd>Skew means samajh lo kisi ne upr se or kisi ne neeche se pakad kr force laga diya kheech diya.like
+                    may
+                    be kaju katli shape.</dd>
+
+                <h3>
+                    <li> transform: skewy(34deg);</li>
+                </h3>
+                <dd>y-axsis me bhi kr sakte ho app skew.</dd>
+
+                <h2>z-axsis me skew nahi hota always remember.
+                    skew z-axsis k liye apply nhi hota hai.
+                </h2>
+            </ol>
+
+            <h2>
+                <li>Translate Property : (Mostly Used Property)</li>
+            </h2>
+            <ol>
+                <h3>
+                    <li> transform: translatex(34px);</li>
+                </h3>
+                <dd>ye 34 pixel translate ho jayega.</dd>
+
+                <h3>
+                    <li> transform: translate(34%);</li>
+                </h3>
+                <dd>ye jo is ki width hai uska (34%) 34 percent translaate ho jayega.</dd>
+
+                <h3>
+                    <li> transform: translate(100%);</li>
+                </h3>
+                <dd>ye 100% percent se translate ho jayega.</dd>
+
+                <h3>
+                    <li> transform: translatey(100%);</li>
+                </h3>
+                dd ye y me translate kro to neeceh aa jayega.
+            </ol>
+
+            <h2>
+                <li>Multiple Transforms Property :</li>
+            </h2>
+            <dd>kabhi kabhi hamein ek se zyada Transform proprty lagani hoti hai tab hum aisa write kr sakte ya see
+                below:
+            </dd>
+
+            <ol>
+                <h3>
+                    <li>transform: translatey(100%) skew(40deg) translateX(45%);</li>
+                </h3>
+                <dd>is me Translate x & y axsis or skew proprty hai.</dd>
+
+                <h2>if i want to hide navbar i use below proprty.</h2>
+
+                <h3>
+                    <li>transform: translatey(-100%) skew(40deg) translateX(45%);</li>
+                </h3>
+
+                <dd>is me bas 100 k samme - minus laga diya hai or margin or padding zero krdi hai.</dd>
+                <dd>thats why box hamara hide hogaya hai.</dd>
+            </ol>
+
+            <h2>
+                <li>Rotation point</li>
+            </h2>
+            <ol>
+                <h3>
+                    <li> transform: rotate(0.125turn);</li>
+                </h3>
+                <dd>ye 45 degree se turn kr raha hai. </dd>
+
+                <h3>
+                    <li>transform-origin:-50% -50%;</li>
+                </h3>
+                <dd>jo Default property hoti hai transform origin ki wo -50% -50% hoti hai. means center hoti hai.</dd>
+
+                <h3>
+                    <li>transform: rotate(55deg);</li>
+                </h3>
+                <h3>
+                    <li>transform-origin:-0% -0%;</li>
+                </h3>
+
+                <dd>mein ne rotate 55 degree kr diya or transform origin 0 kkr diya jaise jaise mein degree ka number
+                    increase kroga waise hi rotation is points zero k about/ around ho raha hai.</dd>
+                <dd>zero zero k about jo ki origion hai.</dd>
+
+            </ol>
+        </ol>
+
+        <h2>
+            <li>3D Transforms :</li>
+        </h2>
+        <ol>
+            <li>means head (3d) 3 dimension kaam karta hai.</li>
+            <li>means ek additional axsis hamare pass hota hai like z-axsis jis ki wajah se 3d 3dimension mein ek
+                object ko manipulate ker sakta hai.</li>
+        </ol>
+    </ol>
+</body>
+
+</html>
