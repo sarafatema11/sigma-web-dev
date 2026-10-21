@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Transitions</title>
+    <style>
+        .container {
+            background-color: antiquewhite;
+            width: 50vw;
+            height: 40vh;
+        }
+
+        .box {
+            background-color: aquamarine;
+            width: 5vw;
+            height: 4vh;
+
+            /* combine all  property  */
+            /* transition-property: all; */
+            /* transition-property: transform; */
+
+            /* transition-property: background-color, transform;
+            transition-duration: 3s;
+            transition-timing-function: ;cubic-bezier(0.22, 0.43, 0, 0.99);
+            transition-delay: 1s; */
+
+            /* for multiple transition property use this  */
+            transition: all 3s cubic-bezier(0.09, 0.5, 0, 0.99) 1s;
+            /* ye krne se jaldi/aggresively  ye big ya small hoga  */
+        }
+
+        /* tr means translate  */
+        .translate {
+            /* transform: translateX(10%) translateY(10%); */
+            /* ye neeche ajayega box  */
+            /* transform: translateX(10vw) translateY(10vh); */
+            transform: translateX(10vw) translateY(10vh) scale(2);
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box translate"></div>
+        <!-- <div class="box translated"></div> -->
+    </div>
+
+
+
+    <h1>CSS Transitions Properties: </h1>
+    <dd>Ek state se Dusre state mein Bhot Smoothly jana.</dd>
+
+    <h2>
+        <dd>Transition property 4 property se mil kr banti hai.</dd>
+    </h2>
+    <ol>
+        <li> transition-property: transform;</li>
+        <li> transition-duration: 3s;</li>
+        <li> transition-timing-function:ease-in-out ;</li>
+        <li>transition-delay:1s ;</li>
+    </ol>
+
+    <ol>
+        <h2>
+            <li>transition-delay:1s ;</li>
+        </h2>
+        <dd>ye animation kitni der baad cahalega.</dd>
+
+        <h2>
+            <li>transition-duration: 3s;</li>
+        </h2>
+        <dd>ye animation kitni der tak chalega.</dd>
+
+        <h4>
+            <p>kitni der k baad asar padega ye hota transition delay.jaise hi translate ko chrome browser me inspect kr
+                k tick remove kroge to us k theek 1 second k baad transition start ho jayega. or 3 second tak chalega.
+            </p>
+        </h4>
+
+        <h2>
+            <li>transition-property: transform;</li>
+        </h2>
+        <dd>transition hum transform property pr kr rahe hai.</dd>
+        <dd>jo transform property lagi hui hai isko wo transition hogi.
+        </dd>
+
+        <h2>
+            <li>transition-property: all;</li>
+        </h2>
+
+        <h2>
+            <li> .translate {
+                transform: translateX(10vw) translateY(10vh);
+                background-color: blue;
+                }</li>
+        </h2>
+
+        <dd>html me box class me translate laga k enter marne se transition neeche se upr jayega or color change
+            hoga.bcz hum color property ko target kr rahe hai.
+        </dd>
+
+        <h2>
+            <li> transition-property: background-color, transform;</li>
+        </h2>
+        <dd>yaha pr html k box class me se translate remove kr k enter maro then see wo neeche upr jara or color change
+            hora.
+        </dd>
+
+        <h2>ye 2 property se aap transition kr sakte ho. all ka aap use kr sakte agr aap ko sari property ko transition
+            lagana hai to.
+        </h2>
+
+        <h2>
+            <li> transform: translateX(10vw) translateY(10vh) scale(2);</li>
+        </h2>
+        <h3>
+            <li> class=" box translaed"</li>
+        </h3>
+        <dd>ye big hojayega box </dd>
+        <dd> or html code me box class me translated krne se small ho jayega. big box neeche se upr jate waqt </dd>
+
+        <h3>
+            <li> class=" box translae"</li>
+        </h3>
+        <dd>ye krne se box upr se neeche jate waqt blue ho jayega.</dd>
+
+        <h2>
+            <li> transition-timing-function: ease-in-out;</li>
+        </h2>
+        <dd>is for transition speed</dd>
+
+        <h2>
+            <li> transition: all 3s cubic-bezier(0.09, 0.5, 0, 0.99) 1s;</li>
+        </h2>
+        <dd>this is for multiple transition property / function in 1 transiton.</dd>
+    </ol>
+</body>
+
+</html>
