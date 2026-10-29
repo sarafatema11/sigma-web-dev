@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Animation</title>
+    <style>
+        .container {
+            background-color: rgb(9, 106, 106);
+            height: 80vh;
+            width: 30vw;
+        }
+
+        .box {
+            height: 34px;
+            width: 45px;
+            /* background-color: aqua; */
+            /* animation: harryKaAnimation;
+            animation-duration: 1s; */
+            /* if i want my animation end in 1 second.  */
+
+            /* animation-duration: 3s; */
+            /* animation 3 second tak chalega 1000px jo animation/keyframe me translatex hai.  */
+
+            /* animation-iteration-count: 3; */
+            /* animation 3 times repeat hoga.  */
+
+            /* animation-iteration-count: infinite; */
+            /* animation infinite time chalta rahega.  */
+
+            /* animation-timing-function: ease-out; */
+            /* animation-timing-function: cubic-bezier(0, 0, 0, 0.96); */
+
+            /* animation-delay: 11s; */
+            /* animation-delay: 1s; */
+            /* page reload karoge to animation 1s se start hoga.  */
+
+            /* animation-direction: reverse; */
+            /* ulta animation start hoga right side start hoga means.  */
+
+            /* animation-direction: alternate-reverse; */
+            /* ye krne animaion right side se left side ja kr wapas ajayegi.  */
+
+            /* animation-play-state:paused; */
+            /* aap chathe ho ki animation beech me se ruk jaye phir jaha ruka hai wahi se start ho to ye animation property use krte hai.  */
+
+            /* animation-fill-mode: backwards; */
+            /* ye red se yellow hua then wapas phele jaisa hogya  */
+
+            /* animation-fill-mode: forwards; */
+            /* aage bad kr box yellow hoga then wahi stop ho jayega.  */
+
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+            animation: harryKaAnimation 2s ease-in-out 3s 1,
+                harry2 3s ease-in-out 3s 1;
+            /* direction , delay or other property ko chod do agr use nhi krna chathe ho to  */
+        }
+
+        @keyframes harryKaAnimation {
+            from {
+                background-color: red;
+            }
+
+            to {
+                background-color: yellow;
+                transform: translateX(1000px);
+            }
+        }
+
+        @keyframes harry2 {
+            0% {
+                transform: rotate(100deg);
+            }
+
+            20% {
+                transform: rotate(200deg);
+            }
+
+            50% {
+                transform: rotate(220deg);
+            }
+
+            80% {
+                transform: rotate(300deg);
+            }
+
+            100% {
+                transform: rotate(310deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box">
+            box
+        </div>
+    </div>
+
+
+
+
+    <h1>CSS Animation : </h1>
+    <dd>u can make multiple css animation </dd>
+
+    <h2>diference between Transition & Animation:</h2>
+    <ol>
+
+        <h2>
+            <li>Transition:</li>
+        </h2>
+        <dd>Transition mein bhi aap ek se zyada property change kr sakte ho but in animation.</dd>
+        <dd>simple property liye animation use kro.</dd>
+
+        <h2>
+            <li>Animation:</li>
+        </h2>
+        <ol>
+            <dd>
+                <li>Animation ki help se Aap ek se zyada property change kr sakte ho.</li>
+            </dd>
+
+            <dd>
+                <li>or animation mein aap defined ker sakte ho konse property khaha se khaha tak jayegi , kitne time tak
+                    jayegi,or kon konse Keyframes honge.</li>
+            </dd>
+
+            <dd>
+                <li>or agar aap ko complex animation banane hai jo ki repeat hore alag alag element me lagare to aap
+                    harryKaAnimation name ka animation bana sakte ho or usko alag alag jagah use kr sakte ho.</li>
+            </dd>
+
+        </ol>
+    </ol>
+
+    <h2>To make Animation Followings these Steps:</h2>
+    <dd>Animation banane k liye keyframe and Animation name likho animation name means like a vairable. </dd>
+    <h3>syntax:</h3>
+    <dd>Ex: @keyframes harryKaAnimation{ from{} to {} }</dd>
+
+    <h1>Animation Property:</h1>
+    <ol>
+        <h2>
+            <li>animation-duration:3s</li>
+        </h2>
+        <ol>
+            <h3>
+                <li>
+                    <dd>(kitni der tak chalega aap ka animation)</dd>
+                </li>
+            </h3>
+
+            <li>
+                <dd>3s means (3 second)tak chalega ye animation duration.</dd>
+            </li>
+            <li>
+                <dd>ye jo hai 1000px translate kr k wapas aa jara hai.</dd>
+            </li>
+        </ol>
+
+        <h2>
+            <li>animation-iteration-count:3;</li>
+        </h2>
+        <ol>
+            <li>itni baar chalna chaiye ye.</li>
+            <li>animation-iteration-count:3; means ye 3 baar repeat hoga.</li>
+        </ol>
+
+        <h2>
+            <li>animation-iteration-count: infinte;</li>
+        </h2>
+        <dd>animation-iteration-count:infinite; krne se ye chalta rahega animation.</dd>
+
+        <h2>
+            <li>animation-timing-function:ease-out;</li>
+        </h2>
+        <ol>
+            <h3>
+                <li>ease</li>
+            </h3>
+            <h3>
+                <li>ease-in</li>
+            </h3>
+            <h3>
+                <li>ease-out</li>
+            </h3>
+            <h3>
+                <li>ease-in-out</li>
+            </h3>
+
+            <dd>is se hum hamara animationn ka timing function change kr sakte hai.</dd>
+        </ol>
+
+        <h2>
+            <li>animation-delay:1s;</li>
+        </h2>
+        <ol>
+            <dd>
+                <li>page reload karoge to animation 1 second k baad start hoga. or repeat hota jayega.</li>
+            </dd>
+            <dd>
+                <li>kitni der k baad start hoga animation if 11s lagaa do to 11 second k baad start hoga animation.</li>
+            </dd>
+        </ol>
+
+        <h2>
+            <li>animation-direction: reverse;</li>
+        </h2>
+        <dd>animation right side se start hogi.</dd>
+
+        <h2>
+            <li>animation-direction: alternate-reverse;</li>
+        </h2>
+        <dd>animation right se left ko ja kr wapas rightside aa jayegi. </dd>
+
+        <h2>
+            <li>animation-play-state:</li>
+        </h2>
+        <ol>
+            <h3>
+                <li>paused</li>
+            </h3>
+            <dd>animation ko beech me se aap paused kr sakte ho </dd>
+            <h3>
+                <li>runing</li>
+            </h3>
+        </ol>
+
+        <h2>
+            <li>Animation-fiiled-mode: </li>
+        </h2>
+        <ol>
+            <li>forwards</li>
+            <li>backwards</li>
+        </ol>
+
+    </ol>
+
+</body>
+</html>
