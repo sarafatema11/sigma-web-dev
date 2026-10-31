@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Object-Fit & Object Position/Cover Properties</title>
+    <style>
+        .container {
+            height: 488px;
+            width: 466px;
+            border: 2px solid black;
+            /* background-color: azure; */
+
+
+            /* background-image: url("https://rukmini1.flixcart.com/image/1500/1500/k6v2ykw0/poster/z/j/s/large-doraemon-cartoon-painting-poster-waterproof-canvas-print-original-imafp898eufs2ykh.jpeg?q=70"); */
+            /* is container me ye background set krdo.  */
+
+            background-image: url("https://us.123rf.com/450wm/progressman/progressman1909/progressman190900115/130695651-woman-in-black-coat-walking-along-the-sea.jpg?ver=6");
+            /* ye image y axis me repeat hori.  */
+
+            background-clip: border-box;
+
+
+            background-repeat: no-repeat;
+            /* use for removing repeating image  */
+
+            /* background-repeat: repeat-x; */
+            /* only x me repeat hoga if image is small  */
+
+            /* background-position: top right; */
+            /* top right part dekkhe image ka  */
+
+            background-position: center center;
+            /* mujhe center position dekhega img ka.  */
+        }
+
+        img {
+            width: 466px;
+            height: 488px;
+
+            /* ye img ko cover kr dega but khahi na khahi se img ko cut kr dega object cover tabhi img cover kr payegi box ko  */
+            /* object-fit: cover; */
+
+            /* ye use krne se jo mein ne width or height di hai wo is me lag jjayehi image mein  */
+            /* object-fit: fill;  */
+
+            /* object-fit: scale-down;  */
+            /* image size is small  */
+
+            /* object-fit: none; */
+            /* none is used for image reset.  */
+
+            object-fit: contain;
+            /* puri img dekhao or space bachi rahene do we use  object-fit: contain. */
+            /* is img me height width ko pura containt krega img puri dekhegi  */
+
+
+            /* object-position: top right; */
+            /* is ne mujhe top right wala posion dekh diya.  */
+
+            object-position: 10px 20px;
+            /* object-position: bottom right; */
+            /* abb is ne right side se bottom image dekha di  */
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- <img src="https://rukmini1.flixcart.com/image/1500/1500/k6v2ykw0/poster/z/j/s/large-doraemon-cartoon-painting-poster-waterproof-canvas-print-original-imafp898eufs2ykh.jpeg?q=70"
+            alt=""> -->
+    </div>
+
+
+
+    <h1>Css Object fit & object position properties:</h1>
+    <ol>
+        <li>ek container k under image ko aisa rakhna hota hai such that uski width puri cover hojaye</li>
+        <li>ya phir wo puri is box k under aapne aspect ratio ko maintain kerte hoye box me fit aajaye.</li>
+        <li>that's why we use object fit & object position properties.</li>
+    </ol>
+
+    <h2>Mostly used Properties in:- object-fit :</h2>
+    <ol>
+        <h3>
+            <li>cover</li>
+        </h3>
+        <h3>
+            <li>contain</li>
+        </h3>
+        <h3>
+            <li>fill - (is by deafult property)</li>
+        </h3>
+    </ol>
+    <ol>
+        <h2>
+            <li>object-fit:cover;</li>
+        </h2>
+        <ol>
+            <li> ye img ko cover kr dega but khahi na khahi se img ko cut kr dega object cover tabhi img cover kr payegi
+                box ko.</li>
+            <li> is box ka aspect ration maintain kro cover krlo. or isko apne parents ki height width means jo
+                container hai us se koi matlab nhi hai ye sirf img ko cover krega. </li>
+        </ol>
+
+
+        <h2>
+            <li>object-fit: contain;</li>
+        </h2>
+        <ol>
+            <li>puri img dekhao or space bachi rahene do we use object-fit contain.</li>
+            <li>is img me height width ko pura containt krega img puri dekhegi </li>
+
+        </ol>
+
+        <h2>
+            <li>object-position: top right;</li>
+        </h2>
+        <ol>
+            <li>object fit cover me konsa positiion cut hoga or konsa position dekhega ye aap khud decide kr skate ho.
+            </li>
+            <li>is ne mujhe top right wala pura posion dekh diya or left side wala cut kr diya. </li>
+        </ol>
+
+        <h2>
+            <li>object-position: bottom right;</li>
+        </h2>
+        <ol>
+            <li>is ne mujhe right side se bottom ki puri image dekha di.
+            </li>
+        </ol>
+
+
+        <h2>
+            <li> object-fit: fill;</li>
+        </h2>
+        <ol>
+            <li> ye use krne se jo mein ne width or height di hai wo is me lag jjayehi image mein. </li>
+            <li>puri immage dekhegi but distorted dekhegi. </li>
+        </ol>
+
+
+        <h2>
+            <li>object-fit: scale-down;</li>
+        </h2>
+        <ol>
+            <li>image ka size small ho jayega. </li>
+        </ol>
+
+        <h2>
+            <li>object-fit: none;</li>
+        </h2>
+        <ol>
+            <li>agr image reset krna ho to aap none kr sakte ho. </li>
+        </ol>
+
+
+        <h2>
+            <li>object-position: 10px 20px;</li>
+        </h2>
+        <ol>
+            <li>object position change kr sakte ho top bottom left right se </li>
+            <li>object fit property mme ye bhi specify kr sakte ho ki kitni kitni dori pr aap image ko dekhna chathy ho.
+            </li>
+        </ol>
+
+        <h2>
+            <li> background-image: url(image address/ link);</li>
+        </h2>
+        <ol>
+            <li>image ka url ka use krte huye hum background de sakte hai container ko style sheet me </li>
+            <li>is container me backgroundimage set krdo.</li>
+
+        </ol>
+
+        <h2>
+            <li> background-position: top right;</li>
+        </h2>
+        <ol>
+            <li>image ka background position top right side se dekhe.</li>
+        </ol>
+
+
+        <h2>
+            <li>background-position: center center;</li>
+        </h2>
+        <ol>
+            <li>
+                image ka center position dekhega top-bottomm se or left-right se. without image ka aspect ratio change
+                kare.
+            </li>
+        </ol>
+
+        <h2>
+            <li>background-image:urll(small size image link)</li>
+        </h2>
+        <ol>
+            <li>small size image ki link daloge to wo y axis me repeat hogi.</li>
+            <li>x axis me or zyada repeat hoti but abhi hum jo link use kre us me sirf y axis me image repeat hori.</li>
+        </ol>
+
+        <h1>(mostly used this repeat property):</h1>
+        <h2>
+            <li> background-repeat: no-repeat;</li>
+        </h2>
+        <ol>
+            <li>image repeat ko remove krne k liye hum repeating property ka use krte hai. </li>
+            <li>ye property use krne se na x mein repeat hoga na y me repeat hoga. </li>
+        </ol>
+
+        <h2>
+            <li>background-repeat: repeat-x;</li>
+        </h2>
+        <ol>
+            <li>agr background image ka width chota hua to wo x me repeat hoga y me repeat nahi hoga.</li>
+        </ol>
+
+        <h2>
+            <li> background-clip: border-box;</li>
+        </h2>
+        <ol>
+            <li>background-clip me aap border-box / padding-box likh sakte ho.</li>
+
+        </ol>
+
+    </ol>
+</body>
+
+</html>
