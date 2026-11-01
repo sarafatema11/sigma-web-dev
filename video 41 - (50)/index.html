@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Filters</title>
+    <style>
+        img {
+            /* filter: blur(10px); */
+            /* height: 456px;
+            width: 500px; */
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: bolder;
+        }
+
+
+        .img1 {
+            /* adjust the brightness of the img  */
+            filter: brightness(122%);
+
+            /* adjust the contrast of the img  */
+            /* filter: contrast(74%); */
+            /* filter: contrast(1.4); */
+
+
+            /* for multiple filters  */
+            /* filter: brightness(122%) contrast(74%); */
+        }
+
+        .img2 {
+            /* Isse image ke original colours different colours mein transform ho jaate hain. */
+            filter: hue-rotate(90deg);
+        }
+
+        .img3 {
+            /* filter: grayscale(20%); */
+
+            /* convert image into full black & white below vlaue 100% ki. */
+            filter: grayscale(100%);
+        }
+
+        .img4 {
+            /* old time / purane zamane ki jaise image ho jayegi  */
+            filter: sepia(100%);
+        }
+
+        .img5 {
+            /* blur the image based on value u give  */
+            filter: blur(10px);
+        }
+
+        .img6 {
+            /* convert the immage into invert  */
+            filter: invert(1);
+            /* filter: invert(0.31); */
+        }
+
+        .img7 {
+            filter: drop-shadow(16px 16px 10px black);
+        }
+
+        .img8 {
+            /* puri image visible 1 vlaue se  */
+            /* filter: opacity(1); */
+
+            /* zero se 0 puri image gayab ho jaye gi. */
+            /* filter: opacity(0); */
+
+            /* hum 0.7 ya us se zyada value de kr decide kr skate hai ki image kitni visible ho.  */
+            filter: opacity(0.8);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <img class="img1"
+            src="https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010125.jpg?size=626&ext=jpg"
+            alt="">
+        <p> EX 1: brightness & contrast image.</p>
+
+        <img class="img2" src="https://c.ndtvimg.com/2023-09/154fgjlg_shah-rukh-khan-_625x300_23_September_23.jpg"
+            alt="">
+        <p> EX 2: hue-rotate filter basically colour changes.</p>
+
+        <img class="img3"
+            src="https://images.hindustantimes.com/img/2022/11/12/550x309/akshay_kumar_1659860706633_1668255913307_1668255913307.jpg"
+            alt="">
+        <p>EX 3: grayscale fillter means black & white image.</p>
+
+        <img class="img4"
+            src="https://www.uopeople.edu/wp-content/uploads/2022/06/Coding-vs-Programming-5-Key-Differences-To-Remember-550x385.jpg.webp"
+            alt="">
+        <p>Ex 4 :sepia filter / puraze zamane ki image.</p>
+
+
+        <img class="img5"
+            src="https://cdn.prod.website-files.com/61f7efd44d01cc87c88dc6f3/64048d2ff247d467cbf7ab2e_Step-into-the-Future-2.jpg"
+            alt="">
+        <p>Ex 5: blur filter.</p>
+
+
+        <img class="img6"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsVWAkM-iLqMPFV53IyNI74JHAJihZMQEa_5S302km8g&s=10"
+            alt="">
+        <p>Ex 6: invert filter.</p>
+
+        <img class="img7"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAqX6IF7YOqoJdPjFZ87QIVeOHSKJXLxpiHalf7Yo0FQ&s=10"
+            alt="">
+        <p>Ex 7:give shadow to the image.</p>
+
+
+        <img class="img8"
+            src="https://www.ciit.edu.ph/wp-content/uploads/2022/01/student-web-programmer-coding-using-multiple-computer-screens.jpg"
+            alt="">
+        <p> EX 8: opacity filter decide how much image should be visible. </p>
+
+    </div>
+
+    <h1>CSS filters :</h1>
+
+    <dd>using this filter property u can invert the brightness , contrast & so many things.</dd>
+    <ol>
+
+        <li>filter: blur(5px);</li>
+        <li>filter: brightness(0.4);</li>
+        <li>filter: contrast(200%);</li>
+        <li>filter: drop-shadow(16px 16px 10px black);</li>
+        <li>filter: grayscale(50%);</li>
+        <li>filter: hue-rotate(90deg);</li>
+        <li>filter: invert(75%);</li>
+        <li>filter: opacity(25%);</li>
+        <li>filter: saturate(30%);</li>
+        <li>filter: sepia(60%);</li>
+
+    </ol>
+
+
+    <h1>CSS Filters Properties: </h1>
+    <ol>
+        <h2>
+            <li>filter:blur(10px);</li>
+        </h2>
+        <ol>
+            <li>is se aap ki image blur hojayegi.</li>
+            <li>aap jitni zyadi value rakhoge utna zyada wo image ko blur karega. ex: bluur value: 7px, 10px etc.</li>
+        </ol>
+
+        <h2>
+            <li> filter: brightness(122%);</li>
+        </h2>
+        <ol>
+            <li>give brightness to the image based on values. </li>
+            <li>is me px use nhi hota hai remember always.</li>
+        </ol>
+
+        <h2>
+            <li>filter:contrast(0.5)</li>
+        </h2>
+        <ol>
+            <li>is use agar mujhe contrast increase krna hai to 0(zero) se 1 (one) tak valuee de sakte hai hum.</li>
+            <li>contrast me hum percentage (%) bhi laga sakte hai.</li>
+            <li>agar mujhe contrast badana increase krna hai to 0 zero / ya us se bhi big vlaue de sakti hu.</li>
+            <li>using this we can cahnge the contrast value.</li>
+        </ol>
+
+        <h2>
+            <li> filter: drop-shadow(16px 16px 10px black);</li>
+        </h2>
+        <ol>
+            <li>give shadow to the image </li>
+            <li>hum shadow ka colour khud decide kr sakte hai.</li>
+            <li>shadow drop kr deta hai.</li>
+        </ol>
+
+        <h2>
+            <li>Multiple Filters:</li>
+        </h2>
+        <ol>
+            <h3>
+                <li>filter: brightness(122%) contrast(1.5);</li>
+            </h3>
+            <ol>
+
+                <li>for multiple filters we can use this method .</li>
+                <li>space de kr hum multiple filters laga sakte hai just like classes .</li>
+            </ol>
+
+            <h3>
+                <li>filter: brightness(122%) contrast(74%);</li>
+            </h3>
+            <ol>
+                <li>in contrast we can also use percentage (%). </li>
+            </ol>
+        </ol>
+
+        <h2>
+            <li> filter: grayscale(100%); filter: grayscale(20%);</li>
+        </h2>
+        <ol>
+            <li>agr is ki value 100% krdiya to image puri black & white hojayegi.</li>
+            <li>or agr 20% is ki value rakhe to image 20% grayscale me convert ho jayegi.</li>
+        </ol>
+
+        <h2>
+            <li> filter: sepia(100%);</li>
+        </h2>
+        <ol>
+            <li>purane zamane ki jaise image ho jayegi.</li>
+        </ol>
+
+        <h2>
+            <li>filter: hue-rotate(90deg);</li>
+        </h2>
+        <ol>
+            <li>basically image ke colours ko change/rotate karta hai. </li>
+            <li>
+                Isse image ke original colours different colours mein transform ho jaate hain.
+            </li>
+            <li>Yahan 90deg ka matlab hai colour wheel ko 90 degrees rotate karna.</li>
+
+            <h3>See Example: </h3>
+            <li>filter: hue-rotate(0deg); /* Original colours */</li>
+            <li> filter: hue-rotate(90deg); /* Colours change */</li>
+            <li>filter: hue-rotate(180deg); /* Opposite colours */</li>
+            <li> filter: hue-rotate(270deg); /* Different colour combination */</li>
+            <li></li>
+            <li>filter: hue-rotate(360deg); /* Original colours */</li>
+        </ol>
+
+        <h2>
+            <li>filter: invert(1);</li>
+        </h2>
+        <ol>
+            <li>filter: invert(.10);</li>
+            <li>point laga kr aap thoda bhot usko apne hisab se change kr sakte ho. </li>
+            <li>it will be converted into Negative image.</li>
+            <li>bacome a innverted image, all colours will be innverted.</li>
+            <li>basically image ke colours ko unke opposite colours mein convert karta hai.</li>
+            <li>for Ex: White → Black ,---, Black → White etc. </li>
+        </ol>
+
+        <h2>
+            <li>filter:opacity(0.6);</li>
+        </h2>
+        <ol>
+            <li>agr value iskko zer(0) hogi to image puri hi gayab ho jaye gi.</li>
+            <li>or agr iski vlaue 1 (one) hogi to puri image visble rahegi.</li>
+            <li>hum apne hisab se image kitnni dekhna/ transparent hona ye decide kr sakte hai.</li>
+        </ol>
+
+    </ol>
+</body>
+
+</html>
