@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Variables</title>
+</head>
+
+<body>
+    <!-- variable start here  -->
+    <ol>
+        <h1>
+            <li>What is javascript variable ?</li>
+        </h1>
+        <dd>basically ek container hota hai jo ki value store krta hai.</dd>
+        <dd>wo vlaue khuch bhi ho sakti hai like Value can be a Number, string, floating point number & may be decimal
+            numbers or wo value javascript object bhi ho sakta hai.
+        </dd>
+
+        <h2>
+            <li>console.log("Hey This is tutorial 55 ")</li>
+        </h2>
+        <dd>ye webpage pr --- inspect --- console --- here our msg </dd>
+
+        <h2>
+            <li>
+                <dd>var a = 5;</dd>
+                <dd>var b = 6;</dd>
+
+                <dd>console.log(a + b)</dd>
+            </li>
+        </h2>
+        <ol>
+            <li>here its print 11 on console screen bcz this 5+6 =11.</li>
+            <li>javascript automatically pata laga liya "var a" ka data type is "number" hai.</li>
+        </ol>
+
+
+        <h2>
+            <li>console.log(a + b + 8)</li>
+        </h2>
+        <ol>
+            <li>(5+6+8=19), now print 19.</li>
+            <li>is this possible using basic arithamatic javascript.</li>
+            <li>here we can add more numbers like then abb print hoga. 11+8= 19</li>
+            <li>19 print hoga abb console page pr.</li>
+        </ol>
+
+        <h2>
+            <li>var c ="Sara";</li>
+        </h2>
+        <ol>
+            <li>javascript automaticall pata laga leta like ye double quotion k under likha hai thats means ye ek
+                "string" hai.</li>
+            <li>string means the collection of characters.</li>
+        </ol>
+
+        <h2>
+            <li>console.log(typeof a, typeof b, typeof c);</li>
+        </h2>
+        <ol>
+            <li>number number string. for a , b , c.</li>
+            <li>kisi bhi varaiable ka data type pata laga ne k liye we can use a type of "operator".</li>
+            <li>output print this ---"number number string." </li>
+        </ol>
+
+
+        <h2>
+            <li>
+                <dd>var _a = "Shubham"; </dd>
+                <dd>var 55a ="Rahul";</dd>
+            </li>
+        </h2>
+
+        <ol>
+            <li>var _a = "Shubham"; </li>
+            <dd>ye chalega its allowed in js.</dd>
+
+            <li>var 55a ="Rahul";</li>
+            <dd>but ye nahi chalega ,its not allowed bcz we can't start with a Numbers.</dd>
+        </ol>
+
+
+        <h2>
+            <li>
+                <dd>const a1 = 6;</dd>
+                <dd>a1= a1 + 1 ;</dd>
+            </li>
+        </h2>
+
+        <ol>
+            <li> "const" means constant means aap kisi bhi value ko change nhi kr sakte.</li>
+            <li>1st wala const a1 = 6; this is const abb aap constant ki value ko chnage nhi kr sakte.</li>
+            <li>a1= a1 + 1 ; like this its not allowed / invalid </li>
+            <li>why this is important bcz kabhi kabhi hum Chathy hai ki galti se bhi Hamara variable change na ho jaye
+                hum se/ galti se.</li>
+            <li>Agar Aap yaha change krne ka try karoge to aap ko melega ek "Erorr"</li>
+            <li>For Ex: <u style="color: red;">script.js:34 Uncaught TypeError: Assignment to constant variable.</u>
+            </li>
+
+        </ol>
+    </ol>
+
+
+    <!-- let is start  -->
+    <ol>
+        <h1>
+            <li> What is let ?</li>
+        </h1>
+        <ol>
+            <li>we use let to yee bhar Automatically "Global Variable" ban gaya.</li>
+            <li>Hum Sab Var ko Let se Replace kr denge.</li>
+            <li>let is a block scope block / curly brackts k under ka hi dekhayega ye.</li>
+        </ol>
+
+        <h2>
+            <li>
+                <dd>let a = 5;</dd>
+                <dd>a = a + 1</dd>
+                <dd>let b = 6;</dd>
+                <dd>let c ="Sara";</dd>
+                <dd>let _a = "Shubham";</dd>
+                <dd>{</dd>
+                <dd> console.log(a)</dd>
+                <dd>}</dd>
+            </li>
+        </h2>
+
+        <ol>
+            <li>here console.log(a) kre isliye answer 6 ayya a = 5 then + 1 = 6</li>
+            <li>agr hum isko a = a + 1 comment off kr de to 5 print hoga.</li>
+        </ol>
+
+        <h2> let ex:
+            <li>
+                <dd>{ </dd>
+                <dd>let a = 66;</dd>
+                <dd>console.log(a)</dd>
+                <dd>}</dd>
+                <dd>console.log(a)</dd>
+            </li>
+        </h2>
+
+        <ol>
+            <li>ye abb 66 dekhayega. console screen pr.</li>
+            <li>abb hum ne console currly brackets k bhar likha hai abb wo hum ko nhi dekhayega 66. bcz abb block k baad
+                5 print hoga.</li>
+            <li>phele block under ka 66 print hogga then 5 print hoga. </li>
+        </ol>
+
+        <h2>var ex:
+            <li>
+                <dd>var a = 5;</dd>
+                <dd>{ </dd>
+                <dd>let a = 66;</dd>
+                <dd>console.log(a)</dd>
+                <dd>}</dd>
+                <dd>console.log(a)</dd>
+            </li>
+        </h2>
+
+        <ol>
+            <li>here its print 66 2 times </li>
+            <li>bcz var hum ne 5 select kra but wo neeche aa k 66 dekhega then isliye wo 66 2 times print hua.</li>
+            <li>
+                issi issuess ki wajah se hum var ki jagah let use kret hai.
+            </li>
+            <li>var is globally scoped & let is blocked scoped.</li>
+        </ol>
+    </ol>
+
+    <h1>Data Types:</h1>
+    <ol>
+        <h3>
+            <li>Primitive Data Type</li>
+        </h3>
+        <h3>
+            <li>object Data Type</li>
+        </h3>
+    </ol>
+
+    <ol>
+        <h2>
+            <li>Primative Data Type:</li>
+        </h2>
+        <ol>
+            <li>basic data types of js.</li>
+            <li>objecct is a non primativve data type.</li>
+            <li>jo ki bakhi data type k baisc building blocks data type hote hai.</li>
+            <li>there are 7 primative data type:</li>
+            <li>Null -- (means Nothing) , Number , String, symbol , undefined --- (any vaiable u have declared is k
+                under koi value nhi hai is ccalled undefined.), boolean --- (two values like True or False), & big int
+                --(is used to Stored big integers.).</li>
+
+        </ol>
+
+        <ol>
+            <h2>
+                <li>
+                    <dd>let x = "Harry bhai";</dd>
+                    <dd>let y = 22;</dd>
+                    <dd>let z = 3.55;</dd>
+                    <dd>const p = true;</dd>
+                    <dd>let q = undefined;</dd>
+                    <dd>let r = null;</dd>
+                    <dd>console.log(x, y, z, p, q, r);</dd>
+                    <dd>console.log(typeof x, typeof y, typeof z, typeof p, typeof q, typeof r);</dd>
+                </li>
+            </h2>
+            <ol>
+                <li>output ptint on console screen is below:</li>
+                <li>Harry bhai 22 3.55 true undefined null</li>
+                <li>string number number boolean undefined object</li>
+                <li>null ka typeof -- object aata hai.</li>
+
+                <h1>question: why typeof null is object ? --- Interview quwstion Answer do.</h1>
+            </ol>
+
+        </ol>
+        <h2>
+            <li>Object Data type:</li>
+        </h2>
+        <ol>
+            <li>object is javascript is a combination of key value pairs, to make any object in javascript you can
+                write.</li>
+        </ol>
+
+        <ol>
+            <h2>
+                <li>
+                    <dd>let o ={</dd>
+                    <dd> "name": "Harry", </dd>
+                    <dd> "job role":5600</dd>
+                    <dd>}</dd>
+                    <dd>console.log(o)</dd>
+                </li>
+            </h2>
+        </ol>
+
+        <ol>
+            <li>output print hoga:</li>
+            <li>
+                {name: 'Harry', job role: 5600}
+                job role
+                :
+                5600
+                name
+                :
+                "Harry"
+                [[Prototype]]
+                :
+                Object</li>
+            <li>name hum bina double quation k bhi likh sakte or sath mein bhi likh sakte ex: "name": / name : </li>
+            <li>but job role me bcz dono k beech mein space hai is ko compursaly likhna hai double quation mein ex: "job
+                role" :</li>
+        </ol>
+
+        <h2>
+            <li>
+                <dd>o.salarary = "100crores";</dd>
+                <dd>console.log(o);</dd>
+                <dd>o.salarary = "500crores";</dd>
+                <dd>console.log(o);</dd>
+            </li>
+        </h2>
+
+        <ol>
+            <li>using this u can add more keys or u can change object using this </li>
+            <li>phele 100crores print hoga then 500 crores.</li>
+            <li>output:</li>
+            <li>
+                {name: 'Harry', job role: 5600, salarary: '500crores'}
+                job role
+                :
+                5600
+                name
+                :
+                "Harry"
+                salarary
+                :
+                "500crores"
+                [[Prototype]]
+                :
+                Object</li>
+        </ol>
+    </ol>
+
+    <h2> question : write a javascript program to store name, phone Number, and Marks of a Student Using object?</h2>
+
+    <h3>Answer see in console </h3>
+
+    <script src="script.js"></script>
+</body>
+</html>
