@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Loops </title>
+</head>
+<body>
+    <h1>JavaScript Loops</h1>
+
+    <h2>Definition of Loops :</h2>
+    <p>
+        A loop in JavaScript is used to execute a block of code repeatedly
+        until a specified condition becomes false.
+    </p>
+
+    <h2>Types of Loops in JavaScript</h2>
+
+    <p>There are mainly 5 types of loops in JavaScript:</p>
+
+    <ol>
+        <li>For Loop</li>
+        <li>While Loop</li>
+        <li>Do While Loop</li>
+        <li>For In Loop</li>
+        <li>For Of Loop</li>
+    </ol>
+
+    <hr>
+
+    <h2>1. For Loop</h2>
+
+    <h3>Definition:</h3>
+    <p>
+        A for loop is used to execute a block of code repeatedly
+        when the number of iterations is known.
+    </p>
+
+    <h3>Syntax:</h3>
+    <pre>
+        <h2>Ex:1 of Syntax</h2>
+for (initialization; condition; increment/decrement) {
+    // Code to execute
+}
+
+ <h2>Ex:2 of Syntax</h2>
+
+for(statement1, statement2,statement3){
+    //code to be execute
+}
+
+<h3>Expplain :</h3>
+<h3>Statement 1 (Initialization): Initializes the loop variable. It executes only once.
+Example: let i = 1;
+
+Statement 2 (Condition): Checks whether the condition is true or false. If true, the loop executes; if false, it stops.
+Example: i <= 5;
+
+Statement 3 (Increment/Decrement): Increases or decreases the loop variable after each iteration.
+Example: i++</h3>
+
+<h3>Working process Method: Initialization → Condition Check → Execute Code → Increment/Decrement → Condition Check Again.</h3>
+    </pre>
+
+    <h3>Example:</h3>
+    <pre>
+
+for (let i = 0; i <5; i++) {     
+    console.log(a + i);            
+}
+    </pre>
+
+    <h3>Output:</h3>
+    <p>
+        1<br>
+        2<br>
+        3<br>
+        4<br>
+        5
+    </p>
+
+    <h3>Important Points:</h3>
+    <ul>
+        <li>Initialization is executed only once.</li>
+        <li>Condition is checked before every iteration.</li>
+        <li>Increment or decrement updates the variable.</li>
+    </ul>
+
+    <hr>
+    <h2>2. For In Loop</h2>
+
+    <h3>Definition:</h3>
+    <p>
+        A for in loop is used to iterate over the enumerable
+        property keys of an object.
+    </p>
+    <p>A for in loop is used to access the keys (property names) of an object one by one.</p>
+
+    <h3>Syntax:</h3>
+    <pre>
+for (let key in object) {
+    // Code to execute
+}
+    </pre>
+
+    <h3>Example:</h3>
+    <pre>
+let obj ={
+    name: "Harry",          
+    role : "Programmer",
+    Company: "CodeWithharry Ai" 
+}
+
+for (const key in obj) {
+    const element = obj[key];
+    console.log(key, element) 
+}
+    </pre>
+
+    <h3>Output (Console):</h3>
+    <pre>
+name Harry
+role Programmer
+Company CodeWithharry Ai
+    </pre>
+
+<p>Here we can write Both Key & element & only Key & only element we can write also Any onne of these.</p>
+
+    <h3>Important Points:</h3>
+    <ul>
+        <li>It is mainly used with objects.</li>
+        <li>It returns property keys.</li>
+        <li>Object values can be accessed using object[key].</li>
+    </ul>
+
+    <hr>
+
+    <h2>3. For Of Loop</h2>
+
+    <h3>Definition:</h3>
+    <p> A for of loop is used to iterate over the values of iterable objects such as arrays and strings.</p>
+    <p>A for of loop is used to access the values of an array or string one by one.</p>
+
+    <h3>Syntax:</h3>
+    <pre>
+for (let value of iterable) {
+    // Code to execute
+}
+    </pre>
+
+    <h3>Example 1:</h3>
+    <pre>
+let fruits = ["Apple", "Banana", "Mango"];
+
+for (let fruit of fruits) {
+    console.log(fruit);
+}
+    </pre>
+
+    <h3>Output (Console):</h3>
+    <pre>
+Apple
+Banana
+Mango
+    </pre>
+
+     <h3>Example 2 :</h3>
+    <pre>
+        for (const c of "Harry") {   
+    console.log(c)  
+}
+    </pre>
+    
+    <h3>Output (Console):</h3>
+    <pre>
+        H 
+        a 
+        r 
+        r 
+        y
+    </pre>
+
+    <h3>Important Points:</h3>
+    <ul>
+        <li>It is used with arrays, strings and other iterables.</li>
+        <li>It returns values instead of keys.</li>
+        <li>It makes iteration easier.</li>
+    </ul>
+
+    <hr>
+
+    <h2>4. While Loop</h2>
+
+    <h3>Definition:</h3>
+    <p>
+        A while loop executes a block of code repeatedly as long
+        as the given condition is true.
+    </p>
+<p>A while loop is used to execute a block of code repeatedly as long as the given condition is true.</p>
+
+    <h3>Syntax:</h3>
+    <pre>
+while (condition) {
+    // Code to be execute
+}
+    </pre>
+
+    <h3>Example:</h3>
+    <pre>
+let i = 1;
+
+while (i <= 5) {
+    console.log(i);
+    i++;
+}
+    </pre>
+
+    <h3>Output (Console):</h3>
+    <pre>
+1
+2
+3
+4
+5
+    </pre>
+
+    <h3>Important Points:</h3>
+    <ul>
+        <li>Condition is checked before execution.</li>
+        <li>If the condition is false, the loop does not execute.</li>
+        <li>Increment or decrement is required to avoid an infinite loop.</li>
+    </ul>
+
+    <hr>
+
+    <h2>5. Do While Loop</h2>
+
+    <h3>Definition:</h3>
+    <p>
+        A do while loop executes the block of code at least once
+        before checking the condition.
+    </p>
+
+    <h3>Syntax:</h3>
+    <pre>
+do {
+    // Code to execute
+} while (condition);
+    </pre>
+
+    <h3>Example:</h3>
+    <pre>
+let i = 1;
+
+do {
+    console.log(i);
+    i++;
+} while (i <= 5);
+    </pre>
+
+    <h3>Output (Console):</h3>
+    <pre>
+1
+2
+3
+4
+5
+    </pre>
+
+    <h3>Important Points:</h3>
+    <ul>
+        <li>Code executes before checking the condition.</li>
+        <li>It executes at least once.</li>
+        <li>It is also called an exit-controlled loop.</li>
+    </ul>
+    <h1>Note: </h1>
+<h2>While = Check first, Execute later.
+<br>
+Do While = Execute first, Check later.</h2>
+    <script src="index.js"></script>
+</body>
+</html>
