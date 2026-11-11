@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Functions Notes</title>
+</head>
+
+<body>
+
+<h1>JavaScript Functions</h1>
+
+<hr>
+
+<h2>1. What is a Function?</h2>
+
+<p>
+A function is a reusable block of code that performs
+a specific task.
+</p>
+
+<p><b>Remember:</b> Define once, Call many times.</p>
+
+<h2>2. Function Example – nice()</h2>
+
+<pre>
+function nice(name) {
+    console.log("Hey " + name + " you are nice!");
+    console.log("Hey " + name + " you are good!");
+}
+
+nice("Rohan");
+nice("Shivam");
+</pre>
+
+<p>
+Here, <b>name</b> is a parameter and
+<b>"Rohan"</b> is an argument.
+</p>
+
+<h2>3. Function Sum</h2>
+
+<pre>
+function sum(a, b) {
+    console.log(a + b);
+}
+
+sum(3, 5);
+</pre>
+
+<p><b>Output:</b> 8</p>
+
+<p>
+Here, a = 3 and b = 5.
+</p>
+
+<h2>4. Return Keyword</h2>
+
+<p>
+return keyword sends a value back from the function
+to the caller.
+</p>
+
+<pre>
+function sum(a, b) {
+    return a + b;
+}
+
+let result = sum(3, 5);
+
+console.log(result);
+</pre>
+
+<p><b>Output:</b> 8</p>
+
+<p><b>Remember:</b> console.log() prints a value,
+while return sends a value back.
+</p>
+
+<h2>5. Reusable Function</h2>
+
+<pre>
+function sum(a, b) {
+    return a + b;
+}
+
+let result1 = sum(3, 5);
+let result2 = sum(7, 5);
+let result3 = sum(3, 13);
+
+console.log(result1);
+console.log(result2);
+console.log(result3);
+</pre>
+
+<p><b>Output:</b> 8, 12, 16</p>
+
+<h2>6. Default Parameters</h2>
+
+<p>
+A default parameter is a value given to a parameter
+when no argument is passed for it.
+</p>
+
+<pre>
+function sum(a, b, c = 3) {
+    return a + b + c;
+}
+
+let result1 = sum(3, 5);
+let result2 = sum(7, 5);
+let result3 = sum(3, 13, 1);
+
+console.log(result1);
+console.log(result2);
+console.log(result3);
+</pre>
+
+<p><b>Output:</b> 11, 15, 17</p>
+
+<ul>
+    <li>If c is not provided, default value 3 is used.</li>
+    <li>If c is provided, the given value is used.</li>
+</ul>
+
+<h2>7. Undefined and NaN</h2>
+
+<pre>
+function sum(a, b, c = 3) {
+    console.log(a, b, c);
+    return a + b + c;
+}
+
+let result = sum(3);
+console.log(result);
+</pre>
+
+<p>
+<b>Output:</b> 3 undefined 3
+</p>
+
+<p>
+<b>NaN:</b> Not a Number. It appears when a mathematical
+operation produces an invalid numeric result.
+</p>
+
+<p>
+Here, b is undefined, so the sum becomes NaN.
+</p>
+
+<h2>8. Arrow Function</h2>
+
+<p>
+An arrow function is another shorter way to write
+a function in JavaScript.
+</p>
+
+<pre>
+const func1 = (x) => {
+    console.log("I am arrow function", x);
+};
+
+func1(34);
+func1(66);
+func1(84);
+</pre>
+
+<p><b>Output:</b></p>
+
+<pre>
+I am arrow function 34
+I am arrow function 66
+I am arrow function 84
+</pre>
+
+<h2>9. Function Invocation</h2>
+
+<p>
+Function invocation means calling a function
+to execute its code.
+</p>
+
+<pre>
+function greet() {
+    console.log("Hello!");
+}
+
+greet();  // Function Invocation
+</pre>
+
+<h2>10. Important Points to Remember ⭐</h2>
+
+<ul>
+    <li>Function = Reusable block of code.</li>
+    <li>Parameter = Variable receiving a value.</li>
+    <li>Argument = Actual value passed to a function.</li>
+    <li>return = Sends value back to the caller.</li>
+    <li>Default Parameter = Default value of a parameter.</li>
+    <li>Arrow Function = Shorter function syntax.</li>
+    <li>Function Invocation = Calling a function.</li>
+    <li>Undefined = Value not assigned.</li>
+    <li>NaN = Not a Number.</li>
+</ul>
+<script src="index.js"></script>
+</body>
+</html>
