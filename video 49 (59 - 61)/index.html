@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Faulty Calculator Question</title>
+</head>
+
+<body>
+
+    <h1>JavaScript Project: Faulty Calculator 🧮</h1>
+
+    <h2>Question:</h2>
+
+    <p>
+        Create a faulty calculator using JavaScript.
+    </p>
+
+    <h3>Requirements:</h3>
+
+    <ol>
+        <li>It takes two numbers as input from the user.</li>
+        <li>It performs the following wrong operations:</li>
+    </ol>
+
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Original Operator</th>
+            <th>Wrong Operation</th>
+        </tr>
+
+        <tr>
+            <td>+</td>
+            <td>-</td>
+        </tr>
+
+        <tr>
+            <td>*</td>
+            <td>+</td>
+        </tr>
+
+        <tr>
+            <td>-</td>
+            <td>/</td>
+        </tr>
+
+        <tr>
+            <td>/</td>
+            <td>**</td>
+        </tr>
+    </table>
+
+    <h3>Important Condition:</h3>
+
+    <p>
+        The calculator should perform the wrong operation
+        only 10% of the time.
+    </p>
+
+    <p>
+        The remaining 90% of the time, it should perform
+        the correct operation.
+    </p>
+
+    <h3>Task:</h3>
+
+    <p>
+        Build this faulty calculator using JavaScript.
+    </p>
+
+    <h3>Hint 💡</h3>
+
+    <ul>
+        <li>Use prompt() to take input.</li>
+        <li>Use Math.random() for the 10% condition.</li>
+        <li>Use if-else statements for operations.</li>
+    </ul>
+
+    <h2>eval() in JavaScript</h2>
+
+    <h3>Definition:</h3>
+    <p>
+        eval() is a built-in JavaScript function that
+        executes a string as JavaScript code.
+    </p>
+
+    <h3>Syntax:</h3>
+    <pre>eval(string);</pre>
+
+    <h3>Example:</h3>
+    <pre>
+let x = "10 + 20";
+console.log(eval(x));
+    </pre>
+
+    <h3>Output:</h3>
+    <p>30</p>
+
+    <h3>Can we use eval()?</h3>
+
+    <p>Yes, we can use eval() for learning and practice.</p>
+
+    <p>But we should avoid it in real-world projects because:</p>
+
+    <ul>
+        <li>It can execute malicious code.</li>
+        <li>It creates security risks.</li>
+        <li>It makes debugging difficult.</li>
+        <li>It can affect performance.</li>
+    </ul>
+
+    <h3>Remember:</h3>
+    <p>
+        Avoid eval() in professional JavaScript development.
+        Use safer alternatives.
+    </p>
+
+    <script src="index.js"></script>
+</body>
+</html>
