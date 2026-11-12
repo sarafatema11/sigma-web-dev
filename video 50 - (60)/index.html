@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String in Javascript </title>
+</head>
+<body>
+    
+<h1>Javascript String Notes:</h1>
+
+<h2>String :</h2>
+<ol>
+    <li>String are used to store and manipulate the text.</li>
+    <li>string can be creted by following syntax:</li>
+    <li>script code:</li>
+    <pre>
+        let name = "Harry"
+        name.length
+    </pre>
+    <li>string can be created using Single quotes--  ('') .</li>
+     <pre>
+        let name = 'Harry'
+        name.length
+    </pre>
+</ol>
+
+<h1>String in Javascript :</h1>
+<ol>
+    <h2><li>Show Name as a string in Browser: </li></h2>
+    <h3><pre>
+        let a = "Harry";   
+        console.log(a)
+    </pre></h3>
+
+   <ol>
+    <li>Output show hogaon Browser:- Harry</li>
+   </ol>
+
+    <h2><li>Show on letters / Characters in Browser using Array:</li></h2>
+<h3><pre>
+        let b = "Harry";
+        
+        console.log(a[0]);   //output:- H 
+        console.log(a[1]);  //output:- a
+        console.log(a[2]);   //output:- r 
+        console.log(a[3]);   //output:- r 
+        console.log(a[4]);   //output:- y 
+        console.log(a[5]);   //output:- undefined
+</pre></h3>
+<ol>
+    <li>output side me show hora wo hi output browser me same show hoga.</li>
+    <li>its show only one character.</li>
+    <li>agar hum ne galti se extra likh diya jo ki character hai bhi nhi to wo undefined show hoga.</li>
+    <li>see 5 index.</li>
+    <li>index always start with Index Zero (0) .</li>
+</ol>
+
+<h2><li>Show Array length :</li></h2>
+<h3><pre>console.log(a.length);</pre></h3>
+<ol>
+    <li>output show :- 5</li>
+    <li>bcz in harry is 5 letters. </li>
+</ol>
+
+
+<h2><li>Template literal : </li></h2>
+<ol>
+    <li>Template literal use Backticks (``)  ye simply tab key k upr or Esc key k neeche milega aap ko keyboard pr.  </li>
+   
+</ol>
+<h3><pre>
+    let real_name = "Harry"
+    let friend = "Rohan"
+<!-- normally hum aise likhte hai but ye thoda tricky hai thtas why we use template literal. -->
+console.log("His name is " + real_name + " and his friend name is " + friend);</pre></h3>
+
+
+<ol>
+    <li>Output:- His name is Harry and his friend name is Rohan</li>
+    <li>kabhi kabhi bhot sare vaiarables hote hai to hamein template banani padti hai string ka to hum template literal ka use krte hai.</li>
+</ol>
+
+<h3><pre>console.log(`His name is ${real_name} and his friend name is ${friend}`)</pre></h3>
+<ol>
+    <li>we use this template literal </li>
+</ol>
+
+<h2><li>Template literal with both single & double quotion:</li></h2>
+<ol>
+     <li>with Template literal , it is possible to use both  silgle('') as well as double quoteion ("") inside a string.</li>
+</li>
+<h3><pre>let sentence = `The name "is" Harry's`
+console.log(sentence);</pre></h3>
+
+<ol>
+    <li>output:- The name "is" Harry's</li>
+    <li>in this the backlist single & diuble quotion everything is come.</li>
+</ol>
+
+</ol>
+
+<h2><li>String Interpolation :</li></h2>
+
+<h3><pre>
+    let realname = "Rahul";
+    let x = `this is ${realname}`;
+    console.log(x);     
+
+</pre></h3>
+<ol>
+    <li>output:- this is Rahul</li>
+    <li>we can insert variable directly in template literal this is called string interpolation.</li>
+    <li>example above code.</li>
+</ol>
+
+<h2><li>Escape Sequence Character: </li></h2>
+
+<dd>Escape Sequence Characters in JavaScript are special characters used with a backslash (\) to perform specific tasks inside strings.</dd>
+<pre>
+ | Escape | Meaning      |
+ -------------------------
+ | `\n`   | New line     |
+ | `\t`   | Tab space    |
+ | `\'`   | Single quote |
+ | `\"`   | Double quote |
+ | `\\`   | Backslash    |
+ -------------------------
+</pre>
+
+<h2>Example:-</h2>
+
+<h3><pre>
+let text = "Hello\nRahul"        
+console.log(text); 
+</pre></h3>
+<ol>
+    <li>output print on browser is :- <br>
+         Hello <br>
+         Rahul</li>
+</ol>
+
+<h2><li>String Properties & Methods:-</li></h2>
+<ol>
+    <li>length is a property. and other is a function unko run krne k liye brackets lagane padte hai like this ().</li>
+</ol>
+
+<pre>
+╔════════════════════════════════════════════╗
+║       JAVASCRIPT STRING PROPERTY           ║
+╠════════════════════════════════════════════╣
+
+╠════════════════════════════════════════════╣
+║ 1. length                                  ║
+║    → Returns total number of characters.   ║
+╠════════════════════════════════════════════╣
+
+╠════════════════════════════════════════════╣
+║       JAVASCRIPT STRING METHODS            ║
+╠════════════════════════════════════════════╣
+║ 1. toUpperCase()                           ║
+║    → Converts string into uppercase.       ║
+║                                            ║
+║ 2. toLowerCase()                           ║
+║    → Converts string into lowercase.       ║
+║                                            ║
+║ 3. slice()                                 ║
+║    → Extracts a part of string.            ║
+║                                            ║
+║ 4. substring()                             ║
+║    → Extracts characters between positions.║
+║                                            ║
+║ 5. replace()                               ║
+║    → Replaces a word or character.         ║
+║                                            ║
+║ 6. replaceAll()                            ║
+║    → Replaces all matching occurrences.    ║
+║                                            ║
+║ 7. trim()                                  ║
+║    → Removes spaces from both ends.        ║
+║                                            ║
+║ 8. trimStart()                             ║
+║    → Removes spaces from the beginning.    ║
+║                                            ║
+║ 9. trimEnd()                               ║
+║    → Removes spaces from the end.          ║
+║                                            ║
+║ 10. includes()                             ║
+║     → Checks whether text exists.          ║
+║                                            ║
+║ 11. startsWith()                           ║
+║     → Checks the starting text.            ║
+║                                            ║
+║ 12. endsWith()                             ║
+║     → Checks the ending text.              ║
+║                                            ║
+║ 13. charAt()                               ║
+║     → Returns character at a position.     ║
+║                                            ║
+║ 14. indexOf()                              ║
+║     → Returns first matching position.     ║
+║                                            ║
+║ 15. lastIndexOf()                          ║
+║     → Returns last matching position.      ║
+║                                            ║
+║ 16. concat()                               ║
+║     → Joins two or more strings.           ║
+║                                            ║
+║ 17. repeat()                               ║
+║     → Repeats a string multiple times.     ║
+║                                            ║
+║ 18. split()                                ║
+║     → Splits string into an array.         ║
+║                                            ║
+║ 19. padStart()                             ║
+║     → Adds characters at the beginning.    ║
+║                                            ║
+║ 20. padEnd()                               ║
+║     → Adds characters at the end.          ║
+╚════════════════════════════════════════════╝
+</pre>
+
+<h2>Example:-</h2>
+<h3><pre>
+let c = "ShivamSh"
+
+console.log(c.toUpperCase())   // output:- SHIVAM
+console.log(c.toLowerCase())  //output:-   shivam
+console.log(c.length)         //output:-    6
+console.log(c.slice(1,5))     //output:- hiva
+                             //zero (0) se le kr 4 k bech k letters ajayege. 
+console.log(c.slice(1))      // output:- hivam
+
+ console.log(c.replace("Sh", "77"))   //output:- 77ivamSh
+
+ console.log(c.concat(a,"Aishwarriya", "Priya", "Rahul"))
+</pre></h3>
+
+<ol>
+    <li>Here is the some function we study it.</li>
+</ol>
+
+
+<h2><li>String Immutablety: </li></h2>
+
+<ol>
+    
+    <li>ek baar aap ne string bana di na or memeory me allocation ho gaya na is k baad aap dubara us string ko change nhi kr sakte.</li>
+    <li>aap new string bana sakte ho Functions ka use kr k but aap us old string ko change nhi kr skate hai.</li>
+    <li>String are immutable . Inorder to acccess the character  at an index we use the following syntax.</li>
+    <pre>
+        let b = "Harry"
+        
+        name[0]     // its print --- H
+        name[1]     //its print --- a
+    </pre>
+    <li>Immutable means once a string is created, its original characters cannot be changed.</li>
+</ol>
+<h2>Ex: </h2>
+<h3><pre>
+let z = "Harry";
+z[0] = "B";       
+console.log(z);
+</pre></h3>
+<ol>
+    <li>output:- Harry</li>
+</ol>
+</ol>
+
+    <script src="index.js"></script>
+</body>
+</html>
