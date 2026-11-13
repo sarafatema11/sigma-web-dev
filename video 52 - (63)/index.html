@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Arrays</title>
+</head>
+<body>
+    <h1>Javascript Arrays:</h1>
+<ol>
+    <li>Array is a Collection of Multiple Data types.</li>
+    <li>you can add Numbers, String, Objects.</li>
+    <li>ek naam k under multiple values store kr paye.</li>
+    <li>Array mutable hota hai we can change array but in string we can not change bcz string is a immutable.   </li>
+</ol>
+
+<ol>
+    <h2><li>Array: </li></h2>
+    <h3><pre>
+let arr = [1, 2, 4, 5, 7]
+console.log(arr)
+    </pre></h3>
+<ol>
+    <li>console/ browser output:- Array[5]</li>
+    <li>down arow pr click karige to hum ko wo numbers index k sath dekhenge sath me length bh mlm hogi.</li>
+<h3><pre>
+   output:-  (5) [1, 2, 4, 5, 7]
+</pre></h3>
+
+</ol>
+
+<h2><li>Array length:</li></h2>
+ <h3><pre>
+console.log(arr.length);
+    </pre></h3>
+    <ol>
+        <li>ye krne se hamein array k under kitni length hai wo pata chale ga same waise hi jaise hum ne string k time reada kara tha ex: "Harry" ----iski length "5" ayegi.</li>
+      <h3><pre>output :-   5 </pre></h3>
+    </ol>
+
+<h2><li>Index value show karega:</li></h2>
+<ol>
+    <li>let arr = [1, 2, 4, 5, 7]</li>
+    <li>ye array hai is k under jo index value hogi wo show karega.</li>
+    <h3>Ex with output :- </h3>
+    <h3><pre>
+        console.log(arr[0]);    //output:- 1
+        console.log(arr[2]);    //output:- 4
+        console.log(arr[4]);    //output:- 7 
+    </pre></h3>
+</ol>
+
+
+<!-- Array is mutable we can change the array. but string is immutable we can not change it. -->
+
+<h2><li>Array Mutable :</li></h2>
+<ol>
+    <li> Array is mutable we can change the array. but string is immutable we can not change it.</li>
+    <h3>Ex 1:- </h3>
+    <h3><pre>
+        let numbers = [7, 2, 40, 9]
+        numbers[2] = 8;
+        console.log(numbers);
+    </pre></h3>
+    <li>In this code Index 2 ki jagah 8 ajayega. </li>
+    <li>Index 2 is 40 .</li>
+    <h3><pre> output:- (4) [7, 2, 8, 9] </pre></h3>
+
+<h3>Ex 2 :-</h3>
+<h3><pre>
+          let arr = [1, 2, 4, 5, 7]
+          arr [0] = 5666;
+          console.log(arr[0]);  
+</pre></h3>
+<li>yaha output:- 5666 not 1 bcz we chanege the value.</li>
+<li>phele starting me hum ne jo array likha tha uska index 0 zero ka 1 outpt arra tha but abb 5666 arra bcz hum ne index 0 ki value change krdi.</li>
+<li>Thats why is called array immutable.</li>
+
+</ol>
+
+<h2><li>String Immutable ex :</li></h2>
+<ol>
+    <li>output:- Harry not karry bcz its immutable striing.</li>
+    <li> Array → Mutable (you can change individual elements).</li>
+    <h3>Ex:-</h3>
+    <h3><pre>
+        let a = "Harry"
+        a[0] = "k"
+        console.log(a);
+    </pre></h3>
+    
+    <li>String → Immutable (you cannot change individual characters).</li>
+    <h3><pre>output:- Harry</pre></h3>
+</ol>
+
+<h2><li>Array Object :</li></h2>
+<ol>
+    <li>Array typeof arr array ko object batata hai ye.   </li>
+    <li>In javascript array are object thhe typeof operator on array return return object. </li>
+    <h3>Ex :- </h3>
+    <h3><pre>
+        console.log(arr, typeof arr);
+    </pre></h3>
+    <h3><pre>output:- (5) [5666, 2, 4, 5, 7] 'object</pre></h3>
+</ol>
+
+<h2><li>Array Methods:</li></h2>
+<dd>In JavaScript, Array Methods are built-in functions that help us perform different operations on arrays, such as adding, removing, searching, and modifying elements.</dd>
+<dd>we use array methods based onn this let condition.</dd>
+<h3> let ar = [5666, 2, 4, 5, 7]</h3>
+<ol>
+    <h3><li>tostring() :</li></h3>
+<ol>
+    <li>Convert an array to a string of comma seperated value.</li>
+    <li>Converts an array into a string.</li>
+    <h3>Ex:-</h3>
+    <h3><pre>
+       let ar = [5666, 2, 4, 5, 7]
+        console.log(str.toString());
+    </pre></h3>
+<h3><pre>Output:- 10, 20, 30</pre></h3>
+</ol>
+
+<h3><li>join() :</li></h3>
+<ol>
+    <li>Joins all array elements into a string using a separator.</li>
+    <h3>Ex:</h3>
+    <h3><pre>
+     let ar = [5666, 2, 4, 5, 7]
+     console.log(ar.join(" and "));
+    </pre></h3>
+   <h3><pre>  output:- 5666 and 2 and 4 and 5 and 7        </pre></h3>
+</ol>
+
+<h2><li>Pop() :</li></h2>
+<ol>
+    <li>Removes the last element from an array.</li>
+    <h3>Ex :</h3>
+    <h3><pre>
+let ar = [5666, 2, 4, 5, 7]
+ar.pop();
+console.log(ar);
+    </pre></h3>
+    <li>here its remove last elemennts which is 7.</li>
+    <h3><pre>output:- (4) [5666, 2, 4, 5] </pre></h3>
+</ol>
+
+<h2><li>push() :</li></h2>
+<ol>
+    <li>Adds an element at the end of an array.</li>
+    <li>We can add numbers and characters letters etc.</li>
+    <h3>Ex:</h3>
+    <h3><pre>
+ar.push(100, "Harry");
+console.log(ar);
+    </pre></h3>
+    <h3><pre>Output:- [5666, 2, 4, 5, 100, 'Harry']
+    </pre></h3>
+</ol>
+
+<h2><li>Shift() :</li></h2>
+<ol>
+    <li>Removes the first element from an array.</li>
+    <h3>Ex :-</h3>
+    <h3><pre>
+ar.shift();
+console.log(ar);
+    </pre></h3>
+    <li>yaha pr first element means jo 5666 hai usko remove krdega.</li>
+    <h3><pre>output:- (7) [2, 4, 5, 100, 'Harry', 100, 'Harry']</pre></h3>
+</ol>
+
+<h2><li>unshift() :</li></h2>
+<ol>
+    <li>Adds an element at the beginning of an array.</li>
+    <h3>Ex:</h3>
+    <h3><pre>
+ar.unshift("Jack");
+console.log(ar);
+    </pre></h3>
+    <li>ye jack ko first element k samme mein print kr dega.</li>
+    <h3><pre>output:- (8) ['Jack', 2, 4, 5, 100, 'Harry', 100, 'Harry']</pre></h3>
+</ol>
+
+
+<h2><li>delete :</li></h2>
+<ol>
+    <li>Deletes an element from an array but does not change its length.</li>
+    <h3>Ex :</h3>
+    <h3><pre>
+delete ar[5];
+console.log(ar);
+    </pre></h3>
+    <li>Yaha pr last element ki jagah empty ajayega.</li>
+    <li>or mein ar[5] ki jagah ar[6] kr do to output "undefined" ajayega.</li>
+
+<h3><pre>(6) ['Jack', 2, 4, 5, 100, empty] </pre></h3>
+</ol>
+
+<h2><li>Concat :</li></h2>
+<ol>
+    <li>Combines two or more arrays and returns a new array.</li>
+    <h3>Ex :</h3>
+    <h3><pre>
+let x = [1, 2, 3]
+let y = [4, 5, 6]
+let z = [9, 8, 7]
+
+let result = x.concat(y, z);
+console.log(result);
+    </pre></h3>
+
+    <li>yaha pr x y z sab ko combine kr diye.</li>
+    <h3><pre>output:- (9) [1, 2, 3, 4, 5, 6, 9, 8, 7]</pre></h3>
+</ol>
+
+
+<h2><li>Sort :</li></h2>
+<ol>
+    <li>Sorts the elements of an array.</li>
+    <li>This method is used to sort the an array in Alphabatically.</li>
+    <li>sort() method array ke elements ko ascending ya descending order mein arrange karta hai.</li>
+    <h3>Ex: </h3>
+    <h3><pre>
+let num = [7, 9, 8]
+num.sort();
+console.log(num);
+    </pre></h3>
+    <li>Numbers or character letters ko Alphabetically arranged krta hai.</li>
+    <h3><pre>output: (3) [7, 8, 9]</pre></h3>
+</ol>
+
+<h2><li>Splice :</li></h2>
+<ol>
+    <li>Adds or removes elements from an array.</li>
+    <li>splice() ka use array mein elements add ya remove karne ke liye hota hai.</li>
+    <h3>Ex :</h3>
+    <h3><pre>
+let NUM = [1, 2, 3, 4, 5]
+
+let Result = NUM.splice(1,3, 55);
+console.log(Result); 
+console.log(NUM); 
+    </pre></h3>
+    <li>yaha samjho kya hua: </li>
+    <pre>
+1 → Index 1 se start karo (value 2).
+3 → Total 3 elements remove karo (2, 3, 4).
+55 → Unki jagah 55 add karo.
+    </pre>
+    <h3><pre>output : (3) [2, 3, 4]  & (3) [1, 55, 5]     </pre></h3>
+</ol>
+
+<h2><li>Slice :</li></h2>
+<ol>
+    <li>Returns a selected portion of an array without changing the original array.</li>
+    <li>slice out a  piece from an array. it creates  a new array.</li>
+    <li>slice() ka use array ke kuch elements ko extract (copy) karne ke liye hota hai.</li>
+    <li>Important: slice() original array ko change nahi karta.  </li>
+    <h3>Ex: </h3>
+<h3><pre>
+let cars = ["BMW", "Audi", "Thar", "Swift", "Tesla"];
+
+let results = cars.slice(1, 3);
+console.log(results);
+</pre></h3>
+<li>Rule: slice(start, end) mein starting index include hota hai, lekin ending index exclude hota hai. means last wala include nhi krte bass wahi ruk jate hai hum.</li>
+<h3><pre> output:- (2) ['Audi', 'Thar']</pre></h3>
+</ol>
+
+<h2><li>reverse :</li></h2>
+<ol>
+    <li>reverse() ka use array ke elements ka order ulta (reverse) karne ke liye hota hai.</li>
+    <li>reverse the elements in the source arrays.</li>
+    <h3>Ex: </h3>
+    <h3><pre>
+let fruits = ["Mango", "Banana", "Apple", "Grapes"]
+fruits.reverse();
+console.log(fruits);
+    </pre></h3>
+
+    <li>Dekho, jo element last mein tha woh first mein aa gaya aur jo first mein tha woh last mein aa gaya.</li>
+
+    <h3><pre>(4) ['Grapes', 'Apple', 'Banana', 'Mango']</pre></h3>
+</ol>
+</ol>
+</ol>
+
+<h1>Loops in Array </h1>
+<ol>
+    <li>Loops in an array are used to access, read, or perform operations on array elements one by one without writing separate code for each element.</li>
+    <li>Array ke sabhi elements ko ek-ek karke access ya print karne ke liye loops ka use kiya jata hai.</li>
+</ol>
+
+<h2>Loops Methods In Arrays :</h2>
+<ol>
+    <h2><li>for loop:</li></h2>
+    <dd>A for loop is a programming control flow statement that repeats a block of code a specific number of times</dd>
+
+<h2><li>for-each loop: </li></h2>
+<dd>forEach() method array ke har element par ek function execute karta hai. Ye original array ko modify nahi karta (jab tak callback khud modify na kare) aur koi new array return nahi karta.</dd>
+
+<h2><li>For-In loop :</li></h2>
+<dd>for...in loop ka use array ke indexes (keys) ko access karne ke liye hota hai.</dd>
+
+
+<h1>Here (mfr) is called Map , Filter, Reduce. methods in arrays. </h1>
+<h2><li>map() :</li></h2>
+<dd>map() method array ke har element par operation perform karta hai aur ek new array return karta hai.</dd>
+
+
+<h2><li>Filter :</li></h2>
+<dd>filter() method condition ke according array se elements select karta hai aur ek new array return karta hai.</dd>
+
+<h2><li>Reduce :</li></h2>
+<dd>reduce() method array ke sabhi elements ko combine karke ek single value return karta hai</dd>
+</ol>
+
+<h2><li>Array from :</li></h2>
+<dd>Array.from() method kisi iterable ya array-like object ko new array mein convert karta hai.</dd>
+
+<script src="index.js"></script>
+<script src="loops.js"></script>
+<script src="mfr.js"></script>
+</body>
+</html>
