@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex: 11 Factorial calculator</title>
+</head>
+<body>
+    <h1>Question: Write a Program to Calcilate Factorial of a Number using reduce and for loop.</h1>
+    <h2> ex:  6! = 6*5*4*3*2*1 = 720.</h2>
+   <h3> What is Factorial :</h3>
+   <ol>
+    <p>The factorial of a number is the multiplication  of all the numbers between ONE and the number itself.</p>
+    <h3>Ex: </h3>
+    <li> 5! = 5*4*3*2*1 = 120 .</li>
+    <li>6! = 6*5*4*3*2*1 = 720.</li>
+   </ol>
+
+   <h1>mine answer : </h1>
+   <h3><pre>
+let z = 6;
+
+let number = Array.from({ length: z }, (value, index) => z - index);
+
+let fac = number.reduce((a, b) => a * b);
+
+console.log(n + "! = " + number.join(" * ") + " = " + fac);
+   </pre></h3>
+
+<h3>output:- </h3>
+<h5>6! = 6 * 5 * 4 * 3 * 2 * 1 = 720 </h5>
+
+<h1>sir answer :</h1>
+
+<h3><pre>
+let a = 7;
+function factorial(number){
+    let arr = Array.from(Array(number+1).keys())
+    let c = arr.slice(1,).reduce((a , b)=> a*b
+    )
+    return c 
+}
+
+function facFor(number){
+    let fac = 1;
+    for (let index = 1; index <=number; index++) {
+        fac = fac * index
+        
+    }
+    return fac
+}
+console.log(factorial(a))
+console.log(facFor(a))
+</pre></h3>
+
+<h3>output:-  5040 </h3>
+
+   <script src="index.js"></script>
+</body>
+</html>
