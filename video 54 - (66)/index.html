@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Document object model</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            this is a box.
+        </div>
+    </div>
+
+    <h1>DOM :</h1>
+    <h2>Dom : Document object Model is a Browser Api which is access through the javascript.</h2>
+    <ol>
+        <li>DOM ek programming interface hai jo HTML document ko ek tree structure (object) mein convert karta hai,
+            jisse JavaScript HTML elements ko access aur change kar sakti hai.</li>
+        <li>DOM khud JavaScript ka method nahi hai. DOM browser ka API hai, jise JavaScript ke through access karte
+            hain.</li>
+    </ol>
+
+    <ol>
+
+        <h2>
+            <li>DOM Methods :</li>
+        </h2>
+        <p>Methods ka use HTML elements ko select ya manipulate karne ke liye hota hai.</p>
+        <h3>
+            <pre>
+        document.getElementById("demo");
+        document.querySelector("h1");
+        document.querySelectorAll("p");
+        document.createElement("div");
+        document.removeChild(element);
+    </pre>
+        </h3>
+
+        <h2>
+            <li>DOM Properties :</li>
+        </h2>
+        <p>Properties se hum HTML elements ki information le ya change kar sakte hain.</p>
+        <h3>
+            <pre>
+element.innerHTML;
+element.innerText;
+element.textContent;
+element.id;
+element.className;
+element.style;
+    </pre>
+        </h3>
+
+
+        <h2>
+            <li>DOM Events :</li>
+        </h2>
+        <p>Events ka matlab hai user ke actions, jaise click karna, keyboard press karna etc.</p>
+        <h3>
+            <pre>
+    element.onclick;
+    element.addEventListener("click", function() {
+    console.log("Button clicked!");
+});
+</pre>
+        </h3>
+
+        <h2>
+            <li>DOM Types :</li>
+        </h2>
+        <p>DOM mein different types ke nodes hote hain:
+            -</p>
+        <h3>
+            <pre>
+ 1. Document Node: Pura HTML document.
+ 2. Element Node: HTML tags, jaise h1, p, div.
+ 3. Text Node: HTML tags ke andar ka text.
+ 4. Attribute Node: Attributes, jaise id, class.
+</pre>
+        </h3>
+
+
+        <h2>
+            <li>DOM Functions :</li>
+        </h2>
+        <p>DOM mein hum JavaScript functions ka use bhi karte hain, jaise :</p>
+        <h3>
+            <pre>
+    function changeText() {
+    document.querySelector("h1").innerText = "Hello!";
+    }
+</pre>
+        </h3>
+    </ol>
+
+
+    <h1>DOM - Notes :</h1>
+    <ol>
+        <li>is used for jo aap ka entire html hai usko map kiya ja sake as a documentry.</li>
+    </ol>
+
+    <ol>
+
+        <h2>
+            <li>title change :</li>
+        </h2>
+        <ol>
+            <li>is se Web page ka jo title hai wo change hota hai.</li>
+            <h3>EX :</h3>
+            <h3>
+                <pre>
+       document.title = "Harry is good"
+       console.log(document.title)
+       console.log(document.body)
+       </pre>
+            </h3>
+            <li>phele to jo title tha wo change ho jayega.</li>
+            <li>then browser me console csreen me aap console.log kra tha uska output dekh ne ko melega.</li>
+            <li>phele console screen pr jo title diya woo ajayega then others things .</li>
+        </ol>
+
+        <h2>
+            <li>body content print on console screen </li>
+        </h2>
+        <ol>
+            <li>is mein tree like struture me aap ki entire html aa jati hai. jab aap likhte ho document.body</li>
+            <li>is ka used hota hai kisi bhi element ko change krne k liye.</li>
+            <li>output mein html body me jo bhi content hai wo pura hum connsole screen pr dekh sakte hai.</li>
+            <h3>EX :</h3>
+            <h3>
+                <pre> console.log(document.body)</pre>
+            </h3>
+
+            <h2>HTMl body example print on console screen </h2>
+
+            <!-- <div class="container">
+                <div class="box">
+                    this is a box.
+                </div>
+            </div> -->
+        </ol>
+
+        <h2>
+            <li>background-Color change using document : </li>
+        </h2>
+        <ol>
+            <li>ye krne se ek inline css insert ho jayegi or aap ka web page ka back grond colour change kr degi.</li>
+            <li>back ground color- green hai abhi.</li>
+            <h3>Ex :</h3>
+            <h3>
+                <pre>
+         document.body.style.backgroundColor = "green";
+    </pre>
+            </h3>
+        </ol>
+    </ol>
+
+    <h1>Difference between DOM & BOM :</h1>
+    <ol>
+        <h2>
+            <li>DOM : document object Model</li>
+        </h2>
+        <ol>
+            <li>DOM ka use HTML page ko access aur manipulate karne ke liye hota hai.</li>
+            <li></li>
+
+
+
+        </ol>
+
+
+        <h2>
+            <li>BOM : browser object Model </li>
+        </h2>
+        <ol>
+            <li>BOM ka use browser ko access aur control karne ke liye hota hai.</li>
+            <li>if u want to work with someone others than the document , then the then browser provide you some
+                additionall object. is called bom. </li>
+            <li>the function / alert / connfirm / prompt they all are also the part of the bom.</li>
+            <li>EX : like location.href --- ye provide ki jati hai aap logo ko jisse aap redirect kr sakte hai dusre URL
+                mein. </li>
+            <h4>Ex : LOcation:href = "https://codewithharry.com"</h4>
+            <li>this is redirect to another URL.</li>
+        </ol>
+    </ol>
+
+    <h2>
+        <li> Window object : </li>
+    </h2>
+    <ol>
+        <li>window objecct hota us k under rehta hai document.</li>
+        <li>window is a global object.</li>
+        <h3>
+            <pre>
+window  //window object hota jis k under hota hai document.
+window.document         //document melega.
+window.document.body     //aap ko html body melegi.
+        </pre>
+        </h3>
+        <li>JavaScript mein window likhna optional hota hai, kyunki browser mein ye global object hai.</li>
+
+        <li>Window object BOM (Browser Object Model) ka main object hai</li>
+        <li>Browser mein jab hum koi webpage open karte hain, toh browser us page ke liye ek window object provide karta
+            hai</li>
+        <li>Iska use browser window ko control aur access karne ke liye hota hai.</li>
+
+        <ol>
+            <h2>
+                <li>Window Object ke Methods :</li>
+            </h2>
+            <ol>
+                <li>Methods ka matlab hai jo kaam perform karte hain.</li>
+                <h3>EX :</h3>
+                <h3>
+                    <pre>
+
+| Method            | Work                                        |
+|-------------------|---------------------------------------------|
+| alert()           | Alert message show karta hai.               |
+| confirm()         | OK/Cancel popup show karta hai.             |
+| prompt()          | User se input leta hai.                     |
+| setTimeout()      | Kuch time baad code execute karta hai.      |
+| setInterval()     | Fixed interval par code execute karta hai.  |
+| clearTimeout()    | setTimeout ko stop karta hai.               |
+| clearInterval()   | setInterval ko stop karta hai.              |
+| open()            | New browser window/tab open karta hai.      |
+| close()           | Browser window close karne ki request karta hai. |
+
+        </pre>
+                </h3>
+            </ol>
+        </ol>
+
+    </ol>
+
+    <!-- script code  -->
+    <script>
+
+        document.title = "Harry is good"
+        console.log(document.title)
+        console.log(document.body)
+        document.body.style.backgroundColor = "green";
+
+    </script>
+
+</body>
+</html>
