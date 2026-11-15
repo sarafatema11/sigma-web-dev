@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom - nodes, parents, children</title>
+    <style>
+        .box {
+            height: 45px;
+            width: 56px;
+            border: 2px solid black;
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- container k baad ya div k baad jo space hai is called text node. -->
+        <div class="box">Box1</div>
+        <div class="box">Box2</div>
+        <div class="box">Box3</div>
+        <div class="box">Box4</div>
+        <div class="box">Box5</div>
+    </div>
+
+    <!-- my notes  -->
+    <h1>Diffrence nodes & elements :</h1>
+    <ol>
+        <h2>
+            <li>first child nodes:</li>
+        </h2>
+        <ol>
+            <li>is me nodes, jo ki text nodes , comments ye sab aate hai.</li>
+            <li>is me text node, comment node, or element nod means (code) etc ye sab ayega.</li>
+        </ol>
+        <h2>
+            <li>fits Elemets child :</li>
+        </h2>
+        <ol>
+            <li>is me jo html code ya jo code hota hai wo atte hai.</li>
+        </ol>
+    </ol>
+
+<!-- child nodes  -->
+    <h1>Child Nodes :</h1>
+    <ol>
+        <li>hum using this <b>document.body.any elemnt</b> ka use kr k childNodes ka pata laga sakte hai.</li>
+        <li>aap ksisi bhi element k childnodes ka pata laga sakte hai.</li>
+        <li><b>Child Nodes : </b> Elements that are direct children for example: head, body, are children of html </li>
+    </ol>
+
+
+    <ol>
+        <h2>
+            <li>document.childNodes : </li>
+        </h2>
+        <ol>
+            <li>is se apn child node acsess kr sakte hai.</li>
+            <li>ye krne pr mujhe mere nodes mil gye like for ex: text, conatiner,scripe etc.</li>
+
+            <li> output:-</li>
+            <h4> NodeList(9) [text, div.container, text, h1, text, ol, text, script, text]</h4>
+        </ol>
+
+        <h2>
+            <li>document.body.childNodes[0]:</li>
+        </h2>
+        <ol>
+            <li>is ka phela jo child hai usko zero kr k acess kr sakta ho.</li>
+
+            <li>ouutput:-</li>
+            <h4>#text</h4>
+            <li>this is a text node. </li>
+            <li>why text node ?</li>
+            <li>bcz us text node k under mein ne space rahi hai. </li>
+        </ol>
+
+        <h2>
+            <li>document.body.childNodes[1]:</li>
+        </h2>
+        <ol>
+            <li>ye container code de dega.</li>
+            <li>
+                Output:-
+                <pre>
+        <code>
+&lt;div class="container"&gt;
+    &lt;div class="box"&gt;Box1&lt;/div&gt;
+    &lt;div class="box"&gt;Box2&lt;/div&gt;
+    &lt;div class="box"&gt;Box3&lt;/div&gt;
+    &lt;div class="box"&gt;Box4&lt;/div&gt;
+    &lt;div class="box"&gt;Box5&lt;/div&gt;
+&lt;/div&gt;
+        </code>
+    </pre>
+            </li>
+        </ol>
+
+        <h2>
+            <li>document.body.childNodes[1].childNodes
+            </li>
+        </h2>
+        <ol>
+            <li>agar aap ko container k under k bhi nodes hona to phir aap ko ye likhna hoga.</li>
+            <li>output:-</li>
+            <h4>NodeList(11) [text, div.box, text, div.box, text, div.box, text, div.box, text, div.box, text]</h4>
+        </ol>
+    </ol>
+
+    <h1>First child, Last child & child Nodes :</h1>
+
+    <ol>
+        <h2>
+            <li>
+                let cont = document.body.childNodes[1]
+            </li>
+        </h2>
+        <ol>
+            <li>is ka output undefined ayega but hai to wo ek conatinner hi</li>
+            <li>output:- </li>
+            <h4>undefined</h4>
+        </ol>
+
+        <h2>
+            <li>cont</li>
+        </h2>
+        <ol>
+            <li>output:- </li>
+            <h3>div.conatiner html code. </h3>
+            <li>ye krne se div.container ka code ajayega </li>
+            <li>jaisa ki phele bola tha cont ek conatiner hai</li>
+            <li> abb hum is k first last child nodes ko accsess karenge. </li>
+        </ol>
+
+        <h2>
+            <li>cont.firstchild :</li>
+        </h2>
+        <ol>
+            <li>yr krne se hum ko container ka jo first child hai wo mil jayega.</li>
+            <li>output:- </li>
+            <h3>text</h3>
+        </ol>
+
+        <h2>
+            <li>cont.lastchild :</li>
+        </h2>
+        <ol>
+            <li>ye krne se conatiner ka last child melega.</li>
+            <li>output:- </li>
+            <h3>text.</h3>
+            <li>jo ki text node hi hoga.</li>
+        </ol>
+
+    </ol>
+
+    <!-- elemennt nodes  -->
+    <h1> Elements child nodes :</h1>
+    <dd>in this we can aceeses div box inside the container.means jo conatiner k under div.box hai hum wo aceese kr
+        sakte hai using element child nodes.</dd>
+    <ol>
+
+        <h2>
+            <li>
+                let cont = document.body.childNodes[1]
+            </li>
+        </h2>
+        <ol>
+            <li>firstly we need to define body then we accsess the child nodes propertiees & meethods.</li>
+            <li>is ka output undefined ayega but hai to wo ek conatinner hi</li>
+            <li>output:- </li>
+            <h4>undefined</h4>
+        </ol>
+
+        <h2>
+            <li>cont :</li>
+        </h2>
+        <ol>
+            <li>is k under div.container hota hai.</li>
+        </ol>
+
+        <h2>
+            <li>cont.firstElementChild : ​</li>
+        </h2>
+        <ol>
+            <li>using this humko aisa child melega jo ki first element hai. means jo ki ( first child element hai.)
+            </li>
+            <li>humko aisa first child hona jo ki element ho.</li>
+            <li>text node is not a lelement.</li>
+            <li>is output box code hoga html ka.</li>
+            <li>output:- </li>
+            <h3>div.box code in html.</h3>
+        </ol>
+
+
+        <h2>
+            <li>cont.lastElementChild.style.color = "red" </li>
+        </h2>
+        <ol>
+            <li>using this we can use the style css properties & change the text color into red.</li>
+            <li>output:- </li>
+            <h3>red </h3>
+            <li>hamare web page pr jo box k under ka text hai us ka color red ho jayega.</li>
+        </ol>
+
+        <h2>
+            <li>cont.lastElementChild.style.backgroundcolor = "pink"
+            </li>
+        </h2>
+        <ol>
+            <li>is se hamare box jo last box hai us ka background color bhi pink me change ho jayega.</li>
+            <li>output:-</li>
+            <h3>pink </h3>
+            <li>background color of last box is pink.</li>
+        </ol>
+    </ol>
+
+    <h1>Parent Nodes: </h1>
+    <dd>usinng this we can access the parent nodes of child nodes.</dd>
+    <ol>
+        <h2>
+            <li>cont.lastElementChild.parentElemnent :​</li>
+        </h2>
+        <ol>
+            <li>ye likhne se hum ko hamare last element ka jo parent element hai wo mil jayega jo ki div.container hai.
+            </li>
+            <li>output:-</li>
+            <h3>div.container code in html </h3>
+        </ol>
+    </ol>
+
+    <!-- sibling nodes  -->
+    <h1>Sibling accsess in nodes previous & next :</h1>
+    <ol>
+        <li>using this we can accsess same parents k jo childrens hai uska prevoius & next siblings.</li>
+    </ol>
+    <ol>
+        <h2>
+            <li>document.body.firstElementChild.children[3].previousElementSibling :</li>
+        </h2>
+        <ol>
+            <li>using this hum previous elemmnt ko accsess kr sakte hai.</li>
+            <li>is ka inndex 3 hai previous means is k baad wala element box hona hum ko.</li>
+            <li>index 3 hai thats means ye box 4 hai. or us ka prevous bpx box 3 ayega.</li>
+            <li>output:-</li>
+            <h3>box 3 code.</h3>
+        </ol>
+
+        <h2>
+            <li>document.body.firstElementChild.children[3].previousElementSibling :</li>
+        </h2>
+        <ol>
+            <li>is ka inndex 3 and means ye box 4 hai. next box melega jo ki box 5 hai.</li>
+            <li>ooutput:-</li>
+            <h3>box 5 code. </h3>
+        </ol>
+
+        <h2>
+            <li>document.body.firstElementChild.children[3].previousSibling :</li>
+        </h2>
+        <ol>
+            <li>is me box 4 jo hai us k phele kya hai . hum yaha elememnt ko targent nahi krre thats why yaha pr hoga
+                text node.</li>
+            <li>oupyut:-</li>
+            <h3>text. </h3>
+        </ol>
+
+        <h2>
+            <li>document.body.firstElementChild.children[3].parentElement :​</li>
+        </h2>
+        <ol>
+            <li>yaha pr first element child k box 4 ka parent child pata lagega.</li>
+            <li>output:-</li>
+            <li>div.container code. </li>
+        </ol>
+    </ol>
+
+<!-- tables nodes  -->
+    <h1>Tables :</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Harry</td>
+            <td>100</td>
+        </tr>
+    </table>
+    <ol>
+        <h2>
+            <li>document.body.children[18]
+                <table>​…​</table>​
+            </li>
+        </h2>
+        <ol>
+            <li>ye print krnne se html code table ka ajyega.</li>
+            <li>18 jo wo index pr hai wo use kro.</li>
+            <li>ouput:-</li>
+            <h3>table code </h3>
+        </ol>
+
+        <h2>
+            <li>document.body.children[18].rows
+            </li>
+        </h2>
+        <ol>
+            <li>HTMLCollection(2) [tr, tr] output ayega.</li>
+        </ol>
+    </ol>
+    <script src="script.js"></script>
+</body>
+</html>
