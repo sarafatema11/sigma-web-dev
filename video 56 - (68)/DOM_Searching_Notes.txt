@@ -1,0 +1,305 @@
+# DOM – Searching Methods
+
+### 1. What is DOM Searching?
+
+1. DOM Searching means finding or selecting HTML elements from a document using JavaScript DOM methods.
+2. In simple words, DOM Searching is used to find HTML elements by their ID, Class Name, Tag Name, or CSS Selectors.
+3. DOM Searching helps us to access and select HTML elements so that we can manipulate them using JavaScript.
+
+### 2. Methods of Searching in DOM
+
+1. getElementById() – Selects an element by its ID.
+2. getElementsByClassName() – Selects elements by their class name.
+3. getElementsByTagName() – Selects elements by their tag name.
+4. querySelector() – Selects the first matching CSS selector.
+5. querySelectorAll() – Selects all matching CSS selectors.
+6. getElementsByName() – Selects elements by their name attribute.
+
+---
+
+### 3. Selecting Elements by Class Name
+
+- It is used to select all HTML elements having the given class name.
+
+Ex:
+
+```js
+let boxes = document.getElementsByClassName("box");
+console.log(boxes);
+```
+
+Explanation:
+
+Is code se humne HTML mein jitne bhi box class wale elements the, un sabko select kiya aur boxes naam ke variable mein store kar diya.
+
+Output:
+
+HTMLCollection(7) [div.box, div.box, div.box, div#redbox.box, div.box, div.box, div.box]
+
+Note: HTMLCollection is a live collection.
+
+---
+
+### 4. Change Background Colour
+
+Ex:
+
+```js
+boxes[2].style.backgroundColor = "red";
+```
+
+1. Is code se humne third box select kiya.
+2. boxes[2] ka index 2 hai, means third box.
+3. Iska background colour red ho jayega.
+
+Output: Third box background colour red.
+
+---
+
+### 5. Change Background Colour by ID
+
+Ex:
+
+```js
+document.getElementById("redbox").style.backgroundColor = "red";
+```
+
+1. Is code se hum redbox ID wale element ko select karenge.
+2. Uska background colour red ho jayega.
+3. Agar container mein aur boxes add karte hain, tab bhi redbox ID wala element hi select hoga.
+4. Bcz humne element ko ID di hai.
+
+Output: Box 2.5 ka background colour red ho jayega.
+
+---
+
+### 6. querySelector()
+
+- It selects the first element that matches the given CSS selector.
+
+Ex:
+
+```js
+document.querySelector(".box").style.backgroundColor = "green";
+```
+
+1. .box means class box.
+2. Ye first box select karega jisme class box hai.
+3. Ye sabhi boxes ko green nahi karega.
+
+Output: First box ka background colour green ho jayega.
+
+---
+
+### 7. querySelectorAll()
+
+- It selects all elements that match the given CSS selector.
+
+Ex:
+
+```js
+console.log(document.querySelectorAll(".box"));
+```
+
+Output:
+
+NodeList(7) [div.box, div.box, div.box, div#redbox.box, div.box, div.box, div.box]
+
+1. Ye saare elements select karega jinmein box class hai.
+2. Ye NodeList return karta hai, HTMLCollection nahi.
+
+---
+
+### 8. querySelectorAll() Using Loops for Applying CSS / Style
+
+1. querySelectorAll() se saare boxes select hote hain.
+2. Lekin hum directly .style use nahi kar sakte, kyunki ye NodeList return karta hai.
+3. Isliye hum forEach() loop use karte hain.
+
+Ex:
+
+```js
+document.querySelectorAll(".box").forEach(e => {
+    e.style.backgroundColor = "pink";
+});
+```
+
+Output: All boxes ka background colour pink ho jayega.
+
+Explanation:
+
+- forEach() har element par loop chalata hai.
+- e.style.backgroundColor se har box ka background colour change hota hai.
+
+---
+
+### 9. getElementsByTagName()
+
+- It selects all HTML elements by their tag name.
+
+Ex:
+
+```js
+console.log(document.getElementsByTagName("div"));
+```
+
+Output:
+
+HTMLCollection(8) [div.container, div.box, div.box, div.box, div#redbox.box, div.box, div.box, div.box]
+
+1. Is code se page ke saare div elements select honge.
+2. Parent div yani container bhi select hoga.
+3. Isliye total 8 div elements milenge.
+
+---
+
+### 10. getElementsByName()
+
+- It is used to select HTML elements by their name attribute.
+- It returns a NodeList containing all matching elements.
+
+HTML Code:
+
+```html
+<div class="box" name="jogi">Bhupendra Jogi 1</div>
+<div class="box" name="jogi">Bhupendra Jogi 1</div>
+```
+
+JS Code:
+
+```js
+console.log(document.getElementsByName("jogi"));
+```
+
+Output:
+
+NodeList(2) [div.box, div.box]
+
+1. HTML code mein name="jogi" attribute add karna hota hai.
+2. JavaScript mein getElementsByName("jogi") use karte hain.
+3. Jitne elements ka name jogi hoga, sab select ho jayenge.
+
+---
+
+# matches(), closest() and contains() Methods
+
+### 11. matches()
+
+- matches() checks whether an element matches a given CSS selector.
+- It returns true or false.
+
+Ex:
+
+```js
+let e = document.getElementsByTagName("div");
+
+console.log(e[0].matches("#redbox"));
+console.log(e[1].matches("#redbox"));
+console.log(e[4].matches("#redbox"));
+```
+
+Output:
+
+false
+false
+true
+
+Explanation:
+
+1. e[0] = container div.
+2. e[1] = first box.
+3. e[4] = redbox.
+4. matches() check karta hai ki selected element diye gaye CSS selector se match karta hai ya nahi.
+
+---
+
+### 12. closest()
+
+- closest() is used to find the nearest matching element (or the element itself) using a CSS selector.
+- It returns the matching element or null if no match is found.
+
+Ex:
+
+```js
+let e = document.getElementsByTagName("div");
+
+console.log(e[4].closest(".container"));
+```
+
+Output:
+
+div.container
+
+Explanation:
+
+1. e[4] = redbox.
+2. closest(".container") nearest container element ko find karega.
+3. Ye matching element ka poora HTML element return karega.
+
+Matlab redbox ke parent mein container hai, isliye console mein div.container show hoga.
+
+---
+
+### 13. contains()
+
+- contains() checks whether one element contains another element inside it.
+- It returns true or false.
+
+Ex:
+
+```js
+let e = document.getElementsByTagName("div");
+
+console.log(e[0].contains(e[4]));
+console.log(e[4].contains(e[0]));
+```
+
+Output:
+
+true
+false
+
+Explanation:
+
+First Example:
+
+```js
+e[0].contains(e[4]);
+```
+
+1. e[0] = container.
+2. e[4] = redbox.
+3. Redbox container ke andar hai.
+4. Isliye output true aayega.
+
+Second Example:
+
+```js
+e[4].contains(e[0]);
+```
+
+1. e[4] = redbox.
+2. e[0] = container.
+3. Container redbox ke andar nahi hai.
+4. Isliye output false aayega.
+
+---
+
+### 14. Difference Between matches(), closest() and contains()
+
+1. matches() – Checks whether an element matches a CSS selector.
+2. closest() – Finds the nearest matching element.
+3. contains() – Checks whether one element contains another element.
+
+---
+
+### Important Points
+
+1. getElementsByClassName() returns HTMLCollection.
+2. getElementsByTagName() returns HTMLCollection.
+3. getElementsByName() returns NodeList.
+4. querySelector() returns the first matching element.
+5. querySelectorAll() returns NodeList.
+6. matches() returns true or false.
+7. closest() returns an element or null.
+8. contains() returns true or false.

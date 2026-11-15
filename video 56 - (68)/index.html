@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sraching in dom</title>
+    <style>
+        .box{
+            height: 34px;
+            width: 34px;
+            margin: 34px;
+            padding: 34px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <div class="box"> Bhupendra Jogi 1 </div> -->
+        <div class="box" name = "jogi"> Bhupendra Jogi 1 </div>
+        <div class="box" name = "jogi"> Bhupendra Jogi 1 </div>
+        <div class="box"> Bhupendra Jogi 2 </div>
+        <div id="redbox" class="box"> Bhupendra Jogi 2.5 </div>
+        <div class="box"> Bhupendra Jogi 3 </div>
+        <div class="box"> Bhupendra Jogi 4 </div>
+        <div class="box"> Bhupendra Jogi 5 </div>
+    </div>
+
+    <h1>DOM - Seraching Methods : </h1>
+    <ol>
+        <li>Searching in DOM means finding or selecting HTML elements from a document using JavaScript DOM methods.</li>
+        <li>In simple words, DOM Searching is used to find HTML elements by their ID, Class Name, Tag Name, or CSS Selectors.</li>
+        <li>DOM Searching helps us to access and select HTML elements so that we can manipulate them using JavaScript.</li>
+        <h2>Methods of Searching in DOM :</h2>
+        <pre>
+    1. getElementById() – Selects an element by its ID.
+    2. getElementsByClassName() – Selects elements by their class         name.
+    3. getElementsByTagName() – Selects elements by their tag name.
+    4. querySelector() – Selects the first matching CSS selector.
+    5. querySelectorAll() – Selects all matching CSS selectors.
+        </pre>
+    </ol>
+
+<h1>Methods of Seraching DOM :</h1>
+<ol>
+<h2><li>Selecting Elements by Class Name : </li></h2>
+<ol>
+    <li>Is code se humne HTML mein jitne bhi box class wale elements the, un sabko select kiya aur boxes naam ke variable mein store kar diya. Phir console.log() se un sabko console mein print kar diya.</li>
+    <h3>Ex:-</h3>
+    <h3><pre>
+let boxes = document.getElementsByClassName("box")
+console.log(boxes)
+    </pre></h3>
+    <li>output:-</li>
+    <h3>HTMLCollection(5) [div.box, div.box, div.box, div.box, div.box]</h3>
+</ol>
+
+<h2><li>Change background colour :</li></h2>
+<ol>
+    <li>using this we change the backgrounnd color.</li>
+    <li> You selected one individual box (third box) and changed its background colour to red. </li>
+    <li>box 3 jis ka index 2 hai uska background colour red ho jayega.</li>
+    <h3>Ex :</h3>
+    <h3><pre>boxes[2].style.backgroundColor = "red"</pre></h3>
+    <li>output:- change bg colour into red.</li>
+</ol>
+
+<h2>Change bg colour by Id :</h2>
+<ol>
+    <li>jis me eleemnt me readbox name ki id hai usko style apply hojaye means us ka background colour red hojaye.</li>
+    <h3>Ex:</h3>
+    <h3><pre>document.getElementById("redbox").style.backgroundColor = "red"</pre></h3>
+    <li>output:- bg colour change box 2.5 bcz its with id</li>
+    <li>agr hum container me dusra box bhi add kr diye tab bhi bg colour 2.5 box pr hi apply hoga.</li>
+    <li>bcz hum ne ye box ko id di hai.</li>
+</ol>
+
+<h2><li>querySelector :</li></h2>
+<ol>
+    <li>using this u can also change the background colour.</li>
+    <h3>Ex :</h3>
+    <h3><pre>
+ document.querySelector(".box").style.backgroundColor="green"</pre></h3>
+ <li>output:- bg is green.</li>
+ <li>ye first box select karega ga jis mein class dot(.) box ho  </li>
+ <li>means ye sab ko green nhi karega is me jo sirf first box match hojayega usko bg green krega.</li>
+</ol>
+
+<h2><li>querySelectorAll :</li></h2>
+<ol>
+    <li>ye ek html collection return karega.</li>
+    <h3>Ex :</h3>
+    <h3><pre>console.log(document.querySelectorAll(".box"))</pre></h3>
+    <li>output:-</li>
+    <h3>NodeList(7) [div.box, div.box, div.box, div#redbox.box, div.box, div.box, div.box]</h3>
+    <li>ye html collection return karega.</li>
+    <li>jis me sare element ayenge jis class box hai.</li>
+</ol>
+
+<h2><li>querySelectorAll : using loops for apply css / style: </li></h2>
+<ol>
+    <li>we dont use same method for apply bg color on boxes like jaise hum ne querySelector pr kya tha.</li>
+    <li>is se error ayega output nhi.</li>
+    <h3>Ex :</h3>
+    <h3><pre>
+ document.querySelectorAll(".box").style.backgroundColor="pink";
+    </pre></h3>
+    <li>output:- error </li>
+    <li>to apply bg colours on boxes we use here loops.</li>
+    <h3>Ex :</h3>
+    <h3><pre>
+    document.querySelectorAll(".box").forEach(e=>{
+    e.style.backgroundColor="pink"
+    })
+</pre></h3>
+<li>output:- all boxes ka backgroundColor pink ho jayega.</li>
+</ol>
+
+<h2>Tag getElementsByTagName :</h2>
+<ol>
+    <li>using this ue can accsess the tag.</li>
+    <li>for Ex see below ex</li>
+    <h3>Ex :</h3>
+    <h3><pre>
+        console.log(document.getElementsByTagName("div"))
+    </pre></h3>
+    <li>output:-</li>
+    <h3>HTMLCollection(8) [div.container, div.box, div.box, div.box, div#redbox.box, div.box, div.box, div.box, redbox: div#redbox.box]</h3>
+    <li>sare div ajayenge parent div bhi ajaega container wala .</li>
+</ol>
+
+<h2><li>getElementsByName :</li></h2>
+<ol>
+    <li>search element by name attribute.</li>
+    <li>It is used to select HTML elements by their name attribute. It returns a NodeList containing all matching elements.</li>
+    <h3>Ex :</h3>
+    <h3><pre>
+        html code:
+        div class="box" name = "jogi" Bhupendra Jogi 1 div
+
+        js code:
+        console.log(document.getElementsByName("jogi"))
+    </pre></h3>
+    <li>html code me name attribute add karo then ye method use kroge to output mil jayega.</li>
+    <li>output:-</li>
+    <h3>NodeList(2) [div.box, div.box]</h3>
+</ol>
+
+<h1>matches(), closest() aur contains() methods :</h1>
+<ol>
+    <h2><li>matches() :</li></h2>
+    <ol>
+        <li>to check if element match the given css  selector.    </li>
+        <li>Check karta hai ki selected element diye gaye CSS selector se match karta hai ya nahi.</li>
+        <h3>Ex :</h3>
+        <h3><pre>
+let e = document.getElementsByTagName("div");
+console.log(e[0].matches("#redbox"));
+console.log(e[1].matches("#redbox"));
+console.log(e[4].matches("#redbox"));
+        </pre></h3>
+        <li>ouput:- false false true </li>
+    </ol>
+</ol>
+
+
+<h2><li>closest() :</li></h2>
+<ol>
+    <li>closest() is used to find the nearest parent element (or the element itself) that matches a given CSS selector. It returns the matching element or null if no match is found.</li>
+    <h3>Ex :</h3>
+    <h3><pre>
+let a = document.getElementsByTagName("div");
+console.log(e[4].closest(".container"));
+    </pre></h3>
+    <li>output:- </li>
+    <h3>div.container </h3>
+    <li> Matlab usne poora container <div> element return kiya, jiske andar baaki div elements hain.</li>
+</ol>
+
+<h2><li>contains() :</li></h2>
+<ol>
+    <li>contains() checks whether one element contains another element inside it. It returns true or false.</li>
+    <h3>Ex :</h3>
+    <h3><pre>
+let z = document.getElementsByTagName("div");
+console.log(e[0].contains(e[4])); 
+console.log(e[4].contains(e[0])); 
+    </pre></h3>
+    <li>output:-  true then false</li>
+</ol>
+</ol>
+    <script src="script.js"></script>
+</body>
+</html>
