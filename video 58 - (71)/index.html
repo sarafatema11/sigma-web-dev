@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserting Removing elements using js</title>
+    <style>
+        .red{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container red bg-green" >
+        <div class="box" style="display: flex;" data-createdby = "harry" data-conceptby = "rohan"> Hey I am a box </div>
+        <div class="box"> Hey I am a box </div>
+    </div>
+
+    <h1> tricks for developers : </h1>
+    <h2>Edit any website and web page using this: </h2>
+        <ol>
+        <h3><li>document.designMode = "on" </li></h3>
+        <li> ye kr k console screen me ye likh kr enter maaro then see u can edit any web page easily.</li>
+    </ol>
+
+<h1>Events & Properties using DOM :</h1>
+<ol>
+
+    <h2><li>innerText method :</li></h2>
+    <ol>
+        <li>kabhi kisi element k under ka text pata lagane k liye is ka use krte hai.</li>
+    </ol>
+
+<h2><li>InnerHtml :</li></h2>
+<ol>
+    <li> inner html me container k under jo html hai wo milti hai.</li>
+    <li>Returns the HTML content inside an element.</li>
+    <li>It does not include the element's own opening and closing tags.</li>
+    <h3>Ex :</h3>
+    <h3><pre>console.log(document.querySelector(".container").innerHTML)</pre></h3>
+    <h3>output:-  <div class="box"> Hey I am a box </div>
+                  <div class="box"> Hey I am a box </div></h3>
+</ol>
+
+<h2><li>OuterHtml :</li></h2>
+<ol>
+    <li>Returns the complete HTML of an element.</li>
+    <li>It includes the element's own opening and closing tags along with its inner content.</li>
+    <h3>Ex :</h3>
+    <h3><pre>
+console.log(document.querySelector(".container").outerHTML)
+    </pre></h3>
+    <h3>output:-</h3>
+    <h3><pre><div class="container">
+        <div class="box"> Hey I am a box </div>
+        <div class="box"> Hey I am a box </div>
+    </div></pre></h3>
+    <li>container k sath sath us k under k elements bhi mil gye.</li>
+</ol>
+
+
+<h2><li>TagName property  :</li></h2>
+<ol>
+    <li>jo element mein ne select kiya hai wo ek div hai.</li>
+    <h3>Ex :</h3>
+    <h3><pre>
+          console.log(document.querySelector(".container").tagName)
+    </pre></h3>
+    <h3><pre>output:- DIV </pre></h3>
+    <li>It works only with HTML elements.</li>
+    <li>In HTML documents, it returns the tag name in uppercase.</li>
+</ol>
+
+<h2><li>Node Name  property:</li></h2>
+<ol>
+    <li>jo element mein ne select kiya hai wo ek div hai.</li>
+    <h3>Ex :</h3>
+    <h3><pre>
+          console.log(document.querySelector(".container").nodeName)
+    </pre></h3>
+    <h3><pre>output:- DIV </pre></h3>
+    <li>It works with elements, text nodes, comments, etc.</li>
+    <li>For HTML elements, it returns the tag name in uppercase.</li>
+</ol>
+
+<h2><li>Text Content :</li></h2>
+<ol>
+    <li>us k under jo text content hai wo mil jayega.</li>
+    <h3>Ex :</h3>
+    <h3><pre>
+         console.log(document.querySelector(".container").textContent)
+    </pre></h3>
+    <h3>output:- Hey I am a box , Hey I am a box </h3>
+</ol>
+
+
+<h2><li>hidden property :</li></h2>
+<ol>
+    <li>hide name k attribute div me laga doge to wo content hide ho jayega. </li>
+    <h3>Ex :</h3>
+    <h3><pre>
+        console.log(document.querySelector(".container").hidden = true)
+    </pre></h3>
+    <h3>output:- //true ayega output.</h3>
+    <li>jo mera container hai us k under hidden laga dega. ye krne se elements hide ho jayegi.</li>
+</ol>
+
+<h2><li>Change innerHtml :</li></h2>
+<ol>
+    <li>we can change inner html.</li>
+    <li>using this kisi bhi element ki inner html change kr sakte hai.  </li>
+    <h3>Ex :</h3>
+    <h3><pre>
+ console.log(document.querySelector(".box").innerHTML = "Hey i am harry")
+</pre></h3>
+<h3>output:- Hey i am harry </h3>
+<li>first element chnage ho jayega. ssee webpage. </li>
+<li>phela element select krega jis k under class box lagi ho </li>
+</ol>
+</ol>
+
+<h1>Attributes :</h1>
+<ol>
+    <h2><li>.hasAttribute :</li></h2>
+    <ol>
+        <li>false tab ayega jab style attribute nhi hoga element me .</li>
+        <h3>Ex :</h3>
+        <h3><pre>
+            console.log(document.querySelector(".box").hasAttribute("style"))
+    </pre></h3>
+    <h3>output:- true </h3>
+</ol>
+
+<h2><li>getAttribute :</li></h2>
+<ol>
+    <li>agr tum get means janna chathy ho konsa attribute hai to wo dekh sakte ho.</li>
+    <h3>Ex :</h3>
+    <h3><pre>
+        console.log(document.querySelector(".box").getAttribute("style"))
+    </pre></h3>
+    <h3>output:- display: flex;</h3>
+    <li>
+        ye dekha dega style k under ye attribute hai. </li>
+</ol>
+
+<h2><li>setAttribute :</li></h2>
+<ol>
+    <li>attribute set kr ta hai display flex ki jagah inline hona to hum set kr sakte using this method </li>
+    <h3>Ex :</h3>
+    <h3><pre>
+        console.log(document.querySelector(".box").setAttribute("style", "display: inline"))
+    </pre></h3>
+    <h3>output: display ; inline set krdega </h3>
+    <li>inspect kr k element me dekho waha display inline dekhega.</li>
+</ol>
+
+<h2><li>attribute :</li></h2>
+<ol>
+    <li>used for to get the collection of all attribbutes.</li>
+    <li>uisng this u can see all attributes.</li>
+    <h3><pre>
+        console.log(document.querySelector(".box").attributes)
+    </pre></h3>
+    <h3>output:- see all attribbutes </h3>
+</ol>
+
+<h2><li>removeattribute :</li></h2>
+<ol>
+    <li>ye style ko remove kr dega means jo bhi humko removve krna hai wo easily remove ho jayega.</li>
+    <h3><pre>
+console.log(document.querySelector(".box").removeAttribute("style"))
+    </pre></h3>
+    <h3>output:- go on webpage inspect see elements me conntainer k box me jo hum ne style diya tha wo remove hogya.</h3>
+</ol>
+</ol>
+
+<h1>Data Attributes :</h1>
+<ol>
+<li>custome attributes aap khud se dal sakte ho.</li>
+<h3><pre>
+<h3>Ex: data-createdby = "harry" </h3>
+</pre></h3>
+<li>is ek element me information stores kr sakte ho.</li>
+
+<h3>Ex: console.log(document.querySelector(".box").dataset)</h3>
+<li>output:- DOMStringMap {createdby: 'harry', conceptby: 'rohan'}</li>
+<li>data - hash ignore hota hai or hum to data banaya hai usko hum acceses kr sakte hai using above code methods.</li>
+<li>data - hash k baad jo hota hai wo " key value pair" me aviliable hota hai.</li>
+</ol>
+
+
+<h1>Insertion Methods :</h1>
+<ol>
+    <h2><li>.append :</li></h2>
+    <ol>
+        <li>Element ke andar sabse last mein content add karta hai.</li>
+        <li>Meaning: Container ke andar sabse neeche div add hoga.</li>
+        <li>ye jab bhi use krte tab wo end me dekhen ko milta text.</li>
+        <h3>ex:</h3>
+        <h3><pre>
+    document.querySelector(".container").append(div);
+        </pre></h3>
+    </ol>
+
+    <h2><li>.before </li></h2>
+    <ol>
+        <li></li>
+        <li>ye krne se hum ne jo created name ka div banaya hai wo div container se phele means container k upr ajayega.</li>
+        <li>u can see on inspect webpage & inspect & elements see here creted div then container div.</li>
+        <li>Selected element ke just pehle content add karta hai.</li>
+        <h3>Ex :</h3>
+        <h3><pre>
+    document.querySelector(".container").before(div);
+        </pre></h3>
+    </ol>
+
+    <h2><li>.after :</li></h2>
+    <ol>
+        <li>Selected element ke just baad content add karta hai.</li>
+        <li>ye krne se before k just ulta hoga.</li>
+        <li>means phele container div ajayega. then creted name div ajyega.</li>
+        <h3>Ex :</h3>
+        <h3><pre>
+    document.querySelector(".container").after(div);
+        </pre></h3>
+    </ol>
+
+    <h2><li>.prepend :</li></h2>
+    <ol>
+        <li>Element ke andar sabse starting mein content add karta hai.</li>
+        <h3>Ex :</h3>
+        <h3><pre>
+      document.querySelector(".container").prepend(div);
+        </pre></h3>
+        <li>Meaning: Container ke andar sabse upar div add hoga.</li>
+        <li>ye append method k just ulta hai us me text last me neeche ajata tha is me sab se upr jayega text.</li>
+        <li>is me text sab se upr ajayega jo hum ne div.created name ka banay hai.</li>
+    </ol>
+
+<h2><li>replacewith :</li></h2>
+<ol>
+    <li>Ye method kisi existing element ko remove karke uski jagah new element add karta hai.</li>
+    <li></li>
+    <h3>ex:</h3>
+    <h3><pre>
+    document.querySelector(".container").replaceWith(div);
+    </pre></h3>
+</ol>
+</ol>
+
+<h1>Adjacent :</h1>
+<dd>JavaScript DOM mein adjacent elements ka matlab hota hai kisi selected element ke just pehle ya just baad content insert karna.</dd>
+
+<ol>
+    <h2><li>insertAdjacentHTML() :</li></h2>
+    <dd>HTML code insert karta hai.</dd>
+
+<h2><li>insertAdjacentText() :</li></h2>
+<dd>Plain text insert karta hai.</dd>
+
+<h2><li>insertAdjacentElement() :</li></h2>
+<dd>Ek HTML element insert karta hai.</dd>
+
+<h1>insertAdjacentHTML() ke 4 positions :</h1>
+<dd>there are below :</dd>
+<ol>
+
+<h2><li>beforebegin :</li></h2>
+<ol>
+    <li>insert HTML immediatly before element.</li>
+</ol>
+
+<h2><li>afterbegin :</li></h2>
+<ol>
+    <li>insert HTML into element at the beging</li>
+</ol>
+
+<h2><li>beforeend :</li></h2>
+<ol>
+    <li>insert HTML into element at the end.</li>
+</ol>
+
+<h2><li>afterend :</li></h2>
+<ol>
+    <li>insert HTML immediatly after html.</li>
+</ol>
+
+</ol>
+<h2><li>Easy trick :</li></h2>
+<dd>see this to remember Adjacent insertion in container me kidhhr hota.</dd>
+
+<h3><pre>
+Easy Trick:
+- Beforebegin = Container ke bahar, upar.
+- Afterbegin = Container ke andar, sabse upar.
+- Beforeend = Container ke andar, sabse neeche.
+- Afterend = Container ke bahar, neeche.
+</pre></h3>
+</ol>
+
+<h1>Node remove :</h1>
+<ol>
+    <li>Ye directly selected element ko remove kar deta hai.</li>
+    <h3><pre>
+        document.querySelector(".box").remove();
+    </pre></h3>
+    <li>- First .box element remove ho jayega., Second .box as it is rahega.</li>
+</ol>
+
+<h1>Class Name & Class list :</h1>
+<ol>
+    <h2>class name :</h2>
+    <ol>
+        <li>className se hum kisi element ki classes ko get ya change kar sakte hain.</li>
+        <h3>Ex:</h3>
+        <h3><pre>
+    console.log(document.querySelector(".container").className)
+        </pre></h3>
+        <li>output:- container red bg-green</li>
+    </ol>
+
+<h2>Class list & its Methods :</h2>
+<ol>
+    <li>classList se hum element ki classes ko individually manage kar sakte hain</li>
+    <li>Iske 3 important methods hain:</li>
+</ol>
+
+<h2>class list Methods :</h2>
+<ol>
+
+<h2><li>Add </li></h2>
+<ol>
+    <li>New class add karta hai.</li>
+    <h3>Ex :</h3>
+    <h3><pre>
+   console.log(document.querySelector(".container").classList.add("harry"))     
+    </pre></h3>
+    <li>output:- container red bg-green harry</li>
+</ol>
+
+<h2><li>Remove :</li></h2>
+<ol>
+    <li>Existing class remove karta hai.</li>
+    <h3>Ex :</h3>
+    <h3><pre>
+   console.log(document.querySelector(".container").classList.remove("red"))     
+    </pre></h3>
+    <li>output:-  container  bg-green harry</li>
+</ol>
+
+<h2><li>Toggle :-</li></h2>
+<ol>
+    <li>Agar class present hai toh remove karega, nahi hai toh add karega.</li>
+    <h3>Ex :</h3>
+    <h3><pre>
+   console.log(document.querySelector(".container").classList.toggle("red"))     
+    </pre></h3>
+    <li>output:- style pply krega ya removve kregga outpput: true false me ayega or css add ya remove kr sakte apn.</li>
+</ol>
+</ol>
+</ol>
+
+    <script src="script.js"></script>
+
+    <script>
+        // dynimically element create kr k laga ne ka example below: 
+        //ex: 
+     /*
+         let div = document.createElement("div");
+        div.innerHTML = "I have been inserted <b> by harry </b>" 
+        div.setAttribute("class", "created")
+    */
+
+        // document.querySelector(".container").append(div)
+        //1. last me text add krdega.
+
+        // document.querySelector(".container").before(div);
+        //2. ye krne se container se phele ek div add ho jayega. jis me hum  ne class created lagaya hai or us k under bold tag ka use kre k text likha hai like " I have been inserted by harry"
+
+    //  document.querySelector(".container").after(div);
+     //3. ye krne se container k baad aap div ajayega created name ka div.
+
+        // document.querySelector(".container").prepend(div);
+        //4. ye likhne se hamara text sab se upr ajayega. 
+
+// document.querySelector(".container").replaceWith(div);
+//5. ye jo mera old div hai container ka usko remove krdega completely or us k under jo boxes  thy usko bhi remove kr dega or waha sirf ek div dekhega created name ka div jis mein "i have been inserted by harry" text likha hua hoga .
+
+
+let cont = document.querySelector(".container")
+
+cont.insertAdjacentHTML("afterend", "<b> I am under the water. please help me here too much raining ...... iuuuuooooo</b>")
+//yaha mein ne ek string bhi likhi bold tag k sath , is ne html ka element bana k conntainer k baad insert kra.
+
+// cont.insertAdjacentHTML("beforeend", "<b> I am under the water. please help me here too much raining ...... iuuuuooooo</b>")
+
+// cont.insertAdjacentHTML("afterbegin", "<b> I am under the water. please help me here too much raining ...... iuuuuooooo</b>")
+
+// cont.insertAdjacentHTML("beforebegin", "<b> I am under the water. please help me here too much raining ...... iuuuuooooo</b>")
+    </script>
+</body>
+</html>
