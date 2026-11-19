@@ -1,0 +1,34 @@
+# Exercise 13: Dynamic Website Builder
+
+**Objective:** JavaScript ki help se screenshot jaisa YouTube video card design karna hai.
+
+### Question:
+
+Ek function `createCard()` complete karo jo har baar call hone par ek naya video card create kare aur HTML ke `.container` ke andar append kare.
+
+Function ko ye 6 parameters milenge:
+
+1. `title` – Video ka title
+2. `cName` – Channel ka naam
+3. `views` – Total views (integer)
+4. `monthsold` – Kitne months pehle upload hua
+5. `duration` – Video duration (string)
+6. `thumbnail` – Thumbnail image URL
+
+### Requirements:
+
+1. JavaScript se dynamically video card create karo.
+2. Card mein thumbnail image show karo.
+3. Thumbnail par video duration show karo.
+4. Card mein video title show karo.
+5. Channel name, views aur upload time show karo.
+6. Card ko `.container` ke andar append karo.
+7. Jab bhi `createCard()` call ho, ek naya card add hona chahiye.
+8. Multiple function calls par multiple cards show hone chahiye.
+
+### Expected Output:
+
+Diye gaye screenshot jaisa YouTube video card design banana hai.
+
+**Condition:** HTML mein har video card manually nahi banana hai. Saara card JavaScript ke through dynamically generate hona chahiye.
+
