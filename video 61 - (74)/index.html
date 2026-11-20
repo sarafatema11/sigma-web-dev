@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in DOM </title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">Hey I am a box</div>
+    </div>
+    <button id="btn">Change Content</button>
+
+<h1>Events in DOM :</h1>
+<ol>
+    <h2><li>mouse Events:</li></h2>
+    <dd>click, dblclick(double click), contextmenu(right click), mouse,mousedown, mouseenter, mouseleave, mouseout etc.</dd>
+
+    <h2><li>keyboard Events:</li></h2>
+    <dd>keyboard-up, keyboard-press, keyboard-down.</dd>
+
+    <h2><li>form Element :</li></h2>
+    <dd>submit, focus etc.</dd>
+
+    <h2><li>Documents event :</li></h2>
+    <dd>DOM control loaded.</dd>
+</ol>
+<h2>Mouse Events are below :</h2>
+<ol>
+<h2><li>addEventListener :</li></h2>
+<ol>
+    <li>addEventListener() is used to attach an event handler to an HTML element.</li>
+</ol>
+
+<h2><li>click ():</li></h2>
+<ol>
+    <li>ek bar button pr click kr diya to conntent change ho jayega.</li>
+    <li>Ex: </li>
+    <h3><pre>
+        button.addEventListener("click", ()=>{ 
+         // alert("I was Clicked. yayy!!")
+
+        document.querySelector(".box").innerHTML = "<b> Yayy you were clicked </b> Enjoy your click!"
+})
+    </pre></h3>
+</ol>
+
+<h2><li>dbl click - measn (double click) :</li></h2>
+<ol>
+    <li>do bar button pr click kra to content show hoga.</li>
+    <li>Ex:-</li>
+    <h3><pre>
+        button.addEventListener("dblclick", ()=>{  
+
+        document.querySelector(".box").innerHTML = "<b> Yayy you were clicked </b> Enjoy your click!"
+})
+    </pre></h3>
+</ol>
+
+<h2><li>mouse down :</li></h2>
+<ol>
+    <li>Jab tum button par click karoge, tab mousedown event bhi execute hoga.</li>
+    <li>jab aap ne mouse k button ko click kra.</li>
+    <li>EX:</li>
+    <h3><pre>
+        button.addEventListener("mousedown", () => {
+        console.log("Mouse button pressed")
+        })
+    </pre></h3>
+</ol>
+
+<h2><li>mouse enter :</li></h2>
+<ol>
+    <li>Jab tum button k pass mouse le kr jaoge to mouse enter execute ho jayega. or color change ho jayega.</li>
+    <li>Ex:</li>
+    <h3><pre>
+        button.addEventListener("mouseenter", () => {
+        document.querySelector(".box").style.color ="red"
+        })
+    </pre></h3>
+</ol>
+
+<h2><li>mouse leave :</li></h2>
+<ol>
+    <li>Jab tum button k pass se mouse pointer le kr jaoge tab mouse leave execute ho jayega. style change ho jayega.</li>
+    <li>Ex:-</li>
+    <h3><pre>
+    button.addEventListener("mouseleave", () => {
+    document.querySelector(".box").style.color ="blue"
+    })      
+    </pre></h3>
+</ol>
+
+<h2><li>mouse out:</li></h2>
+<ol>
+    <li>Jab mouse pointer button ke upar hoga, kuch change nahi hoga.
+Jaise hi mouse pointer button se bahar jayega (mouseout).
+.box ka background color pink ho jayega.</li>
+<li>Ex:</li>
+<h3><pre>
+ button.addEventListener("mouseout", () => {
+ document.querySelector(".box").style.backgroundColor ="pink"
+})   
+</pre></h3>
+</ol>
+
+<h2><li>Context menue :</li></h2>
+<ol>
+    <li>Button par mouse pointer lekar jao. then Right-click karo. then see alert box ayega.</li>
+    <li>Ex:</li>
+    <h3><pre>
+  button.addEventListener("contextmenu", () => {
+  alert("Dont hack us by Right click Please")
+  })     
+    </pre></h3>
+</ol>
+</ol>
+
+<h2>Keyboard event: </h2>
+<dd>Keyboard Events means jab bhi hum keyboard par koi key press ya release karte hain, tab JavaScript mein keyboard events fire hote hain.</dd>
+<ol>
+    <h2><li>Keydown :</li></h2>
+    <ol>
+        <li>Jab bhi hum keyboard ki kisi key ko press karte hain, tab keydown event fire hota hai.</li>
+        <li>Keyboard se koi bhi key press karo. Console mein "jo bhi key press kri wo or us ka code" dono print hoga..</li>
+        <li>Ex:</li>
+        <h3><pre>
+   document.addEventListener("keydown", (e) => {
+   console.log(e.key, e.keyCode)
+   })         
+        </pre></h3>
+    </ol>
+
+<h2><li>keyup :</li></h2>
+<ol>
+    <li>Jab bhi hum keyboard ki kisi key ko press karne ke baad chhodte (release karte) hain, tab keyup event fire hota hai.</li>
+    <li>Ex:</li>
+    <h3><pre>
+   document.addEventListener("keyup", (e) => {
+   console.log(e.key, e.keyCode)
+   })
+    </pre></h3>
+</ol>
+
+<h2><li>key press :</li></h2>
+<ol>
+    <li>Jab user keyboard ki kisi key ko press karta hai, tab keypress event fire hota hai. Ye mainly character keys (jaise A, B, 1) ke liye use hota tha.</li>
+    <li>Deprecated = Purana feature, jiska use ab avoid karna chahiye.</li>
+</ol>
+
+</ol>
+<script src="script.js"></script>
+</body>
+
+</html>
