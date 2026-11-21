@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Back Function & Promise</title>
+</head>
+
+<body>
+    <h1>Call Back function :</h1>
+    <ol>
+        <li>is used for jab bhi aap kisi function ko call krna chathy ho "Once a function is Executes"</li>
+        <li>call back function simpily ek functionn hota hai jo ek function k under jaa k run hota hai.</li>
+        <h3>Define :</h3>
+        <li>a call back function is a function passed into another function as an argument, which is then invoked inside
+            the outer function to complete an action.</li>
+        <li>A callback function is a function that is passed as an argument to another function and executed inside that
+            function.</li>
+    </ol>
+
+    <h1>prismjs cdn :</h1>
+    <ol>
+        <li>Prism.js CDN ek online link hai jiske through hum apni website mein Prism.js library use kar sakte hain.
+        </li>
+        <li>Prism.js ek JavaScript library hai jo code ki Syntax Highlighting karti hai.</li>
+        <li>Matlab jab tum website par JavaScript, HTML, CSS ya Python ka code show karte ho, toh Prism us code ko
+            different colours mein display karta hai.</li>
+
+        <h3>CDN : Content Delivery Network.</h3>
+        <ol>
+            <li>Simple language mein, CDN ek aisa network hai jahan se hum libraries aur files ko online load kar sakte
+                hain.</li>
+        </ol>
+
+        <h3>Short Note:- </h3>
+        <h3>
+            <pre>
+Prism.js: Code ko colourful aur readable banane wali library.
+CDN: Online files load karne ka network.
+Prism.js CDN: CDN ke through Prism.js library ko apni website mein load karna.
+</pre>
+        </h3>
+    </ol>
+
+    <h1>Pyramid of Doom :</h1>
+    <ol>
+        <li>ab callbacks ek ke andar ek itne zyada ho jaate hain ki code samajhna mushkil ho jata hai, use Pyramid of
+            Doom kehte hain.</li>
+        <li>JavaScript mein Pyramid of Doom tab hota hai jab hum multiple callbacks ko ek ke andar ek likhte jaate hain.
+        </li>
+        <li>Ismein problem kya hai?</li>
+        <li>Dekho, ek callback ke andar doosra callback hai, uske andar teesra callback hai.</li>
+        <li>Jaise-jaise callbacks badhte jaate hain, code right side mein badhta jaata hai.</li>
+        <h3>
+            <li>Isse kuch problems hoti hain:- </li>
+        </h3>
+        <ol>
+            <li>Code samajhna difficult ho jata hai.</li>
+            <li>Debugging karna difficult ho jata hai.</li>
+            <li>- Code manage karna difficult ho jata hai.</li>
+        </ol>
+        <li>Isi ko Pyramid of Doom kehte hain.</li>
+        <h3>
+            <li>Is problem ko solve kaise karein?</li>
+        </h3>
+        <li>Iske liye JavaScript mein Promises aur Async/Await use karte hain.</li>
+    </ol>
+
+    <h3>Short mein yaad rakho: </h3>
+    <h3>
+        <pre>
+- Callback: Ek function ko doosre function mein pass karna.
+- Callback Hell: Bahut saare nested callbacks.
+- Pyramid of Doom: Callback Hell ki wajah se code pyramid jaisa dikhna.
+- Promises: Nested callbacks ki problem ko reduce karna.
+- Async/Await: Asynchronous code ko aur easy banana.
+</pre>
+    </h3>
+
+    <h1>Snippets :</h1>
+    <ol>
+        <h2>
+            <li>Steps:</li>
+        </h2>
+        <ol>
+            <li>go on vs code settings</li>
+            <li>select "Snippets" & click on it.</li>
+            <li>type "Javascript" click it.</li>
+            <li>javascript JSON file open edit this file.</li>
+            <li>then uncomment the example of console see below:</li>
+            <h3>Ex of console.log shortcut :</h3>
+            <h3>
+                <pre>
+           // Example:
+	      "Print to console": {
+		  "prefix": "clog",
+		  "body": [
+			"console.log('$1');",
+             //agar 2 upr 1 neeche type kra to cursr ulta ayega clog krne pr cursor phele neeche ayega then phir tab press krne pr upr ayega. promise.js file mein 
+			"$2"
+		  ],
+		  "description": "Log output to console"
+	       }
+          
+            </pre>
+            </h3>
+        </ol>
+
+        <h3>Ex of aler shortcut :</h3>
+        <h3>
+            <pre>
+        "alert": {
+		"prefix": "alt",
+		"body": [
+			"alert('$1');",
+			"$2" 
+        //yaha pr $2 likha isliye cursor new line pr ayya tab key press krne pr promise.js file me.
+		],
+	    }  
+      </pre>
+     </h3>
+     <li>Agar tum promise.js file me jaa k shortcut type kroge to wo ajayega.</li>
+     <li>Ex: clog for console.log('this is promise') + Tab key press krne se cursor upr ki jagah neeche ajayega.</li>
+     <li>ex: alt  for shortcut of alert('harry') + tab key press cursor neechhe ajayega.</li>
+
+    </ol>
+
+    <h1>Promise : </h1>
+    <ol>
+        <li>The solution to the callback hell is promises.</li>
+        <li>A Promise is a "Promise of code execution". the code either execute or fails, in both the cases the
+            subscribers will be notified.</li>
+        <li>JavaScript mein Promise ek aisa object hai jo future mein kisi asynchronous operation ke complete hone ya
+            fail hone ko represent karta hai.</li>
+        <h3>Ex :</h3>
+        <h3>Maan lo tumne online pizza order kiya.</h3>
+        <li>Abhi pizza tumhare paas nahi hai, lekin restaurant tumhe promise karta hai ki pizza deliver karega.</li>
+        <h3>Ab 3 possibilities hain:</h3>
+        <h3>
+            <pre>
+1. Pending: Pizza abhi ban raha hai.
+2. Fulfilled: Pizza successfully deliver ho gaya.
+3. Rejected: Pizza order cancel ho gaya. 
+
+JavaScript Promise bhi isi tarah kaam karta hai.
+</pre>
+        </h3>
+    </ol>
+
+    <h1>resolve() :</h1>
+    <ol>
+        <li>resolve() Promise ko successfully complete (Fulfilled) karta hai aur successful result provide karta hai
+        </li>
+    </ol>
+
+    <h1>reject() :</h1>
+    <ol>
+        <li>reject() Promise ko fail, error (Rejected) karta hai aur failure ka reason provide karta hai.</li>
+    </ol>
+
+    <h1>.then() :</h1>
+    <ol>
+        <li>.then() Promise ke successfully resolve hone par execute hota hai aur resolve ki value receive karta hai.
+        </li>
+    </ol>
+
+    <h1>.catch() :</h1>
+    <ol>
+        <li>.catch() Promise ke reject hone par execute hota hai aur rejection ka reason receive karta hai.</li>
+    </ol>
+
+    <h1>promises Chaining :</h1>
+    <ol>
+        <li>Jab hum ek Promise ke .then() ke andar se doosra Promise return karte hain aur uske baad next .then() lagate
+            hain, toh ise Promise Chaining kehte hain.</li>
+        <li>Ek kaam complete hone ke baad doosra kaam execute karna, phir doosra complete hone ke baad teesra kaam
+            execute karna.</li>
+    </ol>
+
+
+    <h1>Promise API :</h1>
+    <ol>
+
+        <h2>
+            <li>Promise.all() :</li>
+        </h2>
+        <ol>
+            <li>Promise.all() multiple Promises ko ek saath handle karta hai. Jab saare Promises resolve ho jaate hain,
+                tab ye result return karta hai. Lekin agar ek bhi Promise reject ho gaya, toh ye reject ho jata hai.
+            </li>
+            <li>Yaad rakho: Saare resolve hone chahiye, ek bhi reject hua toh Promise.all() reject ho jayega.</li>
+        </ol>
+
+        <h2>
+            <li>Promise.allSettled() :</li>
+        </h2>
+        <ol>
+            <li>Promise.allSettled() tab result deta hai jab saare Promises settle ho jaate hain, chahe resolve ho ya
+                reject.</li>
+            <li>Yaad rakho: Koi bhi Promise reject ho, phir bhi ye sabhi Promises ke results deta hai.</li>
+        </ol>
+
+        <h2>
+            <li>Promise.race() :</li>
+        </h2>
+        <ol>
+            <li>Promise.race() multiple Promises mein se jo sabse pehle settle hota hai, uska result return karta hai
+            </li>
+            <li>Yaad rakho: Jo sabse pehle resolve ya reject hoga, race() usi ka result dega.</li>
+        </ol>
+
+        <h2>
+            <li>Promise.any() :</li>
+        </h2>
+        <ol>
+            <li>Promise.any() multiple Promises mein se jo sabse pehle successfully resolve hota hai, uska result return
+                karta hai.</li>
+            <li>Promise.any() rejection ko ignore karta hai jab tak koi Promise successfully resolve na ho jaye. Agar
+                saare Promises reject ho jaayein, toh AggregateError deta hai.</li>
+        </ol>
+
+        <h2>
+            <li>Promise.resolve() :</li>
+        </h2>
+        <ol>
+            <li>ye ek already fulfilled Promise create karta hai.</li>
+            <li>Yaad rakho: Directly fulfilled Promise create karna ho toh Promise.resolve() use karte hain.</li>
+        </ol>
+
+        <h2>
+            <li>Promise.reject() :</li>
+        </h2>
+        <ol>
+            <li>ek already rejected Promise create karta hai.</li>
+            <li>Yaad rakho: Directly rejected Promise create karna ho toh Promise.reject() use karte hain.</li>
+        </ol>
+    </ol>
+
+    <h2>Question :</h2>
+    <h3>Q: Try all these Promises APIs on your customOromises.
+    </h3>
+    <h4>Answer : " practiceQyestionPromises.js " ye js file me answer hai tumhara.</h4>
+
+
+    <!-- <script src="script.js"></script> -->
+    <!-- <script src="promise.js"></script> -->
+    <script src="practiceQyestionPromises.js"></script>
+</body>
+
+</html>
