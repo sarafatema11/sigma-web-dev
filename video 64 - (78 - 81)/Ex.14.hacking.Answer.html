@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex:14. Hacking Simulator</title>
+
+    <style>
+        body {
+            background-color: green;
+            color: white;
+            font-family: monospace;
+            font-size: 20px;
+        }
+
+        .dots {
+            display: inline-block;
+            animation: blink 1s infinite;
+        }
+
+        /* dot blinking Animation   */
+        @keyframes blink {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="text"></div>
+        <span class="dots">...</span>
+    </div>
+
+    <script>
+
+        console.log("Ex: 14. Hacking Simulator");
+
+        const messages = [
+            "Initializing Hacking",
+            "Reading your Files",
+            "Password files Detected",
+            "Sending all passwords and Personal files to Server",
+            "Cleaning up"
+        ];
+
+        const text = document.getElementById("text");
+
+        // Random Delay Function
+
+        const randomDelay = () => {
+
+            return new Promise((resolve) => {
+
+                let timeout = 1000 + Math.random() * 6000;
+
+                setTimeout(resolve, timeout);
+
+            });
+
+        };
+
+        // Async Function
+
+        const showMessages = async () => {
+
+            for (const message of messages) {
+
+                await randomDelay();
+
+                text.innerHTML += message + "<br>";
+
+            }
+
+        };
+
+        showMessages();
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex : 14 Initializing Hacking Simulation </title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Noto+Sans:ital,wght@0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&family=Poppins:wght@300;400;700&display=swap');
+
+
+        body {
+            background-color: green;
+            color: white;
+            font-family: 'Martel Sans', sans-serif;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Create a hacking simulator which has green background and it shows these messages with random delay of 1 to 7 seconds. -->
+
+    <!-- Initializing Hacking...
+Reading your Files...
+Password files Detected...
+Sending all passwords and Presonal files to Server... 
+Cleaning up... 
+
+
+The three dots must blink so that it looks like a real terminal. -->
+
+    <h2>Answer :</h2>
+
+    <div>Initializing Hacking...</div>
+
+    <script>
+        //1st additem function :
+        const additem = async (item) => {
+            await randomDelay();
+            let div = document.createElement("div")
+            div.innerHTML = item;
+            document.body.append(div)
+        }
+
+        //2. randomDelay function :
+        const randomDelay = () => {
+            return new Promise((resolve, reject) => {
+                timeout = 1 + 6 * Math.random();
+                setTimeout(() => {
+                    resolve()
+                }, timeout * 1000);
+            })
+        }
+
+        // 3. main function :       
+        async function main() {
+            //here dot blink animation like 
+            // 4. Dots blinking using setInterval()           
+            let t = setInterval(() => {
+                let last = document.body.getElementsByTagName("div");
+                last = last[last.length - 1]
+                if (last.innerHTML.endsWith("...")) {
+                    last.innerHTML = last.innerHTML.slice(0, last.innerHTML.length - 3)
+                }
+                else {
+                    last.innerHTML = last.innerHTML + "."
+                }
+            }, 100);
+
+            // 5. Messages ka Array :            
+            // ye hai mera Javascript Array :
+            let text = [
+                "Initialized Hacking now reading your data",
+                "Reading your Files",
+                "Password files Detected",
+                "Sending all passwords and Presonal files to Server",
+                "Cleaning up"
+            ]
+
+            // 6. For...of Loop with await :            
+            for (const item of text) {
+                await additem(item)
+            }
+
+            // 7. clearInterval() :            
+            await randomDelay()
+            clearInterval(t)
+        }
+
+        main()
+
+        //Code Explain :
+        /*
+1st additem function :
+ Iska kaam: HTML document mein naye messages add karna.
+- async → Function ko asynchronous banata hai.
+- await randomDelay() → Message add karne se pehle random delay ka wait karta hai.
+- document.createElement("div") → Naya div create karta hai.
+- div.innerHTML = item → Div ke andar message add karta hai.
+- document.body.append(div) → Div ko webpage mein add karta hai.
+
+
+2. randomDelay() function :
+Iska kaam: 1 se 7 seconds ke beech random delay generate karna.
+
+3. main() function:
+async function main() {
+Ye tumhara main function hai. Iske andar saara execution control ho raha hai.
+
+4. Dots blinking using setInterval() :
+Ye body ke andar jitne bhi div elements hain, un sabko select karega.
+Ye last div ko select karega.
+Ye check karega ki text ke end mein three dots hain ya nahi.
+Agar three dots hain toh unhe remove kar dega.
+Agar three dots nahi hain toh ek dot add karega.
+
+setInterval() har 100 milliseconds mein ye process repeat karta rahega.
+
+
+5. Messages ka Array :
+Is array mein tumhare saare messages stored hain. 
+
+
+6. For...of Loop with await :
+Ye bahut important part hai.
+- for...of array ke har element ko access karta hai.
+- additem(item) message add karta hai.
+- await next iteration se pehle current message ka delay complete hone ka wait karta hai.
+Isliye messages ek-ek karke show hote hain.
+
+
+7. clearInterval() :
+Jab saare messages show ho jayenge, tab:
+1. Ek additional random delay hoga.
+2. clearInterval(t) blinking animation ko stop kar dega.
+
+        */
+
+    </script>
+
+</body>
+</html>
