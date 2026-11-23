@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async/Await & Fetch API in JavaScript</title>
+</head>
+
+<body>
+
+    <h1>Call back function :</h1>
+    <dd>means ek function ko passed krte dusre function phir waha se usko call kr diya jata hai. this is callback. </dd>
+
+    <h1>Promise :</h1>
+    <dd>Promise is a Promise of code execution.</dd>
+
+    <h1>Synchronous in javascript :</h1>
+    <dd>Code execute line by line.</dd>
+
+    <h1>Asynchronous Javascript :</h1>
+    <dd>Asynchronous ka matlab hai kuch tasks background mein handle ho sakte hain aur JavaScript unka wait kiye bina
+        aage ka code execute kar sakta hai.</dd>
+
+    <h2>Why we use Asynchronous JavaScript ?</h2>
+    <ol>
+        <h3>Ex :</h3>
+        <li>Maan lo tum ek website bana rahe ho.</li>
+        <li>Website ko server se users ka data fetch karna hai.</li>
+        <li>Data aane mein 5 seconds lagte hain.</li>
+        <li>Agar JavaScript poore application ko rok de aur data aane ka wait kare, toh website unresponsive ho sakti
+            hai.</li>
+        <li>Is problem ko avoid karne ke liye asynchronous JavaScript use hota hai.</li>
+    </ol>
+
+    <h2>Asynchronous JavaScript have 3 important methods :</h2>
+    <ol>
+        <h3>
+            <li>Callback :</li>
+        </h3>
+        <dd>Ek function ko doosre function ke argument ke roop mein pass karna callback kehlata hai.</dd>
+
+        <h3>
+            <li>Promise :</li>
+        </h3>
+        <dd>Promise ek object hai jo batata hai ki asynchronous task future mein successfully complete hoga ya fail.
+        </dd>
+
+        <h3>
+            <li>Async/Await :</li>
+        </h3>
+        <dd>Async/Await Promise ke saath asynchronous code likhne ka easy tarika hai.</dd>
+    </ol>
+
+    <h1>Async Keyword in Javascript :</h1>
+    <ol>
+        <li>async JavaScript ka ek keyword hai, jo kisi function ke aage lagaya jata hai.</li>
+        <li>async ka matlab hai ki function hamesha ek Promise return karta hai. Promise ka result future mein milta
+            hai, turant nahi.</li>
+        <h3>Ex :</h3>
+        <h3>
+            <pre>
+async function getData() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(455) // random value de denge.
+        }, 3500); 
+    })
+}
+
+console.log("Loading Modules")
+console.log("Do Something Else")
+console.log("Load Data")
+
+let data = getData()
+
+console.log(data)
+
+console.log("Process Data")
+console.log("task 2");
+        </pre>
+        </h3>
+        <h3>Output :</h3>
+        <h3>
+            <pre>
+ Loading Modules
+ Do Something Else
+ Load Data
+ Promise {<pending>}
+ Process Data
+ task 2            
+        </pre>
+        </h3>
+
+        <h3>Code Explain :<h3>
+                <h3>
+                    <pre>
+1. async function getData() — async ki wajah se function Promise return karta hai.
+
+2. new Promise() — Ek Promise create hota hai, jo future mein result dega.
+
+3. setTimeout() — 3500 milliseconds yaani 3.5 seconds baad andar ka code chalega.
+
+4. resolve(455) — Promise successful ho jayega aur uska result 455 hoga.
+
+5. let data = getData() — Function call hota hai aur data mein Promise store hota hai, 455 nahi.
+
+6. console.log(data) — Promise abhi complete nahi hua, isliye output mein Promise { <pending> } dikhta hai.
+
+7. Process Data aur task 2 — Ye dono print ho jaate hain, kyunki JavaScript Promise ka wait nahi kar rahi.
+
+8. (3.5 seconds) baad Promise complete ho jaata hai aur uski value 455 ho jaati hai. Lekin humne value print nahi karwayi.
+    </pre>
+                </h3>
+    </ol>
+
+    <h1>Await Keyword in Javascript :</h1>
+    <ol>
+        <li>JavaScript mein await ek keyword hai jo Promise ke complete hone aur uska result aane tak wait karta hai.
+        </li>
+        <li>await ko normally async function ke andar use kiya jata hai.</li>
+        <h3>Ex :</h3>
+        <h3>
+            <pre>
+async function getData() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(455) // random value de denge.
+        }, 3500);
+    })
+}
+
+async function main() {
+
+    console.log("Loading Modules")
+    console.log("Do Something Else")
+    console.log("Load Data")
+
+    let data = await getData()
+
+    console.log(data)
+
+    console.log("Process Data")
+    console.log("task 2")
+}
+
+main();    
+ </pre>
+        </h3>
+
+        <h3>Output:-</h3>
+        <h3>
+            <pre>
+Loading Modules
+Do Something Else
+Load Data
+
+// 3.5 seconds wait
+
+455
+Process Data
+task 2    
+ </pre>
+        </h3>
+
+        <h3>Code Explain :</h3>
+
+        <h3>
+            <pre>
+1. async function getData() — Ek async function banaya, jo Promise return karta hai.
+
+2. new Promise() — Ek Promise create kiya, jo future mein data dega.
+
+3. setTimeout() — 3500 milliseconds yaani 3.5 seconds ka delay lagaya.
+
+4. resolve(455) — 3.5 seconds baad Promise complete hoga aur 455 value dega.
+
+5. async function main() — Ek async function banaya, jiske andar hum await use kar rahe hain.
+
+6. console.log() — Starting ki teen lines turant print hongi.
+
+7. let data = await getData() — Yahan await Promise ka wait karega. Jab tak Promise complete nahi hota, main() function ka aage ka code execute nahi hoga.
+
+8. console.log(data) — Promise complete hone ke baad 455 value data mein store hogi aur yahan 455 print hoga.
+
+9. Process Data aur task 2 — 455 print hone ke baad ye dono lines execute hongi    
+ </pre>
+        </h3>
+    </ol>
+
+    <h1>API :</h1>
+    <ol>
+        <h3>Full Form: Application Programming Interface</h3>
+        <li>API is a medium that allows two applications to communicate and exchange data with each other.</li>
+        <h3>Ex :</h3>
+        <h3>
+            <pre>
+Easy Example: Restaurant mein:
+
+- Customer = Client
+- Waiter = API
+- Kitchen = Server   
+
+Waiter customer ka order kitchen tak pahunchata hai aur food customer tak laata hai. Waise hi API do applications ke beech communication karwati hai.
+
+here,
+ customer - Clent / Application
+ waiter - API
+ Food/ order - Data 
+ kitchen - Server
+</pre>
+        </h3>
+    </ol>
+
+    <h1>JSON :</h1>
+    <ol>
+        <h3>Full Form: JavaScript Object Notation</h3>
+        <li>Definition: JSON is a data format used to store and exchange data between applications.</li>
+        <h3>Ex : user data </h3>
+        <h3>
+            <pre>
+{
+    "name": "Rahul",
+    "age": 20,
+    "city": "Nashik"
+}    
+</pre>
+        </h3>
+        <h3>output :</h3>
+        <h3>
+            <pre>
+Is JSON mein:
+
+- name = Rahul
+- age = 20
+- city = Nashik    
+</pre>
+        </h3>
+    </ol>
+
+    <h1>Fetch API :</h1>
+    <ol>
+        <li>Fetch API is a built-in JavaScript feature used to send requests to a server and receive data from it.</li>
+
+        <h3>Steps for fetch API :</h3>
+        <ol>
+            <li>async function getdata () sirf is ka code duplicate kro..</li>
+            <li>duplicate isliye bcz hum ye function ko actual function me convert karenge.</li>
+
+            <li>Now, I Tell you What is Fetch API ?</li>
+            <li>here we Take any fake <b>" Dummy API "</b>.</li>
+            <li>go chrome type <b>" JSON Placeholder "</b>go website</li>
+            <li>JSON Placeholder is a <b>"Free Fake Rest API "</b>hai.</li>
+            <li>Jo ki ek fetch API hoti hai javascript k under jo aap use kr sakte ho.</li>
+            <h3>Ex: </h3>
+            <h3>
+                <pre>
+fetch('https://jsonplaceholder.typicode.com/posts/1')
+ .then(response => response.json())
+ .then(json => console.log(json))
+    </pre>
+            </h3>
+            <li>first line :- ek promise return karega.</li>
+            <li>jo .then hai wo dubara se promise return karega.</li>
+            <li>us promise k under Json k pass hone ka wait karoga.</li>
+        </ol>
+        <br>
+        <li>chalo async me convert kr k dekhte hai.</li>
+        <h3> let x = fetch('https://jsonplaceholder.typicode.com/posts/1')</h3>
+        <li>fetch API me get & post dene k options bhi hote hai.</li>
+        <h3> let data = await x.json()</h3>
+        <li>fetch api ko humko 2 baar await kr k pass krna padta hai.</li>
+        <li>2 promise hote hai ek data lane ka promise or dusra data print krne ka promise.</li>
+        <li>aap text me bhi data pass kr sakte ho like see below ex:</li>
+        <h3> let data = await x.text()</h3>
+        <li>data text k form / String form mein ajayega.</li>
+    </ol>
+
+    <h2>What is Settle, reseolve or reject means :</h2>
+    <ol>
+        <li>Settle Means <b>" resolve or reject. "</b></li>
+        <li>resolve means promise has <b>" Settled Suceesfully "</b>.</li>
+        <li>reject means promise <b>" has not Settled Suceesfully. "</b></li>
+
+    </ol>
+
+
+    <h1>Fetch API Post Request Use :</h1>
+    <ol>
+        <li>POST Request ka use server par new data bhejne (send/submit) ke liye hota hai.</li>
+        <li>if u want to use Fetch API ki post request then go chrome type this "Fetch API Post Request"</li>
+        <li>MDN web Docs ki website pr jao waha pr ek Example hai </li>
+        <li>aap ye Example use kro or aap abb post request maar sakte ho hamare Server pr.</li>
+    </ol>
+
+    <h1>GET Request :</h1>
+    <ol>
+        <li>GET request ka use server se data retrieve (receive / Lene) karne ke liye hota hai.</li>
+        <li>means get request is a <b>Simple request.</b></li>
+        <li>jab bhi aap URL me khuch daal k type ker k Enter maroge to ye get request hoti hai.</li>
+        <h3>Ex : Instagram par posts dekhna.</h3>
+    </ol>
+
+
+    <h1>Post Request :</h1>
+    <ol>
+        <li>post request kisi data ko submit krne me help krti hai aap ki.</li>
+        <li>POST request ka use server par new data send ya create ya submit karne ke liye hota hai.</li>
+        <li>Ex : Form submit kre ho koi bhi. etc.</li>
+        <h3>Ex : Instagram par new post upload karna.</h3>
+    </ol>
+
+    <h1>Put Request :</h1>
+    <ol>
+        <li>is for Update, delete etc.</li>
+        <li>delete request is to delete something on the server </li>
+        <li>PUT request ka use server par existing resource ko completely update ya replace karne ke liye hota hai.</li>
+        <h3>Ex : User ki poori profile update karna.</h3>
+    </ol>
+
+    <h1>Option Request :</h1>
+    <ol>
+        <li>is simpily for metadata fetch krne k liye hoti hai.</li>
+        <li>OPTIONS request ka use server se ye jaanne ke liye hota hai ki kisi resource par kaun-kaun se HTTP methods
+            allowed hain.</li>
+        <h3>Ex : Check karna ki server GET, POST ya PUT requests allow karta hai ya nahi.</h3>
+    </ol>
+
+    <h2>Get, Post, put, Option, etc. Ye HTTP methods hain. Fetch API mein method property ke through inka use kar sakte
+        hain.</h2>
+
+    <script src="script.js"></script>
+</body>
+</html>
