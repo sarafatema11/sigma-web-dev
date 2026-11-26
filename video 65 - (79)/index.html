@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling </title>
+</head>
+<body>
+    <h1>Error Handling :</h1>
+    <ol>
+        <li>JavaScript mein Error Handling ka matlab hai: Jab hamare code mein koi error aaye, toh us error ko handle karna taaki program unexpectedly crash na ho.</li>
+        <li>JavaScript mein error handling ke liye mainly try, catch, finally aur throw use hote hain.</li>
+    </ol>
+<ol>
+<h2><li>parseInt :</li></h2>
+<ol>
+    <li>ye ek function hota hai javascript ka jo ki integer me pass kr deta hai ek string ko.</li>
+    <li>hum hum first number 12 & second numbber 34 dalenge to output mil  jayega like <b>The sum of 46</b> </li>
+    <h3>Ex:</h3>
+    <h3><pre>
+let a = prompt("Enter a first number ")
+let b = prompt("Enter a second number ")
+let sum = parseInt(a) + parseInt(b)
+
+console.log("The sum of ", sum);    
+
+//output:- first no. = 12 & second no. 34 , here the output is :- The sun of 46
+    </pre></h3>
+    <li>jab aap ya user galti se ya khud se  numbers ki jagah letters ya name dalega to Nan output show hoga.</li>
+    <li>here, NaN means <b>Not a Number </b> first: Harry & second khan here output: The sum of NaN. </li>
+</ol>
+
+<h2><li>javascript Forgiving Nature :</li></h2>
+<ol>
+    <li>ye bugs ko introduce krega mere code mein or na hi mujhe error msg dekhne ko mil raha hai.</li>
+    <li>javascript ye initially krti hai jis ki wajaha se aap ko error dekhne ko nhi milta hai. bcz javascript forgiving nature hota hai.</li>
+    <li>but aap chathy ho javascript error bata de kabhi kabi mein fix kroga.</li>
+    <li>yaha pr forgiving nature ko ban krne k liye aap error ko throw kr sakte ho.</li>
+    <li>hum yaha Nan ko check laga denge. see below code for example </li>
+    <li>hum NaN ko check krte hai is NaN function se krte hai. <b>isNaN()</b>.</li>
+    <h3>Ex :</h3>
+    <h3><pre>
+let a = prompt("Enter a first number ")
+let b = prompt("Enter a second number ")
+
+if (isNaN(a) || isNaN(b)){
+    throw SyntaxError("Sorry this is not allowed") 
+ //hum istarah se js me bhot sare errors hote hai usko throw kr sakte hai.
+}
+
+let sum = parseInt(a) + parseInt(b)
+
+console.log("The sum of ", sum);  
+
+// output:- fist: Harry & second: khan console screen me ye error show hoga. 
+//output:- Uncaught SyntaxError: Sorry this is not allowed at script.js:7:11
+    </pre></h3>
+<li>if u want to explore more errors in javascript then go on chrome & type <b>"Errors in javascript mdn docs"</b> website.</li>
+<h3>See error in js mdn docs link below :</h3>
+<li>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error</li>
+</ol>
+
+<h3>JavaScript – isNaN() Function :</h3>
+
+<b>Definition:</b><br>
+isNaN() means "Is Not a Number". It checks whether a given value is Not a Number.
+
+<b>Syntax:</b>
+<pre>isNaN(value)</pre>
+
+<b>Examples:</b>
+<pre>
+isNaN(10);       // false
+isNaN("hello");  // true
+isNaN("123");    // false
+isNaN("abc");    // true
+</pre>
+
+<b>Important:</b>
+<ul>
+<li>Number input → false</li>
+<li>Non-numeric input → true</li>
+</ul>
+<br>
+<b>Why do we use isNaN()?</b><br>
+<dd>To validate user input and prevent invalid values during mathematical calculations.</dd>
+
+<br>
+<b>Example: (same jo upr use kra hum ne)</b>
+<pre>
+let a = prompt("Enter first number");
+let b = prompt("Enter second number");
+
+if (isNaN(a) || isNaN(b)) {
+    throw new Error("Invalid input!");
+}
+
+let sum = Number(a) + Number(b);
+console.log(sum);
+</pre>
+
+<b>Remember:</b><br>
+isNaN() → Checks if a value is NOT a Number.<br>
+!isNaN() → Checks if a value can be treated as a Number.
+</ol>
+
+<h3>2 Types of Errors in JavaScript</h3>
+
+<b>1. Custom Error (Throwing Errors) :- </b>
+
+<dd>When we manually create and throw an error based on a condition, it is called a Custom Error.</dd>
+
+<b>Example:</b>
+<h3><pre>
+let a = prompt("Enter a first number ")
+let b = prompt("Enter a second number ")
+
+if (isNaN(a) || isNaN(b)) {
+    throw SyntaxError("Sorry this is not allowed")
+    //hum istarah se js me bhot sare errors hote hai usko throw kr sakte hai.
+}
+
+console.log("The sum of ", sum)    
+</pre></h3>
+
+<dd>We can use custom errors for input validation, such as checking user input with the isNaN() function.</dd>
+<br>
+<b>2. Error Handling (Handling Existing Errors) :- </b>
+
+<dd>Sometimes errors occur unexpectedly due to external factors or mistakes in our application.</dd>
+
+<br>
+<dd>For example:</dd>
+<ul>
+<li>Network request fails.</li>
+<li>Unexpected data is received from an API.</li>
+<li>Server is unavailable.</li>
+</ul>
+
+<dd>We can handle these errors using try-catch.</dd>
+
+<b>Example:</b>
+<h3><pre>
+let a = prompt("Enter a first number ")
+let b = prompt("Enter a second number ")
+
+if (isNaN(a) || isNaN(b)) {
+    throw SyntaxError("Sorry this is not allowed")
+}
+
+let sum = parseInt(a) + parseInt(b)
+
+try {
+    console.log("The sum of ", sum*x) 
+//ye try kro ye chal jata hai to theek hai warna catch msg print kro.
+} catch (error) {
+    console.log("Error aa gaya bhai") 
+// ye print hoga error with out red color mein like print on console screen like a normal msg..
+}    
+</pre></h3>
+
+We can also handle errors by:
+<ul>
+<li>Retrying the request.</li>
+<li>Showing an error message to the user.</li>
+<li>Providing an alternative solution.</li>
+</ul>
+
+<b>Remember:</b>
+
+Custom Error = Manually generate an error using throw.
+
+Error Handling = Handle errors using try-catch.
+</writing>
+
+<h3>**Note:** Dono concepts ek saath bhi use ho sakte hain. Custom error ko bhi `try-catch` se handle kar sakte hain.</h3>
+
+
+<h2>Error object :</h2>
+<ol>
+    <li>for all the built inn error, the error object has two main properties : try & catch and  </li>
+    <h3><pre>
+try {
+    console.log("The sum is:", sum * x);
+}
+catch (error) {
+    console.log("Error aa gaya bhai!");
+
+    console.log("Error Name:", error.name);
+    console.log("Error Message:", error.message);
+    console.log("Error Stack:", error.stack);
+}          
+    </pre></h3>
+
+<h2>Error has  3 main Properties :</h2>
+<ol>
+    <h2><li>error.name :</li></h2>
+    <dd>Ye batata hai ki kis type ka error aaya hai.</dd>
+
+    <h2><li>error.message :</li></h2>
+    <dd>Ye batata hai ki error kyun aaya hai.</dd>
+
+    <h2><li>error.stack :</li></h2>
+    <dd>Ye batata hai ki error kis file aur kis line par aaya hai, along with execution call details.</dd>
+</ol>
+
+<h2>Error object define :</h2>
+    <li>In JavaScript, the Error object is used to create and represent errors in a program.</li>
+    <li>It provides information about what went wrong in the code.</li>
+    <h3>syntax:</h3>
+    <h3><pre>let error = new Error("Something went wrong");</pre></h3>
+    <h3>Example :</h3>
+    <h3><pre>
+try {
+   throw new Error("Invalid Input");
+}
+catch(error) {
+    console.log(error.name);
+    console.log(error.message);
+    console.log(error.stack);
+}
+    </pre></h3>
+</ol>
+
+<h2>try and catch :</h2>
+<ol>
+    <li>try k under ka code try kiya jayega.</li>
+    <li>phit catch k under ka code chalega agr error aata hai to.</li>
+</ol>
+
+<h2>Finally clause :</h2>
+<ol>
+ <li>try k under ka code try kiya jayega.</li>
+<li>phit catch k under ka code chalega agr error aata hai to.</li>
+<li>phit aata hai finally </li>
+<li>try catch kisi me bhi chale finally zaroor chalega.</li>
+<li>ye kam aata hai functions mein.</li>
+<li>finally likho na likho barabar hota hai bcz error k sath bhi finally msg print hoga or without error k sath bhi msg print hoga.</li>
+<h3>so why we use finally ?</h3>
+<li>finally use hota hai functions mein. </li>
+<li>jab bhi hum return krte hai to uske baad ka code nhi chal ta hai.</li>
+
+<h3>Ex:</h3>
+<h3><pre>
+function main(){
+    
+    let a = prompt("Enter a first number ")
+    let b = prompt("Enter a second number ")
+    
+    if (isNaN(a) || isNaN(b)) {
+        throw SyntaxError("Sorry this is not allowed")
+    }
+    
+    let sum = parseInt(a) + parseInt(b)
+    
+    
+    let x = 1;
+    try {
+        console.log("The sum of ", sum * x)
+        return true
+        
+    } catch (error) {
+        console.log("Error aa gaya bhai")
+        return false 
+    }
+    finally{
+        console.log("files are being closed and db connection is being closed"); 
+    }  
+}
+
+let c = main()    
+</pre></h3>
+<h4><pre>
+output:-   The sum of  12
+           files are being closed and db connection is being closed    
+</pre></h4>
+
+<li>abb hum without finally likh kr dekhte hai function mein see yaha pr finally wala jo console msg tha abb wo print nhu hora.</li>
+
+<h3>Ex:</h3>
+
+<h3><pre>
+function main(){
+    
+    let a = prompt("Enter a first number ")
+    let b = prompt("Enter a second number ")
+    
+    if (isNaN(a) || isNaN(b)) {
+        throw SyntaxError("Sorry this is not allowed")
+    }
+    
+    let sum = parseInt(a) + parseInt(b)
+    
+    
+    let x = 1;
+    try {
+        console.log("The sum of ", sum * x)
+        return true
+        
+    } catch (error) {
+        console.log("Error aa gaya bhai")
+        return false 
+    }
+        console.log("files are being closed and db connection is being closed"); 
+     
+}
+
+let c = main()    
+</pre></h3>
+<h4><pre>
+output:-   The sum of  12 </pre></h4>
+<li>itna hi output ayega bcz jab bhi functions k under returns statements  hoti hai. or us k baad bhi aap chathy ho try ho ya catch ho.ya neeche ka code chal jaye.</li>
+<li>but return k baad neeche ka code nhi chalta hai.</li>
+<li>sirf finally hi neeche ka code chalati hai. isliye finally use krte hai.</li>
+</ol>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
