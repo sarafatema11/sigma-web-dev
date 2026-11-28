@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes & Object & object oriented Programming</title>
+</head>
+<body>
+<h1>Object oriented Programming language - (oop) :- </h1> 
+<ol>
+<li>OOP stands for Object-Oriented Programming. It is a programming approach based on classes and objects. It helps us write reusable, organized and maintainable code.</li>
+
+<li>jo aap object oriented Programming se achieve kr sakte ho wo aap functional programming se bhi achieve kr sakte ho.</li>
+<li>difference bass itna hai aap jab bhi oop use krte ho to aap real worlds object banate ho real world templates se.</li>
+
+<li>OOP ek programming concept hai jisme hum code ko Classes aur Objects ki help se organize karte hain.</li>
+<li>JavaScript mein OOP ke 4 main pillars hote hain:</li>
+<h3><pre>
+1. Encapsulation
+2. Inheritance
+3. Polymorphism
+4.  Abstraction    
+</pre></h3>
+</ol>   
+
+<h1>prototype :-</h1>
+<ol>
+    <li>javascript object have special property is called prototype.that is either null or refrence another object. </li>
+    <li>in simple means Prototype allows one object to access the properties and methods of another object.</li>
+<li>hum prototype isliye banate hai q ki hum prototypal Inheritance kr paye.</li>
+</ol>
+
+<h1>Prototypal inheritance :- </h1>
+<ol>
+    <li>when we try to read a property from a protype and its missing, javascript automatically take it from the prototype . this is called <b>" Prototypal Inheritance ".</b> </li>
+</ol>
+
+
+<h1>Setting Prototype :-</h1>
+<ol>
+<li>we can set prototype by setting <b> _ _prototype _ _</b> , now if we read a prototype from the object which is not in object and is present in the prototype, javascript will take it from protype.</li>
+<li>Setting Prototype means connecting one object to another object so that the first object can access the properties and methods of the second object.</li>
+<li>Ek object ko doosre object ka prototype banana.</li>
+</ol>
+
+
+<h1>from the prototype :-</h1>
+<ol>
+<li>if we have a method in object, it will be called from the object. if its missing in object and present in prototype, its called <b>" From the prototype "</b> </li>
+<li>From the prototype" means accessing or inheriting properties and methods from another object through its prototype.</li>
+<li>Ek object apne prototype se properties aur methods leta hai.</li>
+</ol>
+
+<h1>Class :- </h1>
+<ol>
+    <li>A class is a blueprint or template used to create objects. It contains properties and methods.</li>
+    <li>Class ek design hota hai jiske according hum multiple objects create kar sakte hain.</li>
+</ol>
+
+<h1>constructor :- </h1>
+<ol>
+    <li>ye hamesha run krega mein jab bhi ek object banaoga. </li>
+    <li>A constructor is a special method of a class that is automatically called when a new object is created. It is used to initialize object properties.</li>
+    <li>Constructor ka kaam object create hote hi uski properties ko initial values dena hota hai.</li>
+    <li>Constructor automatically tab execute hota hai jab class ka object new keyword se create hota hai.</li>
+</ol>
+
+<h1>this Keyword :-</h1>
+<ol>
+    <li> this is a keyword & this is a way for us to create properties in object. </li>
+    <li>The this keyword refers to the newly created object and is used to initialize its properties.</li>
+    <li>The this keyword refers to the object that is currently executing the function.</li>
+    <li> <b>this.name :- </b> means accessing the name property of the current object. or Current object ka name access karna.</li>
+    <li> <b>this.name = name :- </b> Ye object ke andar name property create karta hai.</li>
+</ol>
+
+<h1>Extend keyword :- </h1>
+<ol>
+    <li>extends ka use ek class ko doosri class se inherit karwane ke liye hota hai.</li>
+</ol>
+
+
+<h1>Super() :-</h1>
+<ol>
+    <li>super() ka use Child Class se Parent Class ka constructor call karne ke liye hota hai.</li>
+    <li> <b>super(name) :- </b> super(name) ka matlab hai Child Class se Parent Class ke constructor ko call karna aur usko name ki value provide karna.</li>
+    <li>agar tum <b>super(name)</b> ki jagah ye likh doge to <b>super()</b> Toh Parent Class ke constructor ko koi argument pass nahi hota. Isliye name ki value <b>undefined </b> hogi. </li>
+</ol>
+
+
+<h1>Methods overriding :- </h1>
+<ol>
+    <li>Method Overriding ka matlab hai Child Class mein Parent Class ke same method name ka method banana, lekin uska implementation change kar dena.</li>
+    <li>For ex:-  lion class me hum ne eats function likh diya :- <b>console.log("Kha raha hoon roar")</b>
+ abb hum <b>l.eats</b> kre to ouput:- <b>Kha raha hoon roar</b> but <b>a.eats</b> kro to output:- <b>Kha raha hoon</b> ayega bcz hum ne method overriding krdi hai.</li>
+</ol>
+
+
+<h1>Super Keyword :-</h1>
+<ol>
+    <li>kisi bhi super class k Method ko Run kr raha hota hai super keyword. hum use kr sakte hai. </li>
+    <li> <b>super.eats()</b> yaha pr mein super class k eats ko run kroga.</li>
+
+    <h3><pre>
+l.eats()
+ Kha raha hai  // apna method run hora.
+ Kha raha hoon roar   // super class ka method run hora.      
+    </pre></h3>
+</ol>
+
+
+<h1>static Methods :-</h1>
+<ol>
+<li>jab bhi mein ne ek static method banaya usko class se call kr sakta ho.</li>
+<li>Static Method wo method hota hai jise hum class ke naam se directly call kar sakte hain. Iske liye object create karne ki zaroorat nahi hoti.</li>
+</ol>
+
+<h1>Getters & Setters :- </h1>
+<ol>
+    <li>JavaScript mein Getters aur Setters ka use class ki properties ko access aur update karne ke liye hota hai.</li>
+    <h3><pre>
+1. Getter (get) → Property ki value ko read/return karta hai.
+2. Setter (set) → Property ki value ko set/update karta hai.        
+    </pre></h3>
+</ol>
+
+<h1>instanceof Operator :-</h1>
+<ol>
+<li>instanceof operator ka use check karne ke liye hota hai ki koi object kisi particular class ka instance hai ya nahi.</li>
+<li>Ye true ya false return karta hai.</li>
+<li>for ex:- <b>l instanceof Lion</b>  output:- <b>truee ayega.</b>  agr mein same a insyenceof Lion kro to false ayega.</li>
+
+</ol>
+
+
+<h1>Quiz question :-</h1>
+<h3>create a class user and create a few  methods along with  a constructor ?</h3>
+<h3>Answer:</h3>
+<h3><pre>
+class User {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    showName() {
+        console.log("Name:", this.name);
+    }
+
+    showAge() {
+        console.log("Age:", this.age);
+    }
+
+    greet() {
+        console.log("Hello " + this.name);
+    }
+}
+
+let user1 = new User("Harry", 20);
+
+user1.showName();
+user1.showAge();
+user1.greet();
+
+
+output:- 
+Name: Harry
+Age: 20
+Hello Harry
+
+</pre></h3>
+
+    <script src="script.js"></script>
+    <!-- <script src="gs.js"></script> -->
+</body>
+</html>
